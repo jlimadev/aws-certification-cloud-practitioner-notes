@@ -1,5 +1,5 @@
 # 📝AWS Cloud Practitione Study Notes - [In Progress]
 
-- [IAM - Identity Access Management]()
-- [EC2 - Elastic Cloud Compute]()
-- [S3 - Simple Storage Service]()
+- [IAM - Identity Access Management](IAM/README.md)
+- [EC2 - Elastic Cloud Compute](EC2/README.md)
+- [S3 - Simple Storage Service](S3/README.md)
