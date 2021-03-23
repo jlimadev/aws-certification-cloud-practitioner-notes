@@ -1,4 +1,4 @@
-# 📝S3 - Cloud Computing
+# 📝Cloud Computing
 
 - [How Clod Computing Works?](#how-clod-computing-works)
 - [The Five Characteristics of Cloud Computing](#the-five-characteristics-of-cloud-computing)
