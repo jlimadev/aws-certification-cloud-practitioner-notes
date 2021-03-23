@@ -31,27 +31,24 @@
 
 ### The Five Characteristics of Cloud Computing
 
-#### On-demand self service
+- **On-demand self service**: Users can provision resources and use them without human interaction from the service providers. Everything is provisioned automatically.
 
-- Users can provision resources and use them without human interaction from the service providers. Everything is provisioned automatically.
+- **Broad Network Access**: The resources are available over the network and can be accessible by others platforms inside the cloud or between customer services.
 
-#### Broad Network Access
+- **Multi-tenacy and Resource Pooling**: Multiple customers can share the same physical infrastructure or application with security and data privacy. In cloud commonly the same hardware is used to Multiple customers, and the data keeps totally safe and private.
 
-- The resources are available over the network and can be accessible by others platforms inside the cloud or between customer services.
+- **Rapid elasticity and Scalability**: Automatically and quickly acquire and dispose resources when needed. Quickly and easily scale based on demand.
 
-#### Multi-tenacy and Resource Pooling
+- **Measured Services**: Usage is measured, users pay correctly for what they have used (seconds, hours, days, etc.)
 
-- Multiple customers can share the same physical infrastructure or application with security and data privacy.
-- In cloud commonly the same hardware is used to Multiple customers, and the data keeps totally safe and private.
+### Six Advantages of Cloud Computing
 
-#### Rapid elasticity and Scalability
-
-- Automatically and quickly acquire and dispose resources when needed
-- Quickly and easily scale based on demand
-
-#### Measured Services
-
-- Usage is measured, users pay correctly for what they have used (seconds, hours, days, etc.)
+- Trade capital expense (CAPEX) for operational expense (OPEX)
+- Benefit from massive economies of scale
+- Stop guessing capacity
+- Increase speed and agility
+- Stop spending money running and maintaining data centers
+- Go global in minutes
 
 ### Types of Services on Cloud Computing
 
