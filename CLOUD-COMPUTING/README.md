@@ -29,6 +29,30 @@
 - Keep some servers on premises and extend some capabilities to the Cloud
 - Can keep sensitive data on the On Premisse server (locally) and the others services on cloud.
 
+### The Five Characteristics of Cloud Computing
+
+#### On-demand self service
+
+- Users can provision resources and use them without human interaction from the service providers. Everything is provisioned automatically.
+
+#### Broad Network Access
+
+- The resources are available over the network and can be accessible by others platforms inside the cloud or between customer services.
+
+#### Multi-tenacy and Resource Pooling
+
+- Multiple customers can share the same physical infrastructure or application with security and data privacy.
+- In cloud commonly the same hardware is used to Multiple customers, and the data keeps totally safe and private.
+
+#### Rapid elasticity and Scalability
+
+- Automatically and quickly acquire and dispose resources when needed
+- Quickly and easily scale based on demand
+
+#### Measured Services
+
+- Usage is measured, users pay correctly for what they have used (seconds, hours, days, etc.)
+
 ### Types of Services on Cloud Computing
 
 #### Infrastructure as a Service (IaaS)
