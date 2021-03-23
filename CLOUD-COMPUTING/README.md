@@ -1,5 +1,9 @@
 # 📝S3 - Cloud Computing
 
+- [How Clod Computing Works?](#how-clod-computing-works)
+- [Types of Cloud Computing](#types-of-cloud-computing)
+- [Types of Services on Cloud Computing](#types-of-services-on-cloud-computing)
+
 ### How Clod Computing Works?
 
 - It works On Demand, the user/company pays only for what is using.
