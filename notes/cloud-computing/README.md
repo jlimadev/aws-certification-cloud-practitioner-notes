@@ -1,6 +1,7 @@
 # 📝Cloud Computing
 
 - [How Clod Computing Works?](#how-clod-computing-works)
+- [Problems solved by the Cloud](#problems-solved-by-the-cloud)
 - [The Five Characteristics of Cloud Computing](#the-five-characteristics-of-cloud-computing)
 - [Types of Cloud Computing](#types-of-cloud-computing)
 - [Types of Services on Cloud Computing](#types-of-services-on-cloud-computing)
