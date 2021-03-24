@@ -12,13 +12,22 @@
 - Instant services and provisioning
 - Scalability
 
+### Problems solved by the Cloud
+
+- Flexibility
+- Cost-Effectiveness
+- Scalability
+- Elasticity
+- High-availability and fault-tolerance
+- Agility
+
 ### The Five Characteristics of Cloud Computing
 
 - **On-demand self service**: Users can provision resources and use them without human interaction from the service providers. Everything is provisioned automatically.
 
 - **Broad Network Access**: The resources are available over the network and can be accessible by others platforms inside the cloud or between customer services.
 
-- **Multi-tenacy and Resource Pooling**: Multiple customers can share the same physical infrastructure or application with security and data privacy. In cloud commonly the same hardware is used to Multiple customers, and the data keeps totally safe and private.
+- **Multi-tenancy and Resource Pooling**: Multiple customers can share the same physical infrastructure or application with security and data privacy. In cloud commonly the same hardware is used to Multiple customers, and the data keeps totally safe and private.
 
 - **Rapid elasticity and Scalability**: Automatically and quickly acquire and dispose resources when needed. Quickly and easily scale based on demand.
 
@@ -26,40 +35,40 @@
 
 ### Types of Cloud Computing
 
-#### Private
+**Private**
 
 - Closed/Not open for the public
-- To provide services/infra to a specfic organization
+- To provide services/infra to a specific organization
 - Known Provider: Rackspace
 
-#### Public
+**Public**
 
 - Deliver stored apps on the internet for open access
 - Provides all the services to deploys apps
 - Known Provider: AWS, Azure, GCP
 
-#### Hybrid
+**Hybrid**
 
 - Keep some servers on premises and extend some capabilities to the Cloud
-- Can keep sensitive data on the On Premisse server (locally) and the others services on cloud.
+- Can keep sensitive data on the On Premise server (locally) and the others services on cloud.
 
 ### Types of Services on Cloud Computing
 
-#### Infrastructure as a Service (IaaS)
+**Infrastructure as a Service (IaaS)**
 
 - Provide building tools for cloud IT accessible from network
 - Provides network, computers, data storage and processing quickly
 - Flexibility
-- Can easily be paralelized with on-premises
+- Can easily be parallelized with on-premises
 
-#### Platform as a Service (PaaS)
+**Platform as a Service (PaaS)**
 
-- Enviroment to develop and deploy apps
+- Environment to develop and deploy apps
 - Focus on Deployment and App management
 - Remove the needs of infra management
 - The platform provides the infra and manages it to run the application
 
-#### Software as a Service (SaaS)
+**Software as a Service (SaaS)**
 
 - Completed product that is run and managed by the service provider
 - Made to final users such as office 365
