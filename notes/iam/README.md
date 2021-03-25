@@ -22,3 +22,21 @@ Identity Access Management is a Global Service.
 - We need to create or attach policies to this Role to grant the permitions.
 - CamelCaseNamed
 - The most common roles: [EC2 Instance Roles, Lambda Function Roles, Roles for CloudFormation]
+
+### IAM Account Security
+
+AWS Provides more security abling us to add pretection mechanisms to our account.
+
+**MFA (Multi Factor Authentication)**
+
+- Password that you know + security device you own.
+- Main benefit of MFA: if a password is stolen or hacked, the account is not compromised.
+- MFA Devices: Virtual Devices (Authy, Google Authenticator), Universal 2nd Factor (U2F) Security Key, Hardware Key Fob MFA Device, Hardware Key Fob MFA Device for AWS GovCloud (US)
+
+**Password Policy**
+
+- Set a minimum password length.
+- Require specific characters in the password: Upper/Lower, numbers, non-alphanumeric.
+- Allow IAM users to change theyr passwords.
+- Require password change each X days.
+- Prevent password reuse.
