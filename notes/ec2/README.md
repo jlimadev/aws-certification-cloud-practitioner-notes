@@ -92,3 +92,21 @@ There are a few [instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserG
 443 - HTTPS - access secured websites
 3389 - RDP (Remote Desktop Protocol) - Log into a windows instance
 ```
+
+### SSH and Instance Connect
+
+- SSH is one of the most important function. It allows you to control a remote machine, uptade, and lots of configurations, all using the command line.
+- Mac, Linux and Win 10+ = SSH and Windows <10 = Putty
+
+```bash
+# check permissions on .pem file (must be chmod 0400)
+# and then log using ssh:
+
+ssh -i permissionsfile.pem ec2-user@public-ip
+```
+
+- EC2 Instance Connect is an Second Option to run SSH directly from Console. It runs a browser based SSH instance connection/terminal. In this case a temporary Key is uploaded to EC2 instance by AWS. Works only out-of-the-box with Amazon Linux 2.
+
+- Remember to Allow port 22 in Security Group.
+
+### EC2 Instances Purchasing Options
