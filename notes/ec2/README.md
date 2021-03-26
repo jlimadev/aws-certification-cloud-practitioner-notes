@@ -41,11 +41,12 @@ m5.2xlarge
 - 5: generation of the instance (AWS improve them over time)
 - 2xlarge: the size of the instance. (Memory, CPU, etc... )
 
-There are seven types of Instances:
+There are a few [instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/instance-types.html):
 
 **General Purpose**:
 
 - Great for a diversity of workloads such as web services and code repositories.
+- Use cases: Small and midsize databases, Data processing tasks that require additional memory, Caching fleets.
 - This one have a good balance between the compute, memory and networking.
 - t2.micro is an example
 
@@ -58,10 +59,15 @@ There are seven types of Instances:
 **Memory Optimized**:
 
 - These types have fast performance for workloads that require in-memory processing.
-- Use cases: Floating point number calcs, Graphic Processing, Data pattern matching.
+- Use cases: High-performance, relational (MySQL) and NoSQL (MongoDB, Cassandra) databases. Distributed web scale cache stores that provide in-memory caching of key-value type data (Memcached and Redis). In-memory databases using optimized data storage formats and analytics for business intelligence (for example, SAP HANA). Applications performing real-time processing of big unstructured data (financial services, Hadoop/Spark clusters). High-performance computing (HPC) and Electronic Design Automation (EDA) applications.
+
 - Most of the instances of this type starts with _R_ (that remembers RAM). We also have instances starting with _X_.
 
 **Storage Optimized**
 
 - Made for storage-intense tasks that require high, sequential Read and Write access to large data sets on local storage
 - Use cases: High Frequency Online Transaction Processing (OLTP) systems, Relational and NoSQL databases, Cache for in-memory database (like Redis), Data warehousing, Distributed file systems.
+
+**Accelerated Computing**:
+
+- This one use hardware accelerators, or co-processors, to perform functions such as floating point number calculations, graphics processing, or data pattern matching, more efficiently than is possible in software running on CPUs.
