@@ -1,4 +1,4 @@
-# 📝AWS Cloud Practitione Study Notes - [In Progress]
+# 👩‍💻 AWS Cloud Practitione Study Notes - [In Progress]
 
 - [Cloud Computing](notes/cloud-computing/README.md)
 - [How AWS Works](notes/aws/README.md)
