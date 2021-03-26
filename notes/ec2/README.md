@@ -29,3 +29,28 @@ echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 - Finally Review and Launch. (Save the Key/Par Generated). A few seconds later the instance will be available and accessible.
 
 - When finish it, just stop/terminate the instance.
+
+---
+
+### EC2 Instance Types
+
+**AWS has the following naming convention:**
+m5.2xlarge
+
+- m: instance class
+- 5: generation of the instance (AWS improve them over time)
+- 2xlarge: the size of the instance. (Memory, CP2, etc.)
+
+**General Purpose**:
+
+- Great for a diversity of workloads suchs as web services and code repositories.
+- This one have a good balance between the compute, memory and networking.
+- t2.micro is an example
+
+**Compute Optimized**:
+
+- Great for compute-intensive workloads that require high performance processors.
+- Services such as Batch processing, media transcode, High perfomance web servers, High performance compute (HPC), Scientific modeling and Machine Learning or Dedicated Gaming Servers.
+- For now, all the Compute Optimized Instance hava naming starting with _C_, like c5.large.
+
+**Memory Optimized**:
