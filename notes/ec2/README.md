@@ -70,4 +70,25 @@ There are a few [instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserG
 
 **Accelerated Computing**:
 
-- This one use hardware accelerators, or co-processors, to perform functions such as floating point number calculations, graphics processing, or data pattern matching, more efficiently than is possible in software running on CPUs.
+- Simmilar to Memory optimized, but this one use hardware accelerators, or co-processors, to perform functions such as floating point number calculations, graphics processing, or data pattern matching, more efficiently than is possible in software running on CPUs.
+
+---
+
+### Security Groups (SG)
+
+- They are fundamentaal of newtwork security in AWS. Theys control how traffic is allowed into our EC2 instances. It is the Firewall of the instance.
+- They contain only **Allow** rules
+- Reference by IP or by other Security Group
+- Regulate the Access to the Ports, Authoirized IP ranges (IPV4 and 6)
+- Control of inbound network (from outside to inside the instance)
+- Control of outbound network (from instance to outside) - by default, all traffic outbound (from our instance to the rest of the world) is allowed.
+- Common Ports that we need to know
+
+```
+22 - SSH (Secure Shell) - log into EC2 Linux instance
+22 - SFTP - (Secure File Transport Protocol) - upload file using SSH
+21 - FTP (File Transfer Protocol) - upload files into a file share
+80 - HTTP - access unsecured websites
+443 - HTTPS - access secured websites
+3389 - RDP (Remote Desktop Protocol) - Log into a windows instance
+```
