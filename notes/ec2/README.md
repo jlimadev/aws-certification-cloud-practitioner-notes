@@ -39,18 +39,29 @@ m5.2xlarge
 
 - m: instance class
 - 5: generation of the instance (AWS improve them over time)
-- 2xlarge: the size of the instance. (Memory, CP2, etc.)
+- 2xlarge: the size of the instance. (Memory, CPU, etc... )
+
+There are seven types of Instances:
 
 **General Purpose**:
 
-- Great for a diversity of workloads suchs as web services and code repositories.
+- Great for a diversity of workloads such as web services and code repositories.
 - This one have a good balance between the compute, memory and networking.
 - t2.micro is an example
 
 **Compute Optimized**:
 
 - Great for compute-intensive workloads that require high performance processors.
-- Services such as Batch processing, media transcode, High perfomance web servers, High performance compute (HPC), Scientific modeling and Machine Learning or Dedicated Gaming Servers.
-- For now, all the Compute Optimized Instance hava naming starting with _C_, like c5.large.
+- Services such as Batch processing, media transcode, High performance web servers, High performance compute (HPC), Scientific modeling and Machine Learning or Dedicated Gaming Servers.
+- For now, all the Compute Optimized Instance have naming starting with _C_, like c5.large.
 
 **Memory Optimized**:
+
+- These types have fast performance for workloads that require in-memory processing.
+- Use cases: Floating point number calcs, Graphic Processing, Data pattern matching.
+- Most of the instances of this type starts with _R_ (that remembers RAM). We also have instances starting with _X_.
+
+**Storage Optimized**
+
+- Made for storage-intense tasks that require high, sequential Read and Write access to large data sets on local storage
+- Use cases: High Frequency Online Transaction Processing (OLTP) systems, Relational and NoSQL databases, Cache for in-memory database (like Redis), Data warehousing, Distributed file systems.
