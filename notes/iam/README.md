@@ -1,5 +1,9 @@
 # 📝IAM - Identity Access Management
 
+- [IAM Permissions](#iam-permissions)
+- [IAM Account Security](#iam-account-security)
+- [How a user can access AWS](#how-a-user-can-access-aws)
+
 Identity Access Management is a Global Service.
 
 - First we have our Root Account. This account should not be shared or even used. We must use only to Create another users, called IAM Users.
@@ -40,3 +44,27 @@ AWS Provides more security abling us to add pretection mechanisms to our account
 - Allow IAM users to change theyr passwords.
 - Require password change each X days.
 - Prevent password reuse.
+
+### How a user can access AWS?
+
+A user can access AWS by:
+
+**AWS Management Console**
+
+- Root or IAM user + password (+ MFA optional)
+
+**AWS CLI**
+
+- Command Line Interface, protected by Access Key and Secrets. If wants to use the CLI in the own computer, so the user needs to install the AWS CLI.
+
+**AWS CloudShell (CLI)**
+
+- is a CLI inside the AWS Console, the user don't need to install this one.
+
+**AWS SDK**
+
+- Software Development Kit, for coding, also protected by Access Key and Secrets.
+
+The access keys and secrets are genereated through the AWS Console and must be kept in secret. The users manages their own keys.
+Access Keys is simmilar to the username.
+Secret Keys is simmilar to the password.
