@@ -3,6 +3,9 @@
 - [IAM Permissions](#iam-permissions)
 - [IAM Account Security](#iam-account-security)
 - [How a user can access AWS](#how-a-user-can-access-aws)
+- [IAM Security Tools](#iam-security-tools)
+- [IAM Best Practices](#iam-best-practices)
+- [IAM Shared Responsibility Model](#iam-shared-responsibility-model)
 
 Identity Access Management is a Global Service.
 
@@ -24,6 +27,7 @@ Identity Access Management is a Global Service.
 - Are created for another Services, so they can access or execute a process inside another service.
 - Some AWS service will need to perform actions on your behalf. To do so, we will assign permissions to AWS services with IAM Roles.
 - We need to create or attach policies to this Role to grant the permitions.
+- Then we attach the role to the service, and the service will be able to perform actions in out behalf.
 - CamelCaseNamed
 - The most common roles: [EC2 Instance Roles, Lambda Function Roles, Roles for CloudFormation]
 
@@ -68,3 +72,13 @@ A user can access AWS by:
 The access keys and secrets are genereated through the AWS Console and must be kept in secret. The users manages their own keys.
 Access Keys is simmilar to the username.
 Secret Keys is simmilar to the password.
+
+### IAM Security Tools
+
+**IAM Credentials Report** [root-account level]
+
+- The Credentials Report lists all your account's users and the status of their credentials.
+
+**IAM Access Advisor** [iam-user level]
+
+- The access adivisor shows the services permissions granted to a user and when those services were last accessed.
