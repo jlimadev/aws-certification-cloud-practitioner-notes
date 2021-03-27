@@ -1,7 +1,15 @@
 # 📝EC2 - Elastic Cloud Compute
 
-- EC2 is one of the most popular of AWS services. EC2 extends to Elastic Compute Cloud and is a service where you can rent virtual servers from AWS. This Cloud Computing is from Infrastructure as a Service (IaaS) type.
-- EC2 is a Region Scoped Service.
+- [How to Create a Basic EC2 Instance](#How-to-Create-a-Basic-EC2-Instance)
+- [EC2 Instance Types](#ec2-Instance-Types)
+- [EC2 Security Groups](#EC2-Security-Groups)
+- [EC2 SSH and Instance Connect](#EC2-SSH-and-Instance-Connect)
+- [EC2 Instance Roles](#EC2-Instance-Roles)
+- [EC2 Instances Purchasing Options](#EC2-Instances-Purchasing-Options)
+- [EC2 Shared Responsibility Model](#EC2-Shared-Responsibility-Model)
+- [EC2 Instance Storage](#EC2-Instance-Storage)
+
+AWS EC2 is one of the most popular of AWS services. EC2 extends to Elastic Compute Cloud and is a service where you can rent virtual servers from AWS. This Cloud Computing is from Infrastructure as a Service (IaaS) type. EC2 is also a Region Scoped Service.
 
 ### How to Create a Basic EC2 Instance
 
@@ -74,7 +82,7 @@ There are a few [instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserG
 
 ---
 
-### Security Groups (SG)
+### EC2 Security Groups
 
 - They are fundamentaal of newtwork security in AWS. Theys control how traffic is allowed into our EC2 instances. It is the Firewall of the instance.
 - They contain only **Allow** rules
@@ -95,7 +103,7 @@ There are a few [instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserG
 
 ---
 
-### SSH and Instance Connect
+### EC2 SSH and Instance Connect
 
 - SSH is one of the most important function. It allows you to control a remote machine, uptade, and lots of configurations, all using the command line.
 - Mac, Linux and Win 10+ = SSH and Windows <10 = Putty
@@ -177,3 +185,11 @@ About the prices: A Standard Reserved Instance provides a more significant disco
 Difference between Dedicated Hosts and EC2 Dedicated Instances
 
 - Both allow you to use dedicated server, but in the EC2 Dedicated Hosts you pay for each Host and can have more access to the hardware it is much more flexible and is recommended when you have server bound licences, while in EC2 Dedicated Instances you pay for each instance and cannot have access to hardware.
+
+---
+
+### EC2 Shared Responsibility Model
+
+---
+
+### EC2 Instance Storage
