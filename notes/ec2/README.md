@@ -93,6 +93,8 @@ There are a few [instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserG
 3389 - RDP (Remote Desktop Protocol) - Log into a windows instance
 ```
 
+---
+
 ### SSH and Instance Connect
 
 - SSH is one of the most important function. It allows you to control a remote machine, uptade, and lots of configurations, all using the command line.
@@ -109,11 +111,15 @@ ssh -i permissionsfile.pem ec2-user@ec2-public-ip
 
 - Remember to Allow port 22 in Security Group.
 
+---
+
 ### EC2 Instance Roles
 
 In order to run or access aws services, usually in our terminal we would use `aws configure`and pass our credentials. But in EC2 instance it is not a good practice, since it is a server and can be managed by more than one person. So if you want to EC2 to performe an action in other services in our behalf, we need to create a role to this EC2.
 
 - For example: if we want to execute the command `aws iam list-users` we need to create a role to that contains the IAM Policy, in this case, the read user permission. To do it we need to create the policy and the role in our IAM Console and after that, in EC2 console, attach the role to the EC2 instance. Now our instance can perform this list-users action without require your secret keys directly inside the server.
+
+---
 
 ### EC2 Instances Purchasing Options
 
@@ -121,7 +127,7 @@ EC2 Instances in the cloud, the default type of EC2 is on-demand instances.
 
 **On-demand instances**
 
-- No commiment to user to specific time.
+- No commitment to user to specific time.
 - Full control over the life-cycle of instance: when start, stop, etc.
 - Pay only for the seconds that the instance is on state Running.
 - Recommend to short workloads and irregular runnings that cannot be stoped until finish.
@@ -129,6 +135,8 @@ EC2 Instances in the cloud, the default type of EC2 is on-demand instances.
 **Reserved Instances**:
 
 - Minimum commitment of one year, maximum of three years.
+- Up to 75% discount compared to On-Demand.
+- Purchasing options: no upfront | partial upfront | all upfront (upfront = pay all now and get more discount).
 - Can buy a instance that runs in one specifc Region [Regional] or Specifc Zone [Zonal] - it affects the price.
 - There are three kinds of reserved instances:
 
@@ -144,3 +152,28 @@ About the prices: A Standard Reserved Instance provides a more significant disco
 | Exchanging Reserved Instances                | Can't be exchanged.        | Can be exchanged during the term for another Convertible Reserved Instance with new attributes |
 | Selling in the Reserved Instance Marketplace | Can be sold.               | Can't be sold.                                                                                 |
 | Buying in the Reserved Instance Marketplace  | Can be bought.             | Can't be bought.                                                                               |
+
+**Spot Instances**: Amazon EC2 Spot Instances let you take advantage of unused EC2 capacity in the AWS cloud. Spot Instances are available at up to a 90% discount compared to On-Demand prices.
+
+- You can "lose" at any time, because spot price changes.
+- Can be combined with On-demand Instances
+- Up to 90% of discount compared to On-Demand
+- Has access to multiple AWS services.
+- You can use Spot Instances for various stateless, fault-tolerant, or flexible applications such as big data, containerized workloads, CI/CD, web servers, high-performance computing (HPC), and test & development workloads.
+
+**Dedicated Hosts**: Book an entire physical server.
+
+- An Amazon EC2 Dedicated Host is a physical server with EC2 instance capacity fully dedicated to your use.
+- This type address compliance requirements, reduce cost by allowing you to use your own licenses
+- Three year reservation period
+- More expensive
+- Useful to compliance needs/regulatory issues, use software that require licenses.
+
+**EC2 Dedicated Instances**: Hardware dedicated to the customer.
+
+- Can share the hardware if instances within the same account.
+- It is a soft version of dedicated hosts.
+
+Difference between Dedicated Hosts and EC2 Dedicated Instances
+
+- Both allow you to use dedicated server, but in the EC2 Dedicated Hosts you pay for each Host and can have more access to the hardware it is much more flexible and is recommended when you have server bound licences, while in EC2 Dedicated Instances you pay for each instance and cannot have access to hardware.
