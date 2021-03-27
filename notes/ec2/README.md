@@ -116,3 +116,31 @@ In order to run or access aws services, usually in our terminal we would use `aw
 - For example: if we want to execute the command `aws iam list-users` we need to create a role to that contains the IAM Policy, in this case, the read user permission. To do it we need to create the policy and the role in our IAM Console and after that, in EC2 console, attach the role to the EC2 instance. Now our instance can perform this list-users action without require your secret keys directly inside the server.
 
 ### EC2 Instances Purchasing Options
+
+EC2 Instances in the cloud, the default type of EC2 is on-demand instances.
+
+**On-demand instances**
+
+- No commiment to user to specific time.
+- Full control over the life-cycle of instance: when start, stop, etc.
+- Pay only for the seconds that the instance is on state Running.
+- Recommend to short workloads and irregular runnings that cannot be stoped until finish.
+
+**Reserved Instances**:
+
+- Minimum commitment of one year, maximum of three years.
+- Can buy a instance that runs in one specifc Region [Regional] or Specifc Zone [Zonal] - it affects the price.
+- There are three kinds of reserved instances:
+
+1. **Reserved Instances**: for long workloads and always use the selected type of instance during the commitment time. (use case: host a database)
+2. **Convertible Reserverd Instances**: long workloads with flexible instances (can change the type of the instance over time)
+3. **Scheduled Reserverd Instances**: When you need to use the instance only in scheduled time. For example: when you need to use the instance every monday from 6am to 11am for one year.
+
+About the prices: A Standard Reserved Instance provides a more significant discount than a Convertible Reserved Instance.
+
+| Action                                       | Standard Reserved Instance | Convertible Reserved Instance                                                                  |
+| -------------------------------------------- | -------------------------- | ---------------------------------------------------------------------------------------------- |
+| Modify Instance                              | Modify Attributes          | Modify Attributes                                                                              |
+| Exchanging Reserved Instances                | Can't be exchanged.        | Can be exchanged during the term for another Convertible Reserved Instance with new attributes |
+| Selling in the Reserved Instance Marketplace | Can be sold.               | Can't be sold.                                                                                 |
+| Buying in the Reserved Instance Marketplace  | Can be bought.             | Can't be bought.                                                                               |
