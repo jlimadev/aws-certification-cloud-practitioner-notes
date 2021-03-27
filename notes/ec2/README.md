@@ -102,11 +102,17 @@ There are a few [instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserG
 # check permissions on .pem file (must be chmod 0400)
 # and then log using ssh:
 
-ssh -i permissionsfile.pem ec2-user@public-ip
+ssh -i permissionsfile.pem ec2-user@ec2-public-ip
 ```
 
-- EC2 Instance Connect is an Second Option to run SSH directly from Console. It runs a browser based SSH instance connection/terminal. In this case a temporary Key is uploaded to EC2 instance by AWS. Works only out-of-the-box with Amazon Linux 2.
+- **EC2 Instance Connect** is an Second Option to run SSH directly from Console. It runs a browser based SSH instance connection/terminal. In this case a temporary Key is uploaded to EC2 instance by AWS. Works only out-of-the-box with Amazon Linux 2.
 
 - Remember to Allow port 22 in Security Group.
+
+### EC2 Instance Roles
+
+In order to run or access aws services, usually in our terminal we would use `aws configure`and pass our credentials. But in EC2 instance it is not a good practice, since it is a server and can be managed by more than one person. So if you want to EC2 to performe an action in other services in our behalf, we need to create a role to this EC2.
+
+- For example: if we want to execute the command `aws iam list-users` we need to create a role to that contains the IAM Policy, in this case, the read user permission. To do it we need to create the policy and the role in our IAM Console and after that, in EC2 console, attach the role to the EC2 instance. Now our instance can perform this list-users action without require your secret keys directly inside the server.
 
 ### EC2 Instances Purchasing Options
