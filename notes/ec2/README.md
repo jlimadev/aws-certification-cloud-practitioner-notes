@@ -208,3 +208,5 @@ Difference between Dedicated Hosts and EC2 Dedicated Instances
 ---
 
 ### EC2 Instance Storage
+
+There are multiple options to EC2 Instance Storage. There is a section about this subject [here](../ec2-instance-storage/readme.md).
