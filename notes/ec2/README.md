@@ -190,6 +190,21 @@ Difference between Dedicated Hosts and EC2 Dedicated Instances
 
 ### EC2 Shared Responsibility Model
 
+**AWS Responsibility**
+
+- Infrastructure (global network security)
+- Isolation of physical hosts
+- Replace Faulty Hardware
+- Compliance validation
+
+**User Responsibility**
+
+- Security Groups rules
+- Operating System patches and updates
+- Software installed inside the instance
+- IAM Roles to/on EC2 and users access
+- Data security on your instance
+
 ---
 
 ### EC2 Instance Storage
