@@ -1,6 +1,6 @@
 # 💾 EC2 Instance Storage
 
-- [EBS Elastic Block Store - Volumes](#Elastic-Block-Store-Volumes)
+- [EBS Elastic Block Store - Volumes](#EBS--Elastic-Block-Store-Volumes)
 - [EBS Snapshots](#EBS-Snapshots)
 - [AMI Amazon Machine Image]()
 - [EC2 Image Builder]()
@@ -8,7 +8,7 @@
 - [EFS Elastic File System]()
 - [EC2 Storage Shared Responsibility Model]()
 
-### Elastic Block Store Volumes
+### EBS Elastic Block Store - Volumes
 
 **Main Informations about Elastic Block Store**:
 
