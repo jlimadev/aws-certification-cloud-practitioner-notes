@@ -1,6 +1,7 @@
 # 📝EC2 - Elastic Cloud Compute
 
 - [How to Create a Basic EC2 Instance](#How-to-Create-a-Basic-EC2-Instance)
+- [Amazon Machine Image](#Amazon-Machine-Image)
 - [EC2 Instance Types](#ec2-Instance-Types)
 - [EC2 Security Groups](#EC2-Security-Groups)
 - [EC2 SSH and Instance Connect](#EC2-SSH-and-Instance-Connect)
@@ -37,6 +38,17 @@ echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 - Finally Review and Launch. (Save the Key/Par Generated). A few seconds later the instance will be available and accessible.
 
 - When finish it, just stop/terminate the instance.
+
+---
+
+### Amazon Machine Image
+
+AMIs extends to Amazon Machine Image and are a customization of an EC2 Instance:
+
+- We can add our own software configurations, operating systems, monitoring and others configurations.
+- This will leaverage to a faster boot, because the software is pre-packed.
+- AMIs are built for a specific region (can be copied across them)
+- We can launch AMIs: 1) provided by AWS, 2) our own AMI or 3) AMIs from AWS Marketplace.
 
 ---
 
