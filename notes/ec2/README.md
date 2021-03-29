@@ -43,12 +43,29 @@ echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 
 ### Amazon Machine Image
 
-AMIs extends to Amazon Machine Image and are a customization of an EC2 Instance:
+**AMIs** extends to Amazon Machine Image and are a customization of an EC2 Instance:
 
 - We can add our own software configurations, operating systems, monitoring and others configurations.
 - This will leaverage to a faster boot, because the software is pre-packed.
 - AMIs are built for a specific region (can be copied across them)
 - We can launch AMIs: 1) provided by AWS, 2) our own AMI or 3) AMIs from AWS Marketplace.
+- We can create an AMI starting from an instance. It will create the AMI and a snapshot of the storage.
+
+**EC2 Image Builder**:
+
+- Used to automate the creation of Virtual Machine or Container Images.
+- Automatically: Create, mantain, validate and test AMIs
+- The builder can run scheduled (when a pack is updated, weekly, etc...)
+- It is a free service (pay for the resources)
+
+In order to create it by Image Builder we need to create an `Image Pipeline`, `Recipe`, `Define infrastructure` and `Define Distribution`:
+
+- This pipeline will have a name/description and a schedule (By time, by Cron or Manual)
+- After that we must choose or create a `Recipe`: In this Recipe we choose if it is a AMI or a Docker image, Select the OS, the components to be installed with the image (such as Java, AWS Cli), and the tests that we can do to check if the image has the correct components.
+- After, we must select `Define infrastructure`: To do it we need to create a Role for the Image Builder execute actions in our behalf, it is an EC2 Role. Then we select the instance Type (e.g. t2.micro) and other basic configurations.
+- Finally, we `Define Distribution`, by choosing the Region(s) to be available and ready to use.
+
+Since this pipeline is ready we can execute anytime to build our AMI. This pipeline will create an EC2 instance (where the AMI will be created based on) and terminate it. As well an instance will be created to test and after testing phase, it will be terminated. Finally it will create the distribution and the AMI will be available to use.
 
 ---
 
