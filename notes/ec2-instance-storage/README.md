@@ -2,9 +2,7 @@
 
 - [EBS Elastic Block Store - Volumes](#ebs-elastic-block-store---volumes)
 - [EBS Snapshots](#EBS-Snapshots)
-- [AMI Amazon Machine Image]()
-- [EC2 Image Builder]()
-- [EC2 Instance Store]()
+- [EC2 Instance Store](#EC2-Instance-Store)
 - [EFS Elastic File System]()
 - [EC2 Storage Shared Responsibility Model]()
 
@@ -34,4 +32,17 @@ Snapshot is a backup of our EBS Volumes at a point in time. It keeps available i
 
 - To Create this snapshot you don't have to detach the volume from an instance (besides it is recommended)
 - With the Snapshot we can Copy to other regions or AZ's or Create a brand new EBS Volume.
-- This snapshot will be a "start" to the new EBS Volume. So the new volume will start with the data starting from the snapshot.
+- This snapshot will be a "start" to the new EBS Volume. So the new volume will start with the data starting from the snapshot. The new volume will be a Restore from a snapshot.
+
+---
+
+### EC2 Instance Store
+
+This is the **physical HARD DRIVE** attached to the server. Limited space, but higher performance. It is called by **ephemeral**
+
+- Better I/O performance. It is good to buffer/cache/scratch data/temp files. Always with short worloads.
+- EC2 Instance Store lose their storage and data if they are stopped.
+- Risk of losing data (because it is a physical hardware)
+- Backups and Replications are our responsibility.
+
+---
