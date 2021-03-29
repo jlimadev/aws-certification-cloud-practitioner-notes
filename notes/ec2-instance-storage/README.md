@@ -3,8 +3,9 @@
 - [EBS Elastic Block Store - Volumes](#ebs-elastic-block-store---volumes)
 - [EBS Snapshots](#EBS-Snapshots)
 - [EC2 Instance Store](#EC2-Instance-Store)
-- [EFS Elastic File System]()
-- [EC2 Storage Shared Responsibility Model]()
+- [EFS Elastic File System](#EFS---Elastic-File-System)
+- [EVS vs. EFS](#EBS-vs-EFS)
+- [EC2 Storage Shared Responsibility Model](#EC2-Storage-Shared-Responsibility-Model)
 
 ### EBS Elastic Block Store - Volumes
 
@@ -46,3 +47,33 @@ This is the **physical HARD DRIVE** attached to the server. Limited space, but h
 - Backups and Replications are our responsibility.
 
 ---
+
+### EFS - Elastic File System
+
+EFS extends to Elastic File System and it is a Network File System (NFS). This NFS can be attached to hundreds of EC2 instances at a time.
+
+- It is a shared NFS.
+- Works in Linux EC2 Instances and works acrros multiple AZs. It makes EFS High Available and Scalable. But, this also makes the EFS more expensinve (3x gp2) and you pay what you use not capacity. If you use only 20gb, that's your usage and you'll pay for this.
+
+### EBS vs EFS
+
+- EBS are bound to one AZ and can be attached to one instance at a time. To move acrros regions we can use the snapashots (it is just a copy).
+- EFS works across multiple regions and can be attached to multiple instances. The same data is available to all instances. It makes the EFS a shared file system.
+
+---
+
+### EC2 Storage Shared Responsibility Model
+
+**AWS Responsibility**
+
+- Infrastructure
+- Replication for Data through the Drivers and Volumes (ensure disasters recover or in case a Hardware stop working)
+- Replace Faulty Hardwares
+- Ensure that their employees cannot access our data.
+
+**User Responsibility**
+
+- Setup backup and snapshots procedures
+- Data encryption
+- Responsibility about the data content on drivers
+- Understand the risk of using [EC2 Instance Store](#EC2-Instance-Store)
