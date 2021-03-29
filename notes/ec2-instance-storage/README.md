@@ -30,8 +30,8 @@
 
 ### EBS Snapshots
 
-Snapshot is a backup of our EBS Volumes at a point in time.
+Snapshot is a backup of our EBS Volumes at a point in time. It keeps available in one Region. But to use it in a volume, we need to create the volume inside an AZ.
 
 - To Create this snapshot you don't have to detach the volume from an instance (besides it is recommended)
-- With the snapshot we can copy data across AZs/Regions
+- With the Snapshot we can Copy to other regions or AZ's or Create a brand new EBS Volume.
 - This snapshot will be a "start" to the new EBS Volume. So the new volume will start with the data starting from the snapshot.
