@@ -16,7 +16,7 @@
 - It can be detached from an instance and attached to other quickly (benefit of network driver)
 - It Can persist data even if the instance is terminated.
 - Can be mounted to one instance at a time (On CCP level exam). One instance can have more than one EBS at a time.
-- They are bound to a specific availability zone, this means if your instance is in us-east1-a and your EBS is in us-east1-b, they cannot be bound to each other. To do it across AZs, we need **Snapshots**.
+- They are bound to a specific availability zone, this means if your instance is in us-east1-a and your EBS is in us-east1-b, they cannot be bound to each other. To do it across AZs, we need **Snapshots** or create an EBS Volume to the same AZ.
 - It have a provisioned capacity in GBs or IOPs (inputs and outputs per second). The billing is based on this capacity, and this capacity can be increased/decreased over time.
 
 **Good to know about EBS**:
@@ -29,3 +29,9 @@
 ---
 
 ### EBS Snapshots
+
+Snapshot is a backup of our EBS Volumes at a point in time.
+
+- To Create this snapshot you don't have to detach the volume from an instance (besides it is recommended)
+- With the snapshot we can copy data across AZs/Regions
+- This snapshot will be a "start" to the new EBS Volume. So the new volume will start with the data starting from the snapshot.
