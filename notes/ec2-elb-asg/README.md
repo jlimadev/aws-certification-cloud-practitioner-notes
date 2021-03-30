@@ -58,7 +58,7 @@ Elastic Load Balancer are managed by AWS and they are servers that forward the i
 
 - Spread the load accross multiple downstream instances.
 - Expose a single point of access (DNS) to our application.
-- Handle with failures of instances (Regular health checks to the instances)
+- Handle with failures of instances (Regular health checks to the instances), don't redirect to unhealthy instances.
 - Provide SSL termination (HTTPS) for our websites
 - High Availability across zones
 
@@ -82,12 +82,29 @@ When configuring the ELB we need to create a `Target Group`, this target group c
 
 ### Auto Scaling Groups (ASG)
 
-The loads and access of websites can change overtime, so we need to add or remove resources. We can do it automatically by using the Auto Scaling Groups. To do so, we need to have an Elastic Load Balancer configure, which means that our application can manage the loads.
+The loads and access of websites can change overtime, so we need to add or remove resources. We can do it automatically by using the Auto Scaling Groups. To do so, we need to have an Elastic Load Balancer configured, which means that our application can manage the loads.
 
 - The main goal of ASG:
   - Scale Out (add EC2 instances) to match an increased load.
   - Scale In (remove EC2 instances) to match a decreased load.
   - Ensure that we have a minimum, desired and maximum number of machines running.
   - Automatically register new instances to our Load Balancer.
-  - Replace unhealthy instances (If a instance fails, it register a new one)
+  - Replace unhealthy instances (If a instance fails, it register a new one automatically)
 - The Auto Scaling Groups leaverage to **costs savings**, since we can adjust the capacity automatically and scale in the right moments (imagine a peak of access in our website, we are going to have machines available to deal with the load and after that we don't need them anymore. In this case we pay more, but just on the peak and after that we dont have to pay the any additional machines).
+
+**Tips, to Create an ASG**:
+
+- When creating an ASG Group, we need to create a template, so the new instances will be herited from it. Whenever we need to register a new instance, ASG will get this template and launch it for us.
+- We can also attach our Load Balancer to our ASG and select our `target group`, so the new instances will be created and attached to the target group.
+- Create Health Checks to Replace unhealthy instances
+- Create the group size: Minimum of Instances, Desired Number of Instances and the Maximum Number of Instances.
+- When create this groups sizes, we can create the Scaling policies to Target tracking scaling policy, this means that we can scale based on CPU usage, network in or out, count of requests per target, etc.
+
+---
+
+Summary to Create an Auto Scaling Group with Load Balancing:
+
+- Create the Load Balancing (Application Load Balancer) give it a name, select the AZs to be available and the Security Groups.
+- Create the Target Groups (attach instances if needed)
+- Create the ASG Group configurations (select subnets, template instance, select the target groups, select health checks, select the group sizes [min, desired, max] + scaling polices).
+- Finally, the server i'll be ready to scale and is totally elastic. 👌✔
