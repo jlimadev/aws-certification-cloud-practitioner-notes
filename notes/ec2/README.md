@@ -9,6 +9,7 @@
 - [EC2 Instances Purchasing Options](#EC2-Instances-Purchasing-Options)
 - [EC2 Shared Responsibility Model](#EC2-Shared-Responsibility-Model)
 - [EC2 Instance Storage](#EC2-Instance-Storage)
+- [EC2 Elastic Load Balancing and Auto Scaling Groups](#EC2-Elastic-Load-Balancing-and-Auto-Scaling-Groups)
 
 AWS EC2 is one of the most popular of AWS services. EC2 extends to Elastic Compute Cloud and is a service where you can rent virtual servers from AWS. This Cloud Computing is from Infrastructure as a Service (IaaS) type. EC2 is also a Region Scoped Service.
 
@@ -238,4 +239,8 @@ Difference between Dedicated Hosts and EC2 Dedicated Instances
 
 ### EC2 Instance Storage
 
-There are multiple options to EC2 Instance Storage. There is a section about this subject [here](./ec2-instance-storage/README.md).
+There are multiple options to EC2 Instance Storage. There is a section about this subject [here](../ec2-instance-storage/README.md).
+
+### EC2 Elastic Load Balancing and Auto Scaling Groups
+
+EC2 have a few options to Load Balancer and auto scale, There is a section about this subject [here](../ec2-elb-asg/README.md).
