@@ -2,6 +2,9 @@
 
 This is where we can see the power of cloud computing, because of the automacally scaling and distribution of loads with low configurations.
 
+- [Scalability & High Availability](#scalability--high-availability)
+- [Scalability vs Elasticity (vs Agility)]()
+
 ### Scalability & High Availability
 
 **Scalability**: Scalability is linked but is different from High Availability, Scalability means that the appliation or system can handle different amounts of load by adapting. There are two different kinds of scalability:
@@ -32,3 +35,11 @@ This is where we can see the power of cloud computing, because of the automacall
 - A few analogies:
   1. To do it in AWS we have ASG and ELB that are multi-az.
   2. This company has employees in three different cities in the country. So if anything stops one branch, the other two still are working and can handle the workload.
+
+### Scalability vs Elasticity (vs Agility)
+
+- **Scalability**: is the ability for a system to accommodate a larger load by making the hardware stronger (vertical scale, scale-up) or by add nodes (horizontal scale, scale-out).
+
+- **Elasticity**: Once the system is scalable, elasticity means that there will be some "auto-scaling" so that system can scale based on the load. This is "cloud-friendly": pay-per-use, match demand, optmize costs.
+
+- **Agility**: (not related to scale - distractor), new IT resources available very quickly. (one click away, what used to happen in weeks)
