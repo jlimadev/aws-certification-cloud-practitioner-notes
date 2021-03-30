@@ -52,7 +52,7 @@ This is where we can see the power of cloud computing, because of the automacall
 
 ### Elastic Load Balancer (ELB)
 
-Elastic Load Balancer are managed by AWS and they are servers that forward the internet traffic to multiple servers (EC2 Instances). They are the _backend of EC2 Instances_. The ELB is what will be exposed to the users and when receive the connection/access it will redirect traffic to instances.
+Elastic Load Balancer are managed by AWS and they are servers that forward the internet traffic to multiple servers (EC2 Instances). `They are the backend of EC2 Instances`. The ELB is what will be exposed to the users and when receive the connection/access it will redirect traffic to instances.
 
 **Why use a Load Balancer?**
 
@@ -75,6 +75,8 @@ Elastic Load Balancer are managed by AWS and they are servers that forward the i
 - Network Load Balancer: (Ultra-high performance, allows TCP) - Layer 4 (handle with millions of request per second, like gaming situation).
 - Gateway Load Balancer: New AWS ELB used when you need to deploy and manage a fleet of third-party virtual appliances that support GENEVE
 - Classic Load Balancer: (slowly retiring) - Layer 4 and 7
+
+When configuring the ELB we need to create a `Target Group`, this target group contains the instances that are going to handle the multiple access.
 
 ---
 
