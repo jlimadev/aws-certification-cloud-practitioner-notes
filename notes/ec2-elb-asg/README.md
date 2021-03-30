@@ -29,7 +29,6 @@ This is where we can see the power of cloud computing, because of the automacall
 
 - High Availability means to run our app/system in at least two different AZs
   - This means more Security, Disaster Recover, Keep the work running.
-  - To do it in AWS we have ASG and ELB that are multi-az.
 - A few analogies:
-  1. asdfa
+  1. To do it in AWS we have ASG and ELB that are multi-az.
   2. This company has employees in three different cities in the country. So if anything stops one branch, the other two still are working and can handle the workload.
