@@ -79,3 +79,13 @@ Elastic Load Balancer are managed by AWS and they are servers that forward the i
 ---
 
 ### Auto Scaling Groups (ASG)
+
+The loads and access of websites can change overtime, so we need to add or remove resources. We can do it automatically by using the Auto Scaling Groups. To do so, we need to have an Elastic Load Balancer configure, which means that our application can manage the loads.
+
+- The main goal of ASG:
+  - Scale Out (add EC2 instances) to match an increased load.
+  - Scale In (remove EC2 instances) to match a decreased load.
+  - Ensure that we have a minimum, desired and maximum number of machines running.
+  - Automatically register new instances to our Load Balancer.
+  - Replace unhealthy instances (If a instance fails, it register a new one)
+- The Auto Scaling Groups leaverage to **costs savings**, since we can adjust the capacity automatically and scale in the right moments (imagine a peak of access in our website, we are going to have machines available to deal with the load and after that we don't need them anymore. In this case we pay more, but just on the peak and after that we dont have to pay the any additional machines).
