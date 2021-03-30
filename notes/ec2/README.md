@@ -11,7 +11,7 @@
 - [EC2 Instance Storage](#EC2-Instance-Storage)
 - [EC2 Elastic Load Balancing and Auto Scaling Groups](#EC2-Elastic-Load-Balancing-and-Auto-Scaling-Groups)
 
-AWS EC2 is one of the most popular of AWS services. EC2 extends to Elastic Compute Cloud and is a service where you can rent virtual servers from AWS. This Cloud Computing is from Infrastructure as a Service (IaaS) type. EC2 is also a Region Scoped Service.
+AWS EC2 is one of the most popular of AWS services. EC2 stands to Elastic Compute Cloud and is a service where you can rent virtual servers from AWS. This Cloud Computing is from Infrastructure as a Service (IaaS) type. EC2 is also a Region Scoped Service.
 
 ### How to Create a Basic EC2 Instance
 
@@ -44,7 +44,7 @@ echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 
 ### Amazon Machine Image
 
-**AMIs** extends to Amazon Machine Image and are a customization of an EC2 Instance:
+**AMIs** stands to Amazon Machine Image and are a customization of an EC2 Instance:
 
 - We can add our own software configurations, operating systems, monitoring and others configurations.
 - This will leaverage to a faster boot, because the software is pre-packed.

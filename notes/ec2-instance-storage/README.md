@@ -50,7 +50,7 @@ This is the **physical HARD DRIVE** attached to the server. Limited space, but h
 
 ### EFS - Elastic File System
 
-EFS extends to Elastic File System and it is a Network File System (NFS). This NFS can be attached to hundreds of EC2 instances at a time.
+EFS stands to Elastic File System and it is a Network File System (NFS). This NFS can be attached to hundreds of EC2 instances at a time.
 
 - It is a shared NFS.
 - Works in Linux EC2 Instances and works acrros multiple AZs. It makes EFS High Available and Scalable. But, this also makes the EFS more expensinve (3x gp2) and you pay what you use not capacity. If you use only 20gb, that's your usage and you'll pay for this.
