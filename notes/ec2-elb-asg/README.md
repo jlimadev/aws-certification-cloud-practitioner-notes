@@ -3,7 +3,9 @@
 This is where we can see the power of cloud computing, because of the automacally scaling and distribution of loads with low configurations.
 
 - [Scalability & High Availability](#scalability--high-availability)
-- [Scalability vs Elasticity (vs Agility)]()
+- [Scalability vs Elasticity (vs Agility)](#scalability-vs-elasticity-vs-agility)
+- [Elastic Load Balancer (ELB)](#elastic-load-balancer-elb)
+- [Auto Scaling Groups (ASG)](#auto-scaling-groups-asg)
 
 ### Scalability & High Availability
 
@@ -23,7 +25,7 @@ This is where we can see the power of cloud computing, because of the automacall
   - Have no limitations, we can always add more instances
   - Implies to distributed systems and web apps/modern apps
   - In AWS **Scale Out** means increasing the number of instances and **Scale In** meanns decreasing the number of instances.
-  - On AWS is easy to scale because of the [**Auto Scaling Groups**]() and [**Load Balancer**]()
+  - On AWS is easy to scale because of the [**Auto Scaling Groups**](#auto-scaling-groups-asg) and [**Load Balancer**](#elastic-load-balancer-elb)
   - A few analogies:
     1. Add more instances to our application run (Scale out)
     2. Hire multiple temporary employees to handle with workload. As soon the load is lower you can dismiss them and keep your default number of employees.
@@ -43,3 +45,19 @@ This is where we can see the power of cloud computing, because of the automacall
 - **Elasticity**: Once the system is scalable, elasticity means that there will be some "auto-scaling" so that system can scale based on the load. This is "cloud-friendly": pay-per-use, match demand, optmize costs.
 
 - **Agility**: (not related to scale - distractor), new IT resources available very quickly. (one click away, what used to happen in weeks)
+
+### Elastic Load Balancer (ELB)
+
+Elastic Load Balancer are managed by AWS and they are servers that forward the internet traffic to multiple servers (EC2 Instances). They are the _backend of EC2 Instances_. The ELB is what will be exposed to the users and when receive the connection/access it will redirect traffic to instances.
+
+**Why use a Load Balancer?**
+
+- Spread the load accross multiple downstream instances.
+- Expose a single point of access (DNS) to our application.
+- Handle with failures of instances (Regular health checks to the instances)
+- Provide SSL termination (HTTPS) for our websites
+- High Availability across zones
+
+**Why use a Elastic Load Balancer?**
+
+### Auto Scaling Groups (ASG)
