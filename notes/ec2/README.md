@@ -244,3 +244,13 @@ There are multiple options to EC2 Instance Storage. There is a section about thi
 ### EC2 Elastic Load Balancing and Auto Scaling Groups
 
 EC2 have a few options to Load Balancer and auto scale, There is a section about this subject [here](../ec2-elb-asg/README.md).
+
+### ECS Fargate and ECR
+
+On practitioner level is required to understand what is the main diferences between ECS Fargate and ECR
+
+- Elastic Container Service:
+
+- Fargate:
+
+- Elastic Container Register:
