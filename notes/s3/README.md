@@ -78,8 +78,8 @@ The `objects` are the files to be stored in S3 Bucket.
 **Resource Based:**
 
 - [Bucket Policies](#s3-bucket-policy): Rules attached directly to S3 Buckets where we can allow or deny access/actions in our bucket.
-- Object Access Control List (ACL) - Object level.
-- Bucket Access Control List (ACL) - Bucket level.
+- Object Access Control List (ACL) - Object level. Grant or Deny access, but this rule is attached directly to the object. More common ACL.
+- Bucket Access Control List (ACL) - Bucket level. Less commom, normally use Bucket Policies.
 
 **Encryption:** We can encrypt objects in S3 using encryption keys.
 
