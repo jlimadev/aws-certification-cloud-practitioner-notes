@@ -1,8 +1,14 @@
 # 📝S3 - Simple Storage Service
 
-S3 stands to Simple Storage Service and it is one of the main services of AWS. S3 is a Regional service. This service is basically "Infinity Scaling" storage.
+S3 stands to Simple Storage Service and it is one of the main services of AWS. This service is basically "Infinity Scaling" storage.
+Amazon S3 Console is a global console, that means that we can see all buckets in all regions, but the buckets itself, needs to be bound to a region.
 
-### S3 Use cases:
+- [S3 Use cases](#s3-use-cases)
+- [S3 Buckets](#s3-buckets)
+- [S3 Objects](#s3-objects)
+- [S3 Create a Bucket and Add Objects](#s3-create-a-bucket-and-add-objects)
+
+### S3 Use cases
 
 - Backup and Storage
 - Disarter Recovery (copying data in multiple regions)
@@ -38,3 +44,14 @@ The `objects` are the files to be stored in S3 Bucket.
 - The object contains Metadata: list of key/value pairs, Track data, Security and lifecycle goals
 - The Object contains Tags to identify better
 - Version ID (S3 Allows Versioning)
+
+### S3 Create a Bucket and Add Objects
+
+- Creating the bucket
+  - In AWS Console we can create the bucket, and choose the name (Globally unique name) and the Region. We can also copy the settings from an existing bucket.
+  - Choose if we are blocking Global Access (on the internet)
+  - Enable versioning
+  - Add Tags and Encryption
+  - Click in create
+- Adding Objects
+  - Inside the bucket, just click in Upload (or drag and drop) and select the file.
