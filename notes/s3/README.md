@@ -7,6 +7,10 @@ Amazon S3 Console is a global console, that means that we can see all buckets in
 - [S3 Buckets](#s3-buckets)
 - [S3 Objects](#s3-objects)
 - [S3 Create a Bucket and Add Objects](#s3-create-a-bucket-and-add-objects)
+- [S3 Security](#s3-security)
+  - [S3 Bucket Policy](#s3-bucket-policy)
+
+---
 
 ### S3 Use cases
 
@@ -19,6 +23,8 @@ Amazon S3 Console is a global console, that means that we can see all buckets in
 - Software delivery
 - Many AWS services uses Amazon S3 as integration/storage as well, such as [EBS Snapashots](../ec2-instance-storage/README.md/#EBS-Snapshots).
 
+---
+
 ### S3 Buckets
 
 Amazon S3 allows people to store `objects` (think as files) in `buckets` (think as directories).
@@ -27,6 +33,8 @@ Amazon S3 allows people to store `objects` (think as files) in `buckets` (think 
 - Buckets must be created inside a specific Region.
 - Naming Convention: To give a name to the bucket must follow this naming convention
   - No uppercase, No underscore, 3-63 characters long, Not an IP, Must start with lowercase letter or number"
+
+---
 
 ### S3 Objects
 
@@ -45,6 +53,8 @@ The `objects` are the files to be stored in S3 Bucket.
 - The Object contains Tags to identify better
 - Version ID (S3 Allows Versioning)
 
+---
+
 ### S3 Create a Bucket and Add Objects
 
 - Creating the bucket
@@ -55,3 +65,47 @@ The `objects` are the files to be stored in S3 Bucket.
   - Click in create
 - Adding Objects
   - Inside the bucket, just click in Upload (or drag and drop) and select the file.
+  - We can also create folder and objects to it.
+
+---
+
+### S3 Security
+
+**User Based:**
+
+- IAM Policies - attach IAM policies to users or groups and them you be allowed to access the bucket from console/cli/sdk
+
+**Resource Based:**
+
+- [Bucket Policies](#s3-bucket-policy): Rules attached directly to S3 Buckets where we can allow or deny access/actions in our bucket.
+- Object Access Control List (ACL) - Object level.
+- Bucket Access Control List (ACL) - Bucket level.
+
+**Encryption:** We can encrypt objects in S3 using encryption keys.
+
+An IAM Principal can access S3 objects if:
+
+- The IAM Permissions allows it **OR** if the Resource Policy allows. (an user that does not contain the IAM Policy to access the bucket, can access a bucket where the Resource Policy allows IAM Users)
+- There is not Deny
+
+A few exemples of usage of S3 Security:
+
+- Your site exposed to web, by default nobody can access it, to allow it we need to create to attach the **S3 Bucket Policy** to allow the public access.
+- An IAM User that already has a policy attached to the account allowing S3 access. In this case there is no need to create the S3 Bucket Policy.
+- An EC2 instance wants to access our S3, so we need to create a Role to EC2 and attach the permisions(policies) to it and attach the role in our EC2. Now the instance will be able to access the bucket.
+- Cross-Account-Access: For this case we may use the S3 Bucket Policy, which will allow the cross-account access.
+
+#### S3 Bucket Policy
+
+Bucket policies are JSON based policies, looks like the IAM Policy; In this document we need to define:
+
+- Resources:
+- Action: Set of API to allow or deny (e.g. S3:GetObject)
+- Effect: Allow or Deny
+- Principal: Who?
+
+Usually we use S3 Bucket to:
+
+1. Grant Public Access to the bucket; (for this we must remove the public access settings on the bucket on `Block all public access` settings)
+2. To force objects to be encrypted at the upload
+3. Grant access to another account (cross-account)
