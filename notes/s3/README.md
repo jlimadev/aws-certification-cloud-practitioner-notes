@@ -197,6 +197,7 @@ We have two types of data replication: `Cross-Region-Replication (CRR)` and `Sam
 - Replicate all the content continuously to another bucket, it happens asynchronously.
 - For this we must enable versioning in **Source** and **Destination** Bucket.
 - The buckets can be in different accounts. (Need the prorper IAM permissions)
+- The replication rule needs a IAM Role to perform the replication. It creates one automatically or we can create our own role.
 
 Cross-Region-Replication (CRR) use cases: Compliance, lower latency access, replication cross-account.
 
