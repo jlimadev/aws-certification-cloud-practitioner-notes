@@ -180,3 +180,30 @@ About deleting versioned objects:
 ---
 
 ### S3 Server Access Logging
+
+It is for audit purposes, enables log access to S3Bucket. Any access (allowed, denied) will be logged into another S3 bucket.
+
+- The logs are written in a specific bucket for logs.
+- This data can be analyzed: Get errors, issues, audit, suspicious patterns.
+
+We can enable it in our bucket properties and change the `Server access logging` and select the target bucket. So, we cannot forget to create the target bucket, where the logs will be stored.
+
+---
+
+### S3 Replication
+
+We have two types of data replication: `Cross-Region-Replication (CRR)` and `Same-Region-Replication (SRR)`.
+
+- Replicate all the content continuously to another bucket, it happens asynchronously.
+- For this we must enable versioning in **Source** and **Destination** Bucket.
+- The buckets can be in different accounts. (Need the prorper IAM permissions)
+
+Cross-Region-Replication (CRR) use cases: Compliance, lower latency access, replication cross-account.
+
+Same-Region-Replication (SRR) use cases: log aggregation, live replication between test and prod environments.
+
+- It does not replicate files before the replication setting be set, only new files. To replicate existing files we must re-upload or use s3 sync tool.
+
+---
+
+### S3 Storage Classes
