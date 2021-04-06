@@ -10,6 +10,11 @@ Amazon S3 Console is a global console, that means that we can see all buckets in
 - [S3 Security](#s3-security)
   - [S3 Bucket Policy](#s3-bucket-policy)
 - [S3 Static Website](#s3-static-website)
+- [S3 Versioning](#s3-versioning)
+- [S3 Server Access Logging](#s3-server-access-logging)
+- [S3 Replication](#s3-replication)
+- [S3 Storage Classes](#s3-storage-classes)
+- [S3 Glacier Vault Lock and Object Lock](#s3-glacier-lock-and-object-lock)
 
 ---
 
@@ -146,3 +151,32 @@ To create an Static Web site we can upload a `index.html` in our bucket and, in 
 - If try to access a not public S3 Bucket, a 403 error will show up.
 
 ---
+
+### S3 Versioning
+
+Keep versions of the objects in S3 Bucket. Anytime we update a file, it will get a new version. Versioning is activated in bucket level. To enable it in AWS Console, we need to go in our Bucket and enable `Bucket Versioning`.
+
+Advantages by activating the versioning feature:
+
+- Protection to file deletion (intended or unintended).
+- Restore versions of the file.
+- Easy rollback to previous versions.
+
+The file when is versioned, it keeps the same key, but Increment the key by 1.
+
+Important to understand about versioning:
+
+- By default, versioning is not enabled, but we can enable whenever we want.
+- File onlly start to get versions when we enable this feature to the bucket.
+- Files prior the versioning will get the first version as null.
+- Suspending versioning will not suspend versioned files.
+
+About deleting versioned objects:
+
+- To delete permanently an object, we need to select the specific version to delete.
+- When we delete without choosing the version, it will add a `Delete Mark` to the object. To delete permanently we need to do it in each version.
+- If we want to restore an object with delete mark, we need to perform the delete action again, but in this case, it will delete the delete mark, making the the object be available.
+
+---
+
+### S3 Server Access Logging
