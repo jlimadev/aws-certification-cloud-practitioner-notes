@@ -203,6 +203,7 @@ Cross-Region-Replication (CRR) use cases: Compliance, lower latency access, repl
 Same-Region-Replication (SRR) use cases: log aggregation, live replication between test and prod environments.
 
 - It does not replicate files before the replication setting be set, only new files. To replicate existing files we must re-upload or use s3 sync tool.
+- If we need to deletions we also need to set this option.
 
 ---
 
