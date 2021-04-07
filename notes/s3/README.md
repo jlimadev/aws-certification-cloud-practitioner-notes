@@ -209,3 +209,46 @@ Same-Region-Replication (SRR) use cases: log aggregation, live replication betwe
 ---
 
 ### S3 Storage Classes
+
+Amazon S3 has multiple classes of storage, and the type of storage can save some costs.
+
+To understand better the classes we need to understand the concepts of Durability and Availability.
+
+**Durability**: Means how long your file will keep stored or How often you will lose your file. AWS by default have the High Durability (99,99 | 11 9's) of objects across multiple AZ in all storage classes.
+
+**Availability**:
+Here are they: How readily available a service is. S3 standard has 99.99% availability. S3 may not be available per 53 minutes in a year.
+
+**Amazon S3 Standard - General Purpose:**
+
+- This is the most common. Used for frequently accessed data
+- 99,99% of Availability
+- Low latency and high throughput
+- Sustain 2 concurrent facility failures
+- Use cases: Big Data analytics, mobile & gaming applications, content distribution
+
+**Amazon S3 Standard-Infrequent Access (IA):**
+
+- When you don't access the file often, but requires rapid access when needed.
+- 99,99% of Availability
+- Lower cost compared to Amazon S3 Standard, but retrieval fee
+- Sustain 2 concurrent facility failures
+- Use Cases: As a data store for disaster recovery, backups…
+
+**Amazon S3 One Zone-Infrequent Access:**
+
+- For files that are easy to recreate
+
+**Amazon S3 Intelligent Tiering**
+
+- Auto select the type (Frequent or Infrequent)
+
+**Amazon Glacier**
+
+- Backups and Archiving
+
+**Amazon Glacier Deep Archive**
+
+- For backups and archiving that will take a long time to be retrieved
+
+**Amazon S3 Reduced Redundancy Storage (deprecated - omitted)**
