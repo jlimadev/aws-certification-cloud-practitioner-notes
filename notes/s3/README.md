@@ -255,10 +255,26 @@ The S3 storage classes are:
 
 **Amazon Glacier**
 
-- Backups and Archiving
+- Low cost object storage (in GB/month) meant for archiving/backup
+- Data is retained for the longer term (years)
+- Retrieval options (each one has the fees for retrieval):
+  - Expedited (1 to 5 minutes)
+  - Standard (3 to 5 hours)
+  - Bulk (5 to 12 hours)
+- Use cases for: for Backups and Archiving
 
 **Amazon Glacier Deep Archive**
 
-- For backups and archiving that will take a long time to be retrieved
+- Store data for years in AWS.
+- Chepeast option for Backup and Archive
+- All the data is replicated in at minimum of 3 AZs
+- Retrieval options (each one has the fees for retrieval):
+  - Standard (12 hours)
+  - Bulk (48 hours)
+- For backups and archiving that will take a long time to be retrieved, store regulatory data that demands history, like medical data, financial data, etc. Not very often requested, but if need this data we can have it in up to 12 hours.
 
-**Amazon S3 Reduced Redundancy Storage (deprecated - omitted)**
+**Amazon S3 Reduced Redundancy Storage**: (deprecated - omitted)
+
+Transition Rules: We can also create transition rules to move the objects between the classes by the following rules:
+
+![AWS Global vs Regional vs AZ](https://csharpcorner.azureedge.net/article/how-to-enable-lifecycle-management-in-s3-bucket-using-aws-portal4/Images/SupportedTransitionsWaterfallModel.png)
