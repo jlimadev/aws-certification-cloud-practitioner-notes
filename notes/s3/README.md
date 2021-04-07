@@ -210,14 +210,16 @@ Same-Region-Replication (SRR) use cases: log aggregation, live replication betwe
 
 ### S3 Storage Classes
 
-Amazon S3 has multiple classes of storage, and the type of storage can save some costs.
+Amazon S3 has multiple classes of storage, and the type of storage can save some costs. A single bucket can have objects in different classes. They are defined in Object Level.
 
 To understand better the classes we need to understand the concepts of Durability and Availability.
 
 **Durability**: Means how long your file will keep stored or How often you will lose your file. AWS by default have the High Durability (99,99 | 11 9's) of objects across multiple AZ in all storage classes.
 
 **Availability**:
-Here are they: How readily available a service is. S3 standard has 99.99% availability. S3 may not be available per 53 minutes in a year.
+How readily available a service is. S3 standard has 99.99% availability. S3 may not be available per 53 minutes in a year.
+
+The S3 storage classes are:
 
 **Amazon S3 Standard - General Purpose:**
 
@@ -227,7 +229,7 @@ Here are they: How readily available a service is. S3 standard has 99.99% availa
 - Sustain 2 concurrent facility failures
 - Use cases: Big Data analytics, mobile & gaming applications, content distribution
 
-**Amazon S3 Standard-Infrequent Access (IA):**
+**Amazon S3 Standard - Infrequent Access (IA):**
 
 - When you don't access the file often, but requires rapid access when needed.
 - 99,99% of Availability
@@ -235,13 +237,21 @@ Here are they: How readily available a service is. S3 standard has 99.99% availa
 - Sustain 2 concurrent facility failures
 - Use Cases: As a data store for disaster recovery, backups…
 
-**Amazon S3 One Zone-Infrequent Access:**
+**Amazon S3 One Zone - Infrequent Access:**
 
-- For files that are easy to recreate
+- It is very simmilar to S3 Standard IA, but his one only saves the file in one AZ.
+- 99.5% Availability
+- Lower cost compared to S3-IA (by 20%)
+- Use cases: Store secondary backups copies of non-premise data, or store data you can easily recreate or to save replicas from another regions in S3.
 
 **Amazon S3 Intelligent Tiering**
 
 - Auto select the type (Frequent or Infrequent)
+- 99,99% of Availability
+- Same Low latency and high throughput of S3 Standard
+- _Cost optimization_ by auto move the objects between tiers based on the use patterns of the object (If used often goes to S3 Standard, otherwise it goes to S3 IA).
+- It is also very resilient with events that impact an entire AZ.
+- Use cases: when you don't know exactly the tiering or want optmize costs.
 
 **Amazon Glacier**
 
