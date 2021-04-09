@@ -302,6 +302,17 @@ Lock objects to specified amount of time.
 
 ---
 
+### S3 Snow Family
+- Highly-secure, portable devices to collect and process data at the edge, and migrate data into and out of AWS.
+
+**Data Migration**
+
+---
+
+### S3 Storage Gateway
+
+---
+
 ### S3 Shared Responsibility Model
 
 **AWS**:
