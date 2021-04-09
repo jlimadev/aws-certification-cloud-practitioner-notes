@@ -299,17 +299,145 @@ Lock objects to specified amount of time.
 - We create a Lock Policy to the files, and the files will be locked to modifications.
 - Once the policy is set, no one can delete or modify the policy.
 - Really good to use when we have compliance data retention rules and policies.
+  > S3 Glacier Vault Lock allows you to easily deploy and enforce compliance controls for individual S3 Glacier vaults with a vault lock policy. You can specify controls such as “write once read many” (WORM) in a vault lock policy and lock the policy from future edits. Once locked, the policy can no longer be changed.
 
 ---
 
 ### S3 Snow Family
-- Highly-secure, portable devices to collect and process data at the edge, and migrate data into and out of AWS.
 
-**Data Migration**
+Highly-secure, portable devices and offline devices, to collect and process data at the edge, and migrate data into and out of AWS.
+
+The Snow Family: Offline devices to perform data migrations. If takes more than a week to transfer all the data, use the snowball devices.
+
+#### Data Migration
+
+- Snow devices types: Snowcone, Snowball Edge and Snowmobile
+- Use to migrate data through devices instead of using network. Network is so much more limited to data transfer, so the migration can be much more faster when using this kind f device.
+- Reasons why network transfer is limited: Limited connectivity, Limited bandwidth, High network costs, Shared bandwidth, Connection stability.
+- Example of usage with S3 use case
+  - Normal method: direct upload files to S3 using network.
+  - With snow family: AWS send the device and you transfer the data to the device and send it back to AWS. Internally they will upload the data to S3 very fast.
+
+**AWS Snowball Edge**:
+
+- Physical data transport solution to move TBs or PBs of data in or out of AWS.
+- Alternative to move data over the network
+- Pay per data transfer job
+- Provide block storage and Amazon S3 Object storage
+- Use case: large data cloud migration, DC decommission, disaster recovery
+
+We have a few types of snowball edge:
+
+- **Snowball Edge Storage Optimized**:
+- 80 TB of HDD Capacity for block volume and S3 Compatible Storage
+- **Snowball Edge Compute Optimized**:
+- 42 TB of HDD Capacity for block volume and S3 Compatible Storage
+
+**AWS Snowcone**:
+
+Small and portable computing device, rugged and secure that resist a multiple natural environments.
+
+- Device used for edge computing, storage, and data transfer.
+- 8TBs of usable storage
+- Used where snowball does not fit: Drone, Space environments, deserts, missions where does not have connectivity.
+- We must provide our own cables and batteries.
+- Can be sent back to AWS offline, or connect it to internet and use AWS DataSync to send the data.
+
+**AWS Snowmobile**:
+It is a truck to get all the data.
+
+- Each snowmobile has 100 PB of capacity (we can use multiple in parallel)
+- Transfer exabytes of data (1EB = 1000PBs = 1000000 TBs)
+- To transfer 1EB we need 10 snowmobiles.
+- High security: temperature controlled, GPS 24/7 and video surveillance.
+- Better use snowball if transfer more than 10PB
+
+**Snowball Process**
+
+1. Request snowball devices from the AWS console for delivery
+2. Install the snowball client on your servers
+3. Connect the snowball to your servers and copy files using the client
+4. Ship back the device when you’re done (goes to the right AWS facility)
+5. Data will be loaded into an S3 bucket
+6. Snowball is completely wiped
+
+#### Edge Computing
+
+- Process data while it is being created on an Edge Location (Anything that does not have internet or cannot access the cloud. For example: A truck on a road, a ship on sea, underground)
+- Usually to locations with limited/no internet access and limited/no easy access to computing power.
+- we setup a Snowcone or Snowball Edge to Edge computing
+  - Preprocess data
+  - Machine learning at the edge
+  - Transcoding media streams
+- We can usually ship it back over time to upload the data.
+- All the devices can run EC2 Instances and AWS Lambda Functions (using AWS IoT Greengrass)
+- Long-term deployment options: 1 and 3 years of discounted pricing
+  **AWS Snowcone (smaller)**:
+
+**AWS Snowball Edge (Compute optimized)**:
+
+- 52 vCPUs, 208 GiB of RAM
+- Optional GPU (useful for video processing or machine learning)
+- 42 TB usable storage
+
+**AWS Snowball Edge (Storage optimized)**:
+
+- Up to 40 vCPUs, 80 GiB of RAM
+- Object storage clustering available
+
+#### AWS OpsHub
+
+Historically, to use Snow Family devices, you needed a CLI (Command Line Interface tool). Today, you can use AWS OpsHub (a software you install on your computer / laptop) to
+manage your Snow Family Device.
+
+- It is a desktop application to manage Snow Family devices
+- Unlocking and configuring single or clustered devices
+- Transferring files
+- Launching and managing instances running on Snow
+  Family Devices
+- Monitor device metrics (storage capacity, active
+  instances on your device)
+- Launch compatible AWS services on your devices
+  (ex: Amazon EC2 instances, AWS DataSync, Network File System (NFS))
 
 ---
 
 ### S3 Storage Gateway
+
+AWS Storage Gateway is a hybrid solution to extend on-premises storage to S3.
+
+It is a hybrid cloud cloud storage service that gives you on-premises access to virtually unlimited cloud storage. It Allows us to bridge all that happens into on-premisses server directly to the cloud.
+
+- Part of your infrastructure is on-premises
+- Part of your infrastructure is on the cloud
+
+Use cases of Hybrid Cloud for Storage:
+
+- Long cloud migrations
+- Security requirements
+- Compliance requirements
+- IT strategy
+
+S3 is a proprietary storage technology (unlike EFS / NFS), so how do you expose the S3 data on-premise? AWS Storage Gateway!
+
+AWS Storage Cloud Native Options:
+
+- Block Storage: Elastic Block Store (EBS) and EC2 Instance Store
+- File Storage: Elastic File System (EFS)
+- Object Storage: S3 and Glacier
+
+The Storage Gateway is bridge between on-premise data and cloud data in S3.
+
+The gateways will be using one of theses behind the scenes: Amazon EBS, S3 or Glacier.
+
+- So the Hybrid storage service is used to allow on-premises to seamlessly use the AWS Cloud.
+- Use cases: disaster recovery, backup & restore, tiered storage
+
+Types of Storage Gateway:
+
+- File Gateway
+- Volume Gateway
+- Tape Gateway
 
 ---
 
