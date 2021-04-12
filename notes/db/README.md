@@ -120,3 +120,21 @@ It is an AWS proprietary technology (not open-source). Aurora is Cloud Optimized
 - Aurora storage automatically grows in increments of 10GB, up to 64 TB.
 - Aurora costs more than RDS (20% more) – but is more efficient
 - Not included into Free Tier
+
+---
+
+## Amazon Elasticache
+
+Is used to get a Redis or Memcached managed database.
+
+- Caches are in-memory databases with high performance, low latency
+- Cache databases Helps reduce load off databases for read intensive workloads, instead of use the repetitive query hitting the database, we can get common responses from our cache.
+- AWS takes care of OS maintenance / patching, optimizations, setup, configuration, monitoring, failure recovery and backups.
+- Architecture example:
+
+```
+Elastic Load Balance <-> EC2 Instances (possible ASG) <-R/W-> RDS
+                                                      <-R/W-> Elasticache
+```
+
+---
