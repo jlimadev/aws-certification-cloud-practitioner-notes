@@ -11,6 +11,7 @@ Databases are optimized for a purpose and come with different features, shapes a
 
 - [Relational Databases](#relational-databases)
 - [NoSQL Databases](#noSql-databases)
+- [Databases and Shared Responsibility on AWS](#Databases-and-Shared-Responsibility-on-AWS)
 
 ---
 
@@ -61,3 +62,5 @@ AWS Manages the databases, it has multiple benefits:
 
 We can have our own database (and others technologies) in EC2 Instances, but we must handle and manage it (the resiliency, backup, patching, high availability, fault
 tolerance, scaling)
+
+---
