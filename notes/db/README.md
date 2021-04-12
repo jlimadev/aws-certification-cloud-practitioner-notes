@@ -48,4 +48,16 @@ Databases are optimized for a purpose and come with different features, shapes a
   }
   ```
 
+---
+
 ## Databases and Shared Responsibility on AWS
+
+AWS Manages the databases, it has multiple benefits:
+
+- Quick Provisioning, High Availability, Vertical and Horizontal Scaling
+- Automated Backup & Restore, Operations, Upgrades
+- Operating System Patching is handled by AWS
+- Monitoring, alerting
+
+We can have our own database (and others technologies) in EC2 Instances, but we must handle and manage it (the resiliency, backup, patching, high availability, fault
+tolerance, scaling)
