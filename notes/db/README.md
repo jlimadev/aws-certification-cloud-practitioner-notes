@@ -22,9 +22,10 @@ Databases are optimized for a purpose and come with different features, shapes a
 - Looks like an excel spreadsheet, with link (relationship) between them.
 - We can use the SQL (Structured Query Language) to perform queries
 
-In AWS we have the following services as relational databases:
+Basically we have two ways to create Relational Databases in AWS: RDS and Aurora. They are both managed by AWS, but Aurora is a cloud native and more cloud friendly while RDS will be running known technologies directly in a managed service.
 
 - [RDS - Relational Database Service](#rds---relational-database-service)
+- [Amazon Aurora](#amazon-aurora)
 
 ## NoSQL Databases
 
@@ -32,26 +33,25 @@ In AWS we have the following services as relational databases:
 - Types: Key-Value, Document, Graph, in-memory, search databases
 - We can have the data in JSON (Javascript Object Notation) format (we can add new fields, nest data, support arrays, etc.)
 - Benefits:
-
   - Flexibility: easy to evolve data model
   - Scalability: designed to scale-out by using distributed clusters
   - High-performance: optimized for a specific data model
   - Highly functional: types optimized for the data model
 
-  Example of JSON data
+Example of JSON data
 
-  ```json
-  {
-    "name": "John",
-    "age": 30,
-    "cars": ["Ford", "BMW", "Fiat"],
-    "address": {
-      "type": "house",
-      "number": 23,
-      "street": "Dream Road"
-    }
+```json
+{
+  "name": "John",
+  "age": 30,
+  "cars": ["Ford", "BMW", "Fiat"],
+  "address": {
+    "type": "house",
+    "number": 23,
+    "street": "Dream Road"
   }
-  ```
+}
+```
 
 ---
 
@@ -101,3 +101,16 @@ Example of usage:
   - The ELB will receive the web requests
   - The EC2 instances doing/hosting the application logic
   - RDS doing Reads and Writes
+
+---
+
+## Amazon Aurora
+
+It is an AWS proprietary technology (not open-source). Aurora is Cloud Optimized, so it have much more performance compared Relational Database Service (RDS).
+
+- Amazon Aurora supports Postgres and MySQL
+  - Compared to RDS running a MySQL database, Aurora MySQL has 5x more performance
+  - Compared to RDS running a Postgres database, Aurora Postgres has 3x more performance
+- Aurora storage automatically grows in increments of 10GB, up to 64 TB.
+- Aurora costs more than RDS (20% more) – but is more efficient
+- Not included into Free Tier
