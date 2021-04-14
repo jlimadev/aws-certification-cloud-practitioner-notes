@@ -177,3 +177,15 @@ Usually the exam ask what kind of database is used for analytics and data wareho
 - Pay as you go, based on the launched instances
 - Has SQL interface to perform queries.
 - Integrated with BI tools such as Amazon Quicksight and Tableau.
+
+## Amazon Elastic MapReduce - EMR
+
+EMR stands to Elastic MapReduce and it is a tool to perform big data processing and analysis by provisioning Hadoop Clusters.
+
+- EMR helps us to create Hadoop Clusters (it can be hundreds of EC2 instances) to do big data processing and analysis
+- Supports Apache Spark, HBase, Presto, Flink and others.
+- EMR takes care of provisioning EC2 Instances and the configurations
+- Autoscaling Groups integration
+- Spot instances integration
+
+Use Cases: data processing, big data, machine learning, web indexing...
