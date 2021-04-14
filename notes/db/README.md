@@ -17,6 +17,9 @@ Databases are optimized for a purpose and come with different features, shapes a
   - [Amazon DynamoDB](#amazon-dynamodb)
   - [Amazon DynamoDB Accelerator - DAX](#amazon-dynamodb-accelerator---dax)
 - [Databases and Shared Responsibility on AWS](#Databases-and-Shared-Responsibility-on-AWS)
+- [Amazon Redshift](#Amazon-Redshift)
+- [Amazon Elastic MapReduce - EMR](#amazon-elastic-mapReduce---emr)
+- [Amazon Athena](#amazon-athena)
 
 ## Relational Databases
 
@@ -189,3 +192,15 @@ EMR stands to Elastic MapReduce and it is a tool to perform big data processing 
 - Spot instances integration
 
 Use Cases: data processing, big data, machine learning, web indexing...
+
+## Amazon Athena
+
+Amazon Athena is a serverless database to perform SQL queries on S3.
+
+- It is fully managed by AWS
+- Used to query data in S3
+- Pay per query, not for database
+- Outputs are stored in S3
+- Secured by IAM
+
+Use cases: One-time SQL queries, serverless queries on S3, log analytics.
