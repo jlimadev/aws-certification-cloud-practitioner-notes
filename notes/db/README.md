@@ -18,8 +18,6 @@ Databases are optimized for a purpose and come with different features, shapes a
   - [Amazon DynamoDB Accelerator - DAX](#amazon-dynamodb-accelerator---dax)
 - [Databases and Shared Responsibility on AWS](#Databases-and-Shared-Responsibility-on-AWS)
 
----
-
 ## Relational Databases
 
 - Use table to each Entity, the tables have attributes
@@ -57,8 +55,6 @@ Example of JSON data
 
 Amazon provides multiple services of NoSQL databases.
 
----
-
 ## Databases and Shared Responsibility on AWS
 
 AWS Manages the databases, it has multiple benefits:
@@ -70,8 +66,6 @@ AWS Manages the databases, it has multiple benefits:
 
 We can have our own database (and others technologies) in EC2 Instances, but we must handle and manage it (the resiliency, backup, patching, high availability, fault
 tolerance, scaling)
-
----
 
 ## RDS - Relational Database Service
 
@@ -101,22 +95,20 @@ RDS is a managed service:
 
 Example of usage:
 
-- Elastic Load Balance <-> EC2 Instances <-R/W-> RDS
+`Elastic Load Balance <-> EC2 Instances <-R/W-> RDS`
 
-  - The ELB will receive the web requests
-  - The EC2 instances doing/hosting the application logic
-  - RDS doing Reads and Writes
+- The ELB will receive the web requests
+- The EC2 instances doing/hosting the application logic
+- RDS doing Reads and Writes
 
 - RDS Deployment Options:
   - **RDS Read Replicas**: Here we can scale the workload of our DB, we can create up to 15 replicas. The data is written only to main DB and we can read the data from the replicas.
   - **RDS Multi-AZ**: Failover in case of AZ outage (high availability), data is read/written to main database. Can have only one other AZ as failover (the data will be replicated to failover db, that will be used only if the main db has any kind of issue)
   - **RDS Multi-Region** (read replicas): Disaster recovery strategy in case of Region issue, local performance for global reads (Example: so if we have the main db in us-east-1 and replica in sa-east-1, we can read locally from region sa-east-1 with less latency, but if we need to write, it goes to main db, in us-east-1) replications costs
 
----
-
 ## Amazon Aurora
 
-It is an AWS proprietary technology (not open-source). Aurora is Cloud Optimized, so it have much more performance compared Relational Database Service (RDS).
+It is an AWS proprietary technology (not open-source) of a Relational database. Aurora is Cloud Optimized, so it have much more performance compared Relational Database Service (RDS).
 
 - Amazon Aurora supports Postgres and MySQL
   - Compared to RDS running a MySQL database, Aurora MySQL has 5x more performance
@@ -124,8 +116,6 @@ It is an AWS proprietary technology (not open-source). Aurora is Cloud Optimized
 - Aurora storage automatically grows in increments of 10GB, up to 64 TB.
 - Aurora costs more than RDS (20% more) – but is more efficient
 - Not included into Free Tier
-
----
 
 ## Amazon Elasticache
 
@@ -143,8 +133,6 @@ Elastic Load Balance <-> EC2 Instances (possible ASG) <-R/W-> RDS
                                                       <-R/W-> Elasticache
 ```
 
----
-
 ## Amazon DynamoDB
 
 DynamoDB is a fully managed and High Available NoSQL Key/Value Database with replications across 3 AZs.
@@ -156,8 +144,6 @@ DynamoDB is a fully managed and High Available NoSQL Key/Value Database with rep
 - Integrated with IAM for security, authorization and administration
 - Low cost and auto scaling capabilities
 - Keywords: Serverless, low-latency and single digit millisecond.
-
----
 
 ## Amazon DynamoDB Accelerator - DAX
 
@@ -174,7 +160,5 @@ Main difference between DAX and Elasticache: DAX is used only with DynamoDB whil
 ```
 Application <-R/W-> DynamoDB Accelerator (DAX) <-R/W-> DynamoDB
 ```
-
----
 
 ## Amazon Redshift
