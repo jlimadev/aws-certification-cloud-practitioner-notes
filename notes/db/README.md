@@ -20,6 +20,7 @@ Databases are optimized for a purpose and come with different features, shapes a
 - [Amazon Redshift](#Amazon-Redshift)
 - [Amazon Elastic MapReduce - EMR](#amazon-elastic-mapReduce---emr)
 - [Amazon Athena](#amazon-athena)
+- [Amazon Quicksight](#amazon-quicksight)
 
 ## Relational Databases
 
@@ -197,10 +198,20 @@ Use Cases: data processing, big data, machine learning, web indexing...
 
 Amazon Athena is a serverless database to perform SQL queries on S3.
 
-- It is fully managed by AWS
-- Used to query data in S3
+- It does not need a server to run, and for this, we don't need manage any infrastructure, so we pay only per executed query.
 - Pay per query, not for database
+- Used to query data in S3
 - Outputs are stored in S3
 - Secured by IAM
 
 Use cases: One-time SQL queries, serverless queries on S3, log analytics.
+
+## Amazon Quicksight
+
+It is a serverless learning-powered Business Intelligence (B.I) service to create interactive dashboards.
+
+Fast, auto scalable, embeddable, with per-session pricing;
+
+Use cases: Business Analytics, Building Visualizations, Perform ad-hoc analysis, get insights using data
+
+Fully integrated with AWS DBs: RDS, Aurora, Athena, S3, DynamoDB, Redshift
