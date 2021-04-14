@@ -10,7 +10,12 @@ What is a database:
 Databases are optimized for a purpose and come with different features, shapes and constraints, thats why exists multiple types of databases:
 
 - [Relational Databases](#relational-databases)
+  - [Relational Database Service - RDS](#rds---relational-database-service)
+  - [Amazon Aurora](#amazon-aurora)
 - [NoSQL Databases](#noSql-databases)
+  - [Amazon Elasticache](#amazon-elasticache)
+  - [Amazon DynamoDB](#amazon-dynamodb)
+  - [Amazon DynamoDB Accelerator - DAX](#amazon-dynamodb-accelerator---dax)
 - [Databases and Shared Responsibility on AWS](#Databases-and-Shared-Responsibility-on-AWS)
 
 ---
@@ -23,9 +28,6 @@ Databases are optimized for a purpose and come with different features, shapes a
 - We can use the SQL (Structured Query Language) to perform queries
 
 Basically we have two ways to create Relational Databases in AWS: RDS and Aurora. They are both managed by AWS, but Aurora is a cloud native and more cloud friendly while RDS will be running known technologies directly in a managed service.
-
-- [RDS - Relational Database Service](#rds---relational-database-service)
-- [Amazon Aurora](#amazon-aurora)
 
 ## NoSQL Databases
 
@@ -53,10 +55,7 @@ Example of JSON data
 }
 ```
 
-Amazon provides multiple services of NoSQL databases:
-
-- [Amazon Elasticache](#amazon-elasticache)
-- [Amazon DynamoDB](#amazon-dynamodb)
+Amazon provides multiple services of NoSQL databases.
 
 ---
 
@@ -157,3 +156,25 @@ DynamoDB is a fully managed and High Available NoSQL Key/Value Database with rep
 - Integrated with IAM for security, authorization and administration
 - Low cost and auto scaling capabilities
 - Keywords: Serverless, low-latency and single digit millisecond.
+
+---
+
+## Amazon DynamoDB Accelerator - DAX
+
+Amazon DynamoDB Accelerator is a in-memory cache for DynamoDB.
+It has 10x performance improvement
+
+- single digit millisecond latency to microseconds latency when accessing tables.
+- Secure, highly available and high scalable
+
+Main difference between DAX and Elasticache: DAX is used only with DynamoDB while Elasticache is used with another databases.
+
+- Architecture example:
+
+```
+Application <-R/W-> DynamoDB Accelerator (DAX) <-R/W-> DynamoDB
+```
+
+---
+
+## Amazon Redshift
