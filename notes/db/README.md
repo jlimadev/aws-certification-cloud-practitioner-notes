@@ -53,6 +53,11 @@ Example of JSON data
 }
 ```
 
+Amazon provides multiple services of NoSQL databases:
+
+- [Amazon Elasticache](#amazon-elasticache)
+- [Amazon DynamoDB](#amazon-dynamodb)
+
 ---
 
 ## Databases and Shared Responsibility on AWS
@@ -129,7 +134,9 @@ Is used to get a Redis or Memcached managed database.
 
 - Caches are in-memory databases with high performance, low latency
 - Cache databases Helps reduce load off databases for read intensive workloads, instead of use the repetitive query hitting the database, we can get common responses from our cache.
+- Very readily available, easy accessible and they can relieve the pressure on main database by returning common results.
 - AWS takes care of OS maintenance / patching, optimizations, setup, configuration, monitoring, failure recovery and backups.
+- Keywords: In-memory database
 - Architecture example:
 
 ```
@@ -138,3 +145,15 @@ Elastic Load Balance <-> EC2 Instances (possible ASG) <-R/W-> RDS
 ```
 
 ---
+
+## Amazon DynamoDB
+
+DynamoDB is a fully managed and High Available NoSQL Key/Value Database with replications across 3 AZs.
+
+- Scales to massive workloads, distributed “serverless” database (We don't need to manage any server related to this database)
+- Millions of requests per seconds, trillions of row, 100s of TB of storage
+- Fast and consistent in performance
+- Single-digit millisecond latency – low latency retrieval
+- Integrated with IAM for security, authorization and administration
+- Low cost and auto scaling capabilities
+- Keywords: Serverless, low-latency and single digit millisecond.
