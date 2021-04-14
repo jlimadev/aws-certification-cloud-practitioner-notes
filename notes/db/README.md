@@ -53,7 +53,7 @@ Example of JSON data
 }
 ```
 
-Amazon provides multiple services of NoSQL databases.
+Amazon provides multiple services of NoSQL databases: Elasticache, DynamoDB, DynamoDB Accelerator
 
 ## Databases and Shared Responsibility on AWS
 
@@ -106,6 +106,8 @@ Example of usage:
   - **RDS Multi-AZ**: Failover in case of AZ outage (high availability), data is read/written to main database. Can have only one other AZ as failover (the data will be replicated to failover db, that will be used only if the main db has any kind of issue)
   - **RDS Multi-Region** (read replicas): Disaster recovery strategy in case of Region issue, local performance for global reads (Example: so if we have the main db in us-east-1 and replica in sa-east-1, we can read locally from region sa-east-1 with less latency, but if we need to write, it goes to main db, in us-east-1) replications costs
 
+RDS is good for OLTP (Online Transaction Processing)
+
 ## Amazon Aurora
 
 It is an AWS proprietary technology (not open-source) of a Relational database. Aurora is Cloud Optimized, so it have much more performance compared Relational Database Service (RDS).
@@ -147,10 +149,10 @@ DynamoDB is a fully managed and High Available NoSQL Key/Value Database with rep
 
 ## Amazon DynamoDB Accelerator - DAX
 
-Amazon DynamoDB Accelerator is a in-memory cache for DynamoDB.
+Amazon DynamoDB Accelerator is a in-memory cache for DynamoDB and it is fully managed by AWS.
 It has 10x performance improvement
 
-- single digit millisecond latency to microseconds latency when accessing tables.
+- single digit millisecond latency to `microseconds` latency when accessing tables.
 - Secure, highly available and high scalable
 
 Main difference between DAX and Elasticache: DAX is used only with DynamoDB while Elasticache is used with another databases.
@@ -162,3 +164,16 @@ Application <-R/W-> DynamoDB Accelerator (DAX) <-R/W-> DynamoDB
 ```
 
 ## Amazon Redshift
+
+Based on Postgres database, but this one is not used to `OLTP - Online Transaction Processing`, this one is used to `OLAP - Online Analytical Processing`, this type of database is for analytics and data warehousing.
+
+Usually the exam ask what kind of database is used for analytics and data warehousing, so Amazon Redshift is the answer.
+
+- Load data once every hour, not every second.
+- 10x performance compared to others data warehouses, scale to PBs of data.
+- The data is stored in Columns (columnar storage of data)
+- Massive Parallel Query Execution (MPP)
+- High Availability
+- Pay as you go, based on the launched instances
+- Has SQL interface to perform queries.
+- Integrated with BI tools such as Amazon Quicksight and Tableau.
