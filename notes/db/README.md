@@ -16,6 +16,7 @@ Databases are optimized for a purpose and come with different features, shapes a
   - [Amazon Elasticache](#amazon-elasticache)
   - [Amazon DynamoDB](#amazon-dynamodb)
   - [Amazon DynamoDB Accelerator - DAX](#amazon-dynamodb-accelerator---dax)
+  - [Amazon DocumentDB](#amazon-documentDb)
 - [Databases and Shared Responsibility on AWS](#Databases-and-Shared-Responsibility-on-AWS)
 - [Amazon Redshift](#Amazon-Redshift)
 - [Amazon Elastic MapReduce - EMR](#amazon-elastic-mapReduce---emr)
@@ -97,18 +98,17 @@ RDS is a managed service:
 
 **Important**: We cannot use SSH into our database instances.
 
-Example of usage:
-
-`Elastic Load Balance <-> EC2 Instances <-R/W-> RDS`
+Example of usage: `Elastic Load Balance <-> EC2 Instances <-R/W-> RDS`
 
 - The ELB will receive the web requests
 - The EC2 instances doing/hosting the application logic
 - RDS doing Reads and Writes
 
-- RDS Deployment Options:
-  - **RDS Read Replicas**: Here we can scale the workload of our DB, we can create up to 15 replicas. The data is written only to main DB and we can read the data from the replicas.
-  - **RDS Multi-AZ**: Failover in case of AZ outage (high availability), data is read/written to main database. Can have only one other AZ as failover (the data will be replicated to failover db, that will be used only if the main db has any kind of issue)
-  - **RDS Multi-Region** (read replicas): Disaster recovery strategy in case of Region issue, local performance for global reads (Example: so if we have the main db in us-east-1 and replica in sa-east-1, we can read locally from region sa-east-1 with less latency, but if we need to write, it goes to main db, in us-east-1) replications costs
+RDS Deployment Options:
+
+- **RDS Read Replicas**: Here we can scale the workload of our DB, we can create up to 15 replicas. The data is written only to main DB and we can read the data from the replicas.
+- **RDS Multi-AZ**: Failover in case of AZ outage (high availability), data is read/written to main database. Can have only one other AZ as failover (the data will be replicated to failover db, that will be used only if the main db has any kind of issue)
+- **RDS Multi-Region** (read replicas): Disaster recovery strategy in case of Region issue, local performance for global reads (Example: so if we have the main db in us-east-1 and replica in sa-east-1, we can read locally from region sa-east-1 with less latency, but if we need to write, it goes to main db, in us-east-1) replications costs
 
 RDS is good for OLTP (Online Transaction Processing)
 
@@ -215,3 +215,12 @@ Fast, auto scalable, embeddable, with per-session pricing;
 Use cases: Business Analytics, Building Visualizations, Perform ad-hoc analysis, get insights using data
 
 Fully integrated with AWS DBs: RDS, Aurora, Athena, S3, DynamoDB, Redshift
+
+## Amazon DocumentDB
+
+Amazon DocumentDB is the AWS implementation of MongoDB. It is a NoSQL database and optimized to run in cloud.
+
+- It is used to store, query and index JSON data.
+- Fully managed database, highly available with replication across 3 AZs.
+- Storage grows automatically from 10gb to 64TB.
+- Automatically scales to workloads with millions of requests per second.
