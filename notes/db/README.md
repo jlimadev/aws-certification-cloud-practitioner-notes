@@ -22,6 +22,7 @@ Databases are optimized for a purpose and come with different features, shapes a
 - [Amazon Elastic MapReduce - EMR](#amazon-elastic-mapReduce---emr)
 - [Amazon Athena](#amazon-athena)
 - [Amazon Quicksight](#amazon-quicksight)
+- [Amazon Neptune](#amazon-neptune)
 
 ## Relational Databases
 
@@ -224,3 +225,20 @@ Amazon DocumentDB is the AWS implementation of MongoDB. It is a NoSQL database a
 - Fully managed database, highly available with replication across 3 AZs.
 - Storage grows automatically from 10gb to 64TB.
 - Automatically scales to workloads with millions of requests per second.
+
+## Amazon Neptune
+
+Amazon Neptune is a fully managed Graph Database.
+
+- Neptune is highly available with replication across 3 AZs and it can have upp to 15 read replicas.
+- Build and run applications working with highly connected
+  datasets
+- Optimized to run complex and hard queries
+- Can store up to billions of relationships and query graphs with milliseconds of latency
+
+Use cases for Amazon Neptune:
+
+- Social network (users interactions and connections)
+- Knowledge Database (such as wikipedia)
+- Fraud detection
+- Recommendations Engines (users who bought product X also bought this other Y product)
