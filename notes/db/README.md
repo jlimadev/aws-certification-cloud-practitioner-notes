@@ -23,6 +23,8 @@ Databases are optimized for a purpose and come with different features, shapes a
 - [Amazon Athena](#amazon-athena)
 - [Amazon Quicksight](#amazon-quicksight)
 - [Amazon Neptune](#amazon-neptune)
+- [Amazon QLDB](#amazon-qldb)
+- [Amazon Managed Blockchain](#amazon-managed-blockchain)
 
 ## Relational Databases
 
@@ -245,7 +247,7 @@ Use cases for Amazon Neptune:
 
 ## Amazon QLDB
 
-QLDB stands to Quantum Ledger Database, and this is a database service for Ledger and Store securely financial data and transactions.
+QLDB stands to Quantum Ledger Database, so Amazon QLDB is a database service for Ledger and Store securely financial data and transactions.
 
 - It is completely immutable system, so no entry can be removed or modified, it is all encrypted and all entries have logs and data to audit.
 - Used to review history of all the changes made to your application data over time.
@@ -254,3 +256,21 @@ QLDB stands to Quantum Ledger Database, and this is a database service for Ledge
 - In QLDB there is no concept of decentralization. So QLDB has a central and unique point of control while `Amazon Managed Blockchain` use this kind of concept.
 
 ## Amazon Managed Blockchain
+
+Blockchain makes it possible to execute financial transactions between multiple parties, without the need of a central authority.
+With Amazon Managed Blockchain is possible to join public blockchain networks or create your own private network.
+
+It is compatible with Ethereum and HyperLedger Fabric.
+
+## Amazon DMS
+
+Amazon Data Migration Service is a service to migrate data from one database to another. As we could see, exists multiple types of databases, so if we need to migrate data from other types we use DMS.
+
+- DMS Runs into an EC2 instance, and this kind of resource only runs while the migration is running.
+- With DMS we can quickly and securely migrate databases to AWS
+
+it supports Homogeneous Migrations and Heterogeneous Migrations.
+
+- The homogeneous migrations are to same type of database: Ex. Oracle to Oracle.
+- The heterogenous migrations are to different types of database: SQL Server to Oracle
+- We can also migrate to Kinesis Stream Data.
