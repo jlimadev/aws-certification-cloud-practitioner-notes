@@ -242,3 +242,15 @@ Use cases for Amazon Neptune:
 - Knowledge Database (such as wikipedia)
 - Fraud detection
 - Recommendations Engines (users who bought product X also bought this other Y product)
+
+## Amazon QLDB
+
+QLDB stands to Quantum Ledger Database, and this is a database service for Ledger and Store securely financial data and transactions.
+
+- It is completely immutable system, so no entry can be removed or modified, it is all encrypted and all entries have logs and data to audit.
+- Used to review history of all the changes made to your application data over time.
+- QLDB is a fully managed database and is highly available with replication across 3 AZs.
+- 2-3x better performance than common ledger blockchain frameworks.
+- In QLDB there is no concept of decentralization. So QLDB has a central and unique point of control while `Amazon Managed Blockchain` use this kind of concept.
+
+## Amazon Managed Blockchain
