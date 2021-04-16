@@ -274,3 +274,19 @@ it supports Homogeneous Migrations and Heterogeneous Migrations.
 - The homogeneous migrations are to same type of database: Ex. Oracle to Oracle.
 - The heterogenous migrations are to different types of database: SQL Server to Oracle
 - We can also migrate to Kinesis Stream Data.
+
+## Amazon Glue
+
+Amazon Glue is a serverless and fully managed service to perform ETL (Extract Transform and Load). With ETL we can connect to multiple databases to extract data, transform according our needs and load into another database to add the analysis part.
+
+- Example of usage
+
+```
+S3 Bucket       ==>
+                    \
+Amazon RDS      ==>   GLUE (ETL) => Amazon Redshift => Amazon Quicksight (B.I)
+                    /
+Amazon Aurora   ==>
+```
+
+Glue also has a another service called `Glue Data Catalog`. This service catalogs all the datasets in AWS Infrastructure and it keeps available with all the information about the dataset, such as table names, columns names, types, etc.
