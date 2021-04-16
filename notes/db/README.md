@@ -113,7 +113,7 @@ RDS Deployment Options:
 - **RDS Multi-AZ**: Failover in case of AZ outage (high availability), data is read/written to main database. Can have only one other AZ as failover (the data will be replicated to failover db, that will be used only if the main db has any kind of issue)
 - **RDS Multi-Region** (read replicas): Disaster recovery strategy in case of Region issue, local performance for global reads (Example: so if we have the main db in us-east-1 and replica in sa-east-1, we can read locally from region sa-east-1 with less latency, but if we need to write, it goes to main db, in us-east-1) replications costs
 
-RDS is good for OLTP (Online Transaction Processing)
+RDS databases are used for OLTP (Online Transaction Processing)
 
 ## Amazon Aurora
 
@@ -125,6 +125,8 @@ It is an AWS proprietary technology (not open-source) of a Relational database. 
 - Aurora storage automatically grows in increments of 10GB, up to 64 TB.
 - Aurora costs more than RDS (20% more) – but is more efficient
 - Not included into Free Tier
+
+Aurora databases are used for OLTP (Online Transaction Processing)
 
 ## Amazon Elasticache
 
