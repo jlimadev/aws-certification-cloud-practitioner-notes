@@ -25,6 +25,7 @@ Databases are optimized for a purpose and come with different features, shapes a
 - [Amazon Neptune](#amazon-neptune)
 - [Amazon QLDB](#amazon-qldb)
 - [Amazon Managed Blockchain](#amazon-managed-blockchain)
+- [Summary](#summary)
 
 ## Relational Databases
 
@@ -292,3 +293,20 @@ Amazon Aurora   ==>
 ```
 
 Glue also has a another service called `Glue Data Catalog`. This service catalogs all the datasets in AWS Infrastructure and it keeps available with all the information about the dataset, such as table names, columns names, types, etc.
+
+## Summary
+
+- Relational Databases - OLTP: RDS & Aurora (SQL)
+- Differences between Multi-AZ, Read Replicas, Multi-Region
+- In-memory Database: ElastiCache
+- Key/Value Database: DynamoDB (serverless) & DAX (cache for DynamoDB)
+- Warehouse - OLAP: Redshift (SQL)
+- Hadoop Cluster: EMR
+- Athena: query data on Amazon S3 (serverless & SQL)
+- QuickSight: dashboards on your data (serverless)
+- DocumentDB: “Aurora for MongoDB” (JSON – NoSQL database)
+- Amazon QLDB: Financial Transactions Ledger (immutable journal, cryptographically verifiable)
+- Amazon Managed Blockchain: managed Hyperledger Fabric & Ethereum blockchain
+- Glue: Managed ETL (Extract Transform Load) and Data Catalog service
+- Database Migration: DMS
+- Neptune: graph database
