@@ -19,12 +19,31 @@ Inside an EC2 instance we can have multiple docker containers running: An image 
 
 Docker images can be stored privately or publicly: **Private** are stored into ECR (Elastic Container Registry from Amazon) and the **Public** ones are stored into Docker Hub
 
-## Elastic Container Service:
+## Elastic Container Service
 
-## Fargate:
+Elastic Container Service (ECS) is a service to Launch docker containers on AWS.
 
-## Elastic Container Register:
+- When we are talking about ECS we must understand that we need to provision and maintain the infrastructure (EC2 Instances).
+- AWS takes care of starting and stopping the containers and choose the most available container to place the container.
+- It has full integration with the Application Load Balancer
+
+## Fargate
+
+Fargate is also used to launch docker containers on AWS, but Fargate does not require us to provision the infrastructure.
+
+- So more simple service and is serverless, since we don't need to to manage any server or EC2 instances.
+- AWS just run the container based on the CPU/RAM our container needs.
+
+## Elastic Container Register
+
+Elastic Container Register (ECR) is the AWS service to store the containers.
+
+- It is a private docker registry.
+- This is where the containers are stored, so they can be run by ECS or Fargate.
 
 ---
 
 On (CCP) practitioner level is required to understand what is the main differences between ECS Fargate and ECR.
+ECS: Run containers with need of provisioning the infrastructure.
+Fargate: Run containers without provisioning the infrastructure.
+ECR: Where the Containers are stored.
