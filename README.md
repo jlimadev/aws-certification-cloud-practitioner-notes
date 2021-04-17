@@ -9,3 +9,4 @@
   - [EC2 - Elastic Load Balancing & Auto Scaling Groups](notes/ec2-elb-asg/README.md)
   - [ECS, Fargate and ECR](notes/ecs/README.md)
 - [Database and Analytics](notes/db/README.md)
+- [Serverless and Lambdas](notes/serverless/README.md)
