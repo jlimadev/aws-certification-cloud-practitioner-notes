@@ -66,3 +66,12 @@ With API gateway we can allow external request on services that are not exposed 
 - Fully Scalable and Serverless
 - Supports REST APIs and Websocket APIs
 - Supports security, authentication, API Keys, monitoring
+
+API gateway example:
+A client create a item in your website, your website saves it on dynamo with this structure:
+
+```
+Client <-Rest API-> API GATEWAY <-PROXY REQUEST-> Lambda <-CRUD-> DynamoDB
+
+Your site calls api gateways through your Rest API, then api gateway will proxy the request to the Lambda function and this lambda will insert the register into dynamoDB.
+```
