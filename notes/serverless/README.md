@@ -56,3 +56,13 @@ Lambdas use cases:
     - if the function consume 128MB of RAM, you can use it for 3.200.000 seconds
   - After that you pay $1.00 for 600.000 GB/Seconds
 - More pricing [examples](https://aws.amazon.com/pt/lambda/pricing/)
+
+## Amazon API Gateway
+
+Amazon API Gateway is serverless HTTP API, a fully managed service for developers to easily create, publish, maintain, monitor and secure APIs.
+
+With API gateway we can allow external request on services that are not exposed directly. API Gateway will proxy a request into a service with all the needed security and scale.
+
+- Fully Scalable and Serverless
+- Supports REST APIs and Websocket APIs
+- Supports security, authentication, API Keys, monitoring
