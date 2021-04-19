@@ -7,7 +7,7 @@
 - [EC2 - Elastic Cloud Compute](notes/ec2/README.md)
   - [EC2 - Instance Storage](notes/ec2-instance-storage/README.md)
   - [EC2 - Elastic Load Balancing & Auto Scaling Groups](notes/ec2-elb-asg/README.md)
-  - [ECS, Fargate and ECR](notes/ecs/README.md)
+- [ECS, Fargate and ECR](notes/ecs/README.md) (Containers)
 - [Database and Analytics](notes/db/README.md)
 - [Serverless](notes/serverless/README.md) (Lambdas, API Gateway, AWS Batch)
 - [Other Services](notes/other-services/README.md) (AWS Batch)
