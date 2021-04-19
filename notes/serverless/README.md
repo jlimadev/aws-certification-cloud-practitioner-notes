@@ -75,3 +75,7 @@ Client <-Rest API-> API GATEWAY <-PROXY REQUEST-> Lambda <-CRUD-> DynamoDB
 
 Your site calls api gateways through your Rest API, then api gateway will proxy the request to the Lambda function and this lambda will insert the register into dynamoDB.
 ```
+
+## AWS Batch
+
+This [AWS Batch](../other-services/README.md) is serverless if is running with Fargate
