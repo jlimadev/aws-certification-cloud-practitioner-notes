@@ -31,3 +31,20 @@ Upload of Images -> S3 -Trigger-> | ECS -> EC2/Spot Instances | -> Insert Proces
 - Any runtime as long it is packed as a docker image (any container with any programming language)
 - Storage of the Instance (EC2 EBS Volume or Instance Store)
 - Is a managed service (not serverless because it need EC2 instances)
+
+## Amazon Lightsail
+
+Amazon Lightsail is a standalone service for Virtual servers, storage, databases, and networking for users that are not used to cloud services/no cloud experience.
+
+- Low and predictable prices
+- Simple alternative to EC2, RDS, ELB, EBS, Route 53.
+- Great for beginners with cloud
+- Setup monitoring and notifications
+- Use cases:
+
+  - Simple web apps (has templates for nodejs, LAMP, nginx, MEAN)
+  - Websites (Wordpress, Magento, Plesk)
+  - Dev and Test environment
+
+- Has high availability but not have any auto-scaling
+- It has limited integrations with AWS Services
