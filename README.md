@@ -11,3 +11,4 @@
 - [Database and Analytics](notes/db/README.md)
 - [Serverless](notes/serverless/README.md) (Lambdas, API Gateway, AWS Batch)
 - [Other Services](notes/other-services/README.md) (AWS Batch)
+- [Deploy and Managing Infrastructure at Scale](notes/deployment/README.md)
