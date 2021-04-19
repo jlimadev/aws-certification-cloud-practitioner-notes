@@ -10,3 +10,4 @@
   - [ECS, Fargate and ECR](notes/ecs/README.md)
 - [Database and Analytics](notes/db/README.md)
 - [Serverless](notes/serverless/README.md) (Lambdas, API Gateway)
+- [Other Services](notes/other-services/README.md) (AWS Batch)
