@@ -6,6 +6,8 @@ In AWS we have services to run and manage our applications into containers. In o
 
 Docker is a software development platform to deploy apps. With docker we pack our app into a container and can be run in any OS.
 
+Another definition of Docker would be `Docker is a software development platform that allows you to run applications the same way, regardless of where they are run. It can scale containers up and down within seconds.`
+
 Docker can run in any machine, and it brings some benefits:
 
 - Any Machine and OS
