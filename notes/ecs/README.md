@@ -47,3 +47,10 @@ On (CCP) practitioner level is required to understand what is the main differenc
 ECS: Run containers with need of provisioning the infrastructure.
 Fargate: Run containers without provisioning the infrastructure.
 ECR: Where the Containers are stored.
+
+• Docker: container technology to run applications
+• ECS: run Docker containers on EC2 instances
+• Fargate:
+• Run Docker containers without provisioning the infrastructure
+• Serverless offering (no EC2 instances)
+• ECR: Private Docker Images Repository

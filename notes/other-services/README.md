@@ -48,3 +48,8 @@ Amazon Lightsail is a standalone service for Virtual servers, storage, databases
 
 - Has high availability but not have any auto-scaling
 - It has limited integrations with AWS Services
+
+---
+
+• Batch: run batch jobs on AWS across managed EC2 instances or it can be Serverless if running with Fargate
+• Lightsail: predictable & low pricing for simple application & DB stacks

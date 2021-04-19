@@ -9,5 +9,5 @@
   - [EC2 - Elastic Load Balancing & Auto Scaling Groups](notes/ec2-elb-asg/README.md)
   - [ECS, Fargate and ECR](notes/ecs/README.md)
 - [Database and Analytics](notes/db/README.md)
-- [Serverless](notes/serverless/README.md) (Lambdas, API Gateway)
+- [Serverless](notes/serverless/README.md) (Lambdas, API Gateway, AWS Batch)
 - [Other Services](notes/other-services/README.md) (AWS Batch)
