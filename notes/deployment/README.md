@@ -39,3 +39,31 @@ Productivity:
 - Supports (almost) all AWS resources
 
 We can also use the CloudFormation Stack Designer: here we can see all the resources as a Diagram and we can see the relations between the components.
+
+## Elastic Beanstalk
+
+Elastic Beanstalk is a developer centric view of deploying an application on AWS. It is a Platform as a Service (PaaS).
+
+Usually developers face a few problems dealing with AWS, but they just want to deploy the code
+
+- Managing Infrastructure
+- Configuration of databases, load balancers
+- Scaling concerns
+
+Most of the web apps have a similar architecture (ELB + ASG). With Beanstalk we can deploy using all these features but in one view, with full control of the application. You worry about the code, only.
+
+It is a Managed Service
+
+- Instances Configuration are made by beanstalk
+- Deployment strategies are configured and made into beanstalk
+- Capacity Provisioning
+- Load Balancing and Auto Scaling
+- Application Monitoring and health monitoring (Health agent pushes metrics to cloudwatch, check the app health and publishes health events)
+
+It Support many languages and platforms: Java, Go, NodeJS, Docker or your own platform.
+
+Three Architecture Models:
+
+- Single Instance deployment (good for devl environment)
+- LB + ASG: Great for production and pre-production web applications
+- ASG only: Great for non-web apps in production (workers)
