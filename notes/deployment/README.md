@@ -4,7 +4,7 @@ In this section we are going to understand how to deploy our workload into AWS
 
 - [Cloud Formation](#cloud-formation)
 - [Elastic Beanstalk](#elastic-beanstalk)
-- [CodeDeploy](#codedeploy)
+- [AWS CodeDeploy](#aws-codedeploy)
 - [CodeCommit](#codecommit)
 - [CodeBuild](#codecommit)
 - [CodePipeline](#CodePipeline)
@@ -72,3 +72,24 @@ Difference between CloudFormation and Beanstalk
 
 - CloudFormation is IaaC and you can deploy any AWS Services and integrations
 - Beanstalk is PaaS and it uses CloudFormation to deploy the Web Applications and you just need to worry about your code.
+
+## AWS CodeDeploy
+
+AWS Code Deploy is a tool to deploy code automatically.
+
+- AWS CodeDeploy is a Hybrid service and can be used in Amazon EC2, AWS Fargate, AWS Lambda, and your on-premises servers.
+- It does not use Beanstalk or CloudFormation behind the scenes. It is a different service.
+- You must first create the servers/instances (configured) to CodeDeploy run
+- By deploy code we can understand upgrade versions of our software automatically.
+
+## AWS CodeCommit
+
+Is a way to store the code into a Git AWS Repository. It is a competitor to GitHub.
+With AWS CodeCommit we can create multiple repositories, we can easily share code into our organization and keep the versions.
+
+- The code is automatically versioned
+- It is fully managed
+- Scalable & Highly Available
+- Private, Secured, Integrated with AWS
+
+## AWS CodeBuild
