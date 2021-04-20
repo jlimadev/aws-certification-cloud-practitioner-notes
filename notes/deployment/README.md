@@ -93,3 +93,18 @@ With AWS CodeCommit we can create multiple repositories, we can easily share cod
 - Private, Secured, Integrated with AWS
 
 ## AWS CodeBuild
+
+You can build you code into AWS. It means it can compiles the source code, run tests, and produce the final package.
+
+- The package that is produced can be deployed (for CodeDeploy for example)
+- Fully Managed and Serverless
+- Scalable and Highly Available
+- You pay only for the time the package is being built
+
+Example of usage
+
+```
+
+AWS CodeCommit <--> AWS CodeBuild --> Ready to Deploy [Can be AWS CodeDeploy]
+
+```
