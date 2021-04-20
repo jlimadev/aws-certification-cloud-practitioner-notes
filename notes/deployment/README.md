@@ -42,7 +42,7 @@ We can also use the CloudFormation Stack Designer: here we can see all the resou
 
 ## Elastic Beanstalk
 
-Elastic Beanstalk is a developer centric view of deploying an application on AWS. It is a Platform as a Service (PaaS).
+Elastic Beanstalk (EB) is a developer centric view of deploying an application on AWS. It is a Platform as a Service (PaaS).
 
 Usually developers face a few problems dealing with AWS, but they just want to deploy the code
 
@@ -55,7 +55,7 @@ Most of the web apps have a similar architecture (ELB + ASG). With Beanstalk we 
 It is a Managed Service
 
 - Instances Configuration are made by beanstalk
-- Deployment strategies are configured and made into beanstalk
+- Deployment strategies are configured and made into beanstalk (Internally Beanstalk create a deployment into CloudFormation)
 - Capacity Provisioning
 - Load Balancing and Auto Scaling
 - Application Monitoring and health monitoring (Health agent pushes metrics to cloudwatch, check the app health and publishes health events)
@@ -67,3 +67,8 @@ Three Architecture Models:
 - Single Instance deployment (good for devl environment)
 - LB + ASG: Great for production and pre-production web applications
 - ASG only: Great for non-web apps in production (workers)
+
+Difference between CloudFormation and Beanstalk
+
+- CloudFormation is IaaC and you can deploy any AWS Services and integrations
+- Beanstalk is PaaS and it uses CloudFormation to deploy the Web Applications and you just need to worry about your code.
