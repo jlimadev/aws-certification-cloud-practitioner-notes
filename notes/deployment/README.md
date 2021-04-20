@@ -3,7 +3,7 @@
 In this section we are going to understand how to deploy our workload into AWS
 
 - [Cloud Formation](#cloud-formation)
-- [Beanstalk](#beanstalk)
+- [Elastic Beanstalk](#elastic-beanstalk)
 - [CodeDeploy](#codedeploy)
 - [CodeCommit](#codecommit)
 - [CodeBuild](#codecommit)
@@ -14,7 +14,7 @@ In this section we are going to understand how to deploy our workload into AWS
 
 ## Cloud Formation
 
-Cloud Formation is a Declarative way to deploy our resources into AWS.
+Cloud Formation is a Declarative way to deploy our resources into AWS. It is used when you need to create and repeat an architecture in different environments, regions or AWS accounts
 
 With cloud formation you can "say": I want a S3 Bucket, I want an EC2 instance, i want a EBS as storage to that instance and so on. Cloud formation creates everything in the right order and with the exact configuration;
 
@@ -38,4 +38,4 @@ Productivity:
 - Leverage the documentation
 - Supports (almost) all AWS resources
 
-We can also use the CloudFormation Stack Designer: here we can see all the resources as a Diagram and we can see the relations between the components
+We can also use the CloudFormation Stack Designer: here we can see all the resources as a Diagram and we can see the relations between the components.

@@ -79,3 +79,10 @@ Your site calls api gateways through your Rest API, then api gateway will proxy 
 ## AWS Batch
 
 This [AWS Batch](../other-services/README.md) is serverless if is running with Fargate
+
+## Summary
+
+- Lambda is Serverless, Function as a Service, seamless scaling, reactive and can runs functions up to 15 minutes
+- In lambda we are billed by Invocations and by Time running x RAM
+- API Gateway: expose Lambda functions and other AWS services as HTTP API
+- AWS Batch: Is serverless when running with Fargate
