@@ -158,3 +158,12 @@ How SSM Works:
   - SSM Agent installed report to SSM Service
 - If an instance can’t be controlled with SSM, it’s probably an issue with the SSM agent!
 - Thanks to the SSM agent, we can run commands, patch & configure our servers
+
+## AWS OpsWorks
+
+It is another Hybrid Service to manage repetitive actions in our servers. it is a managed Chef & Puppet of AWS.
+
+To understand it, we need to understand two tolls before: `Chef & Puppet`: Chef & Puppet help you perform server configuration automatically by code, or repetitive actions related to your servers.
+
+- AWS OpsWorks is an alternative to AWS SSM, but this one, you only provision standard AWS Resources (EC2, Databases, ELB)
+- How it works: Based on a `cookbook` it will provision an architecture to your service, by provisioning ELB, ASG, EC2, Databases and your Application
