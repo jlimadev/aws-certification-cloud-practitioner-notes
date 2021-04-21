@@ -167,3 +167,22 @@ To understand it, we need to understand two tolls before: `Chef & Puppet`: Chef 
 
 - AWS OpsWorks is an alternative to AWS SSM, but this one, you only provision standard AWS Resources (EC2, Databases, ELB)
 - How it works: Based on a `cookbook` it will provision an architecture to your service, by provisioning ELB, ASG, EC2, Databases and your Application
+
+## Summary
+
+- CloudFormation: (AWS only)
+  - Infrastructure as Code, works with almost all of AWS resources
+  - Repeat across Regions & Accounts
+- Beanstalk: (AWS only)
+  - Platform as a Service (PaaS), limited to certain programming languages or Docker
+  - Deploy code consistently with a known architecture: ex, ALB + EC2 + RDS
+- CodeDeploy (hybrid): deploy & upgrade any application onto servers
+- Systems Manager (hybrid): patch, configure and run commands at scale
+- OpsWorks (hybrid): managed Chef and Puppet in AWS
+- CodeCommit: Store code in private git repository (version controlled)
+- CodeBuild: Build & test code in AWS
+- CodeDeploy: Deploy code onto servers
+- CodePipeline: Orchestration of pipeline (from code to build to deploy)
+- CodeArtifact: Store software packages / dependencies on AWS
+- CodeStar: Unified view for allowing developers to do CICD and code
+- Cloud9: Cloud IDE (Integrated Development Environment) with collab
