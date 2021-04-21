@@ -5,12 +5,12 @@ In this section we are going to understand how to deploy our workload into AWS
 - [Cloud Formation](#cloud-formation)
 - [Elastic Beanstalk](#elastic-beanstalk)
 - [AWS CodeDeploy](#aws-codedeploy)
-- [AWS CodeCommit](#codecommit)
-- [AWS CodeBuild](#codecommit)
-- [AWS CodePipeline](#CodePipeline)
-- [CodeArtifact](#CodeArtifact)
-- [CodeStar](#CodeStar)
-- [Cloud9](#Cloud9)
+- [AWS CodeCommit](#aws-codecommit)
+- [AWS CodeBuild](#aws-codecommit)
+- [AWS CodePipeline](#aws-CodePipeline)
+- [AWS CodeArtifact](#aws-CodeArtifact)
+- [AWS CodeStar](#aws-CodeStar)
+- [AWS Cloud9](#aws-Cloud9)
 
 ## Cloud Formation
 
@@ -115,3 +115,25 @@ Example of usage
  ----------AWS CodePipeline---------------------------
 |AWS CodeCommit <--> AWS CodeBuild --> AWS CodeDeploy |
 ```
+
+## AWS CodeArtifact
+
+AWS CodeArtifact is a Artifact Management service to store, publish and share software packages used in development processes.
+
+- secure, scalable and fully managed
+- It is a place to store the code dependencies
+- Integrated with multiple Artifacts (Maven, Gradle, npm, yarn, twine, pip, and NuGet)
+- Developers and CodeBuild can then retrieve dependencies straight from CodeArtifact
+
+## AWS CodeStar
+
+It is a unified UI to manage software development activities in one place. It is a central service to development that allows a quick start using AWS Tools.
+It gives you a dashboards with integration with CodeCommit, CodeBuild, CodePipeline, CodeBuild, etc.
+
+# AWS Cloud9
+
+It is a Cloud IDE into AWS, it is a code editor running directly in the browser.
+
+- Classic IDEs (such as IntelliJ, VSCode) you need to install in your computer
+- With Cloud IDE you don't need to install, just need internet connection and access the IDE
+- Cloud9 allows work collaboration (pair programming) in real-time
