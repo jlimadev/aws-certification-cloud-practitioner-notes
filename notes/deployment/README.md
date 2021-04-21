@@ -5,9 +5,9 @@ In this section we are going to understand how to deploy our workload into AWS
 - [Cloud Formation](#cloud-formation)
 - [Elastic Beanstalk](#elastic-beanstalk)
 - [AWS CodeDeploy](#aws-codedeploy)
-- [CodeCommit](#codecommit)
-- [CodeBuild](#codecommit)
-- [CodePipeline](#CodePipeline)
+- [AWS CodeCommit](#codecommit)
+- [AWS CodeBuild](#codecommit)
+- [AWS CodePipeline](#CodePipeline)
 - [CodeArtifact](#CodeArtifact)
 - [CodeStar](#CodeStar)
 - [Cloud9](#Cloud9)
@@ -101,10 +101,17 @@ You can build you code into AWS. It means it can compiles the source code, run t
 - Scalable and Highly Available
 - You pay only for the time the package is being built
 
+## AWS CodePipeline
+
+With AWS Code Pipeline we can orchestrate our deployment steps
+Usually in our pipelines we Get our code, test, build, provisioning servers and deploy. With CodePipeline we can do it. It is a CI/CD tool.
+
+- It is fully managed
+- Compatible with CodeCommit, CodeBuild, CodeDeploy, Elastic Beanstalk, Cloud Formation, GitHub and others providers + have custom plugins.
+
 Example of usage
 
 ```
-
-AWS CodeCommit <--> AWS CodeBuild --> Ready to Deploy [Can be AWS CodeDeploy]
-
+ ----------AWS CodePipeline---------------------------
+|AWS CodeCommit <--> AWS CodeBuild --> AWS CodeDeploy |
 ```
