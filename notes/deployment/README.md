@@ -137,3 +137,24 @@ It is a Cloud IDE into AWS, it is a code editor running directly in the browser.
 - Classic IDEs (such as IntelliJ, VSCode) you need to install in your computer
 - With Cloud IDE you don't need to install, just need internet connection and access the IDE
 - Cloud9 allows work collaboration (pair programming) in real-time
+
+## AWS Systems Manager
+
+AWS System Manager (SSM) is a Hybrid service to manage EC2 Instances and On-Premise systems at scale. Works with Linux and Windows.
+
+AWS SSM is basically a service to patch our fleet of instances/servers or even run commands in all of them.
+
+- We can understand the status get insights of our infrastructure
+- has multiple products inside this service
+- Most popular features:
+  - Patching automation for enhanced compliance
+  - Run commands across an entire fleet of servers
+  - Store parameter configuration with the SSM Parameter Store
+
+How SSM Works:
+
+- We need to install the SSM agent onto the systems we control (Each EC2 Instance or On-Prem Servers)
+  - Installed by default on Amazon Linux AMI & some Ubuntu AMI
+  - SSM Agent installed report to SSM Service
+- If an instance can’t be controlled with SSM, it’s probably an issue with the SSM agent!
+- Thanks to the SSM agent, we can run commands, patch & configure our servers
