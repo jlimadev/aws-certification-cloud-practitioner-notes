@@ -14,7 +14,10 @@ AWS Infrastructure consists in:
 - Availability Zones: Made of multiple data centers
 - Edge Locations (Points of Presence): for content delivery as close as possible to users
 
-Global Services to Decrease Latency and Improve Availability -[Route53](#route53)
+Global Services to Decrease Latency and Improve Availability
+
+- [Route53](#route53)
+- [CloudFront](#cloudFront)
 
 ## Route53
 
