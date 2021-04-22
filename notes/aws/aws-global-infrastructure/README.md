@@ -30,16 +30,18 @@ DNS is a collection of rules and records which helps clients understand how to r
 
 ### Route 53 Routing Policies
 
+Multiples strategies of Routing, expect by the simple route policy, all have health checks and each one different goals:
+
 - **Simple Routing Policy**: A client (web browser) request through an URL and Route 53 resolves and responds an IP. This one does not have health checks.
 
   - Example: Web Browser -foo.com---> Route 53 (receives)
     <-11.22.1.2- Route 53 (responds)
 
-- **Weighted Routing Policy**: client (web browser) request through an URL and Route 53 resolves and multiples IPs with a weight to each one. And since we have multiple instances, Route 53 perform health checks.
+- **Weighted Routing Policy**: It is to distribute the traffic across multiple instances: So, a client (web browser) request through an URL and Route 53 resolves and multiples IPs with a weight to each one. And since we have multiple instances, Route 53 perform health checks.
 
   - Example: 20% of the users will get response from server 1, 30% of the users will get response from server 2, 50% of the users will get response from server 3. It is like a Load Balancing
 
-- **Latency Routing Policy**: This Latency Routing Policy is made to reduce latency by understanding WHERE is the request coming from, and it will make sure to send a response from the closest server.
+- **Latency Routing Policy**: This Latency Routing Policy is made to reduce latency by understanding WHERE is the request coming from, and it will make sure to send a response from the closest server. This one also have health checks
 
   - Example: We have an application global application published in South America (Brazil) and Europe (France). Our users are around the globe, so if we receive an request from Argentina it will get the response from the server in South America.
 
