@@ -26,6 +26,8 @@ Global Services to Decrease Latency and Improve Availability
 ## Route53
 
 It is a Managed DNS (Domain Name System) of AWS.
+Route 53 features are (non exhaustive list): Domain Registration, DNS, Health Checks, Routing Policy
+
 DNS is a collection of rules and records which helps clients understand how to reach servers through URLs. DNS records examples:
 
 ```
