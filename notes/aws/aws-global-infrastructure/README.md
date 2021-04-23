@@ -50,6 +50,35 @@ Multiples strategies of Routing, expect by the simple route policy, all have hea
 
 - **Failover Routing Policy**: We have two instances, main instance and failover instance, if the main one fails it will redirect automatically to the failover instance. It performs health checks on the main instance.
 
+## CloudFront
+
+CloudFront is a Content Delivery Network (CDN). It improves the read performance and cache the content into Amazon Edge Locations all around the world. It improves the user experience (less latency).
+
+- Amazon contains 216+ Points of Presence (Edge Locations).
+- CloudFront has DDoS protection, Shield and AWS Web Application Firewalls.
+- The first call always goes to the Original Location, but after that, the content will cached in the edge location and next requests will be faster for all users.
+  - A Static S3 Web Site deployed in Brazil (sa-east-1). A user from china tries to access. The first access on china will be slower because the response comes from the origin, but it will be cached into Edge Location, so next users will get faster responses.
+
+CloudFront can cache from:
+
+**S3 Bucket**:
+
+- For distributing files and caching them at the edge
+- Enhanced security with CloudFront Origin Access Identity (OAI)
+- CloudFront can be used as an ingress (to upload files to S3)
+
+**Custom Origin (HTTP)**
+
+- Any kind of website
+- Load Balancer, EC2, S3 Website (Bucket must be enabled as website)
+- Any HTTP backend (even on premise)
+
+### CloudFront vs S3 Bucket Replication
+
+- In CloudFront we work with all the Edge Locations around the world. The files are cached, but they have a Time To Live (TTL) and they are great for static content that must be available everywhere.
+
+- In S3 Bucket Replication we need to choose a region to replicate the data, and files are updated in near real time. The files are Read Only as well and it is great for Dynamic content (but in a few regions, not all)
+
 ## Summary
 
 - Route 53: Great to route users to the closest deployment with least latency and good for disaster recovery strategies.
