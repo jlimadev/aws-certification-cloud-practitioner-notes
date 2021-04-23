@@ -89,6 +89,8 @@ As we know an S3 Bucket is linked to one region and sometimes we need to transfe
 
 With S3 Transfer Accelerator we can speed up the transfer of the file by transferring the file to an AWS Edge Location. This Edge Location will forward the file to the target bucket. This is only used when you need to download or upload files in buckets that are far away of the user.
 
+Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket. Transfer Acceleration takes advantage of Amazon CloudFront’s globally distributed edge locations. As the data arrives at an edge location, data is routed to Amazon S3 over an optimized network path.
+
 - Example: We have a bucket in Australia and our user will upload a file in USA. So it will upload into the Edge Location and internally the file will to your bucket using AWS internal network (faster and private)
 
 ## AWS Global Accelerator

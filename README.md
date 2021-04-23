@@ -12,5 +12,5 @@
 - [Serverless](notes/serverless/README.md) (Lambdas, API Gateway, AWS Batch)
 - [Other Services](notes/other-services/README.md) (AWS Batch, Lightsail)
 - [Deploy and Managing Infrastructure at Scale](notes/deployment/README.md) (CloudFormation, Beanstalk, CodePipeline+, OpsWorks, Systems Manager)
-- [Global Infrastructure](notes/aws/aws-global-infrastructure/README.md) (Route53, Cloudfront, S3 and Global Accelerator)
+- [Global Infrastructure](notes/aws-global-infrastructure/README.md) (Route53, Cloudfront, S3 and Global Accelerator)
 - [Cloud Integration](notes/cloud-integration/README.md) (SNS, SQS, Kinesis and Amazon MQ)
