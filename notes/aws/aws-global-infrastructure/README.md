@@ -18,6 +18,7 @@ Global Services to Decrease Latency and Improve Availability
 
 - [Route53](#route53)
 - [CloudFront](#cloudFront)
+- [S3 Transfer Accelerator](#s3-transfer-accelerator)
 
 ## Route53
 
@@ -78,6 +79,14 @@ CloudFront can cache from:
 - In CloudFront we work with all the Edge Locations around the world. The files are cached, but they have a Time To Live (TTL) and they are great for static content that must be available everywhere.
 
 - In S3 Bucket Replication we need to choose a region to replicate the data, and files are updated in near real time. The files are Read Only as well and it is great for Dynamic content (but in a few regions, not all)
+
+## S3 Transfer Accelerator
+
+As we know an S3 Bucket is linked to one region and sometimes we need to transfer files all around the world into a specific Bucket.
+
+With S3 Transfer Accelerator we can speed up the transfer of the file by transferring the file to an AWS Edge Location. This Edge Location will forward the file to the target bucket. This is only used when you need to download or upload files in buckets that are far away of the user.
+
+- Example: We have a bucket in Australia and our user will upload a file in USA. So it will upload into the Edge Location and internally the file will to your bucket using AWS internal network (faster and private)
 
 ## Summary
 
