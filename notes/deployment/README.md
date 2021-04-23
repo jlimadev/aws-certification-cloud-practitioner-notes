@@ -11,6 +11,8 @@ In this section we are going to understand how to deploy our workload into AWS
 - [AWS CodeArtifact](#aws-CodeArtifact)
 - [AWS CodeStar](#aws-CodeStar)
 - [AWS Cloud9](#aws-Cloud9)
+- [AWS Systems Manager](#aws-systems-manager)
+- [AWS OpsWorks](#aws-opsWorks)
 
 ## Cloud Formation
 
