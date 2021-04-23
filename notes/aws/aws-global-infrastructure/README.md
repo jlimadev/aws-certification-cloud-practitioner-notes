@@ -88,9 +88,26 @@ With S3 Transfer Accelerator we can speed up the transfer of the file by transfe
 
 - Example: We have a bucket in Australia and our user will upload a file in USA. So it will upload into the Edge Location and internally the file will to your bucket using AWS internal network (faster and private)
 
+## AWS Global Accelerator
+
+Improves global applications availability and performance by using AWS Global Network. Through the Edge Locations it uses the internal network of AWS and it is very faster.
+
+- Leverage the AWS internal network to optimize the route to your application (60% improvement)
+- 2 Anycast IP are created for your application and traffic is sent through Edge Locations
+- The Edge locations send the traffic to your application
+
+### AWS Global Accelerator vs CloudFront
+
+They both use the AWS global network and its edge locations around the world and Both services integrate with AWS Shield for DDoS protection.
+
+- **CloudFront** is a Content Delivery Network and it improves the performance of cacheable content (such as images, videos, static files) and the content is served at the edge.
+
+- **AWS Global Accelerator** has no caching, it proxies the packets by using the edge location and the internal network to have more speed. Improves performance for a wide range of applications over TCP or UDP.
+  - Good for HTTP use cases that require static IP addresses and Good for HTTP use cases that required deterministic, fast regional failover.
+
 ## Summary
 
 - Route 53: Great to route users to the closest deployment with least latency and good for disaster recovery strategies.
 - CloudFront: Replicate part of your application to AWS Edge Locations and cache common requests (less latency)
 - S3 Transfer Acceleration: Accelerate S3 Downloads and Uploads
-- AWS Global Accelerator: Improve Global Availability and Performance of your apps.
+- AWS Global Accelerator: Improve Global Availability and Performance of your apps by using internal AWS networking.
