@@ -19,6 +19,9 @@ Global Services to Decrease Latency and Improve Availability
 - [Route53](#route53)
 - [CloudFront](#cloudFront)
 - [S3 Transfer Accelerator](#s3-transfer-accelerator)
+- [AWS Global Accelerator](#aws-global-accelerator)
+- [AWS Outposts](#aws-outposts)
+- [Summary](#summary)
 
 ## Route53
 
@@ -105,9 +108,28 @@ They both use the AWS global network and its edge locations around the world and
 - **AWS Global Accelerator** has no caching, it proxies the packets by using the edge location and the internal network to have more speed. Improves performance for a wide range of applications over TCP or UDP.
   - Good for HTTP use cases that require static IP addresses and Good for HTTP use cases that required deterministic, fast regional failover.
 
+## AWS Outposts
+
+With Hybrid Cloud: businesses can keep an server on premises infrastructure alongside a cloud infrastructure, Therefore, in hybrid you usually have to deal two infra by managing them (Cloud and On-Premise). So you have different commands, different instances, etc.
+
+Thinking about it, AWS has release AWS Outposts, which is a physical "Server Rack" that offers the same AWS Infrastructure, APIs and tools to build the applications on Premise the same way wou would do in the cloud.
+
+- AWS will setup and manage “Outposts Racks” within your on-premises infrastructure and you can start leveraging AWS services on-premises
+- You are responsible for the Outposts Rack physical security after the installation.
+
+Benefits:
+
+- Low-latency access to on-premises systems
+- Local data processing
+- Data residency
+- Easier migration from on-premises to the cloud
+- Fully managed service
+- Some services that work on Outposts: EC2, S3, EBS, EKS, ECS, RDS, EMR
+
 ## Summary
 
 - Route 53: Great to route users to the closest deployment with least latency and good for disaster recovery strategies.
 - CloudFront: Replicate part of your application to AWS Edge Locations and cache common requests (less latency)
 - S3 Transfer Acceleration: Accelerate S3 Downloads and Uploads
 - AWS Global Accelerator: Improve Global Availability and Performance of your apps by using internal AWS networking.
+- AWS Outposts: Deploy Outposts Racks in your own Data Centers to extend AWS services
