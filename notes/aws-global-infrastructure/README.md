@@ -61,7 +61,7 @@ Multiples strategies of Routing, expect by the simple route policy, all have hea
 CloudFront is a Content Delivery Network (CDN). It improves the read performance and cache the content into Amazon Edge Locations all around the world. It improves the user experience (less latency).
 
 - Amazon contains 216+ Points of Presence (Edge Locations).
-- CloudFront has DDoS protection, Shield and AWS Web Application Firewalls.
+- CloudFront has DDoS protection, Shield and AWS Web Application Firewalls. (You can use AWS WAF web access control lists (web ACLs) to help minimize the effects of a distributed denial of service (DDoS) attack. For additional protection against DDoS attacks, AWS also provides AWS Shield Standard and AWS Shield Advanced.)
 - The first call always goes to the Original Location, but after that, the content will cached in the edge location and next requests will be faster for all users.
   - A Static S3 Web Site deployed in Brazil (sa-east-1). A user from china tries to access. The first access on china will be slower because the response comes from the origin, but it will be cached into Edge Location, so next users will get faster responses.
 
