@@ -13,6 +13,15 @@ When we start deploying multiple applications, they will inevitably need to comm
 
 ## Simple Queue Service
 
+First we need to understand how does a queue work: We have producers that generates message and stores it in a queue. Once this message is stored in a queue it can be read by consumers, who will be polling the message and process it, and after finish the processing it will delete the message from the queue.
+
+Simple Queue Service (SQS) is one of the most old AWS Services and it is used to decouple between application tiers.
+
+- Fully Managed and Serverless services + Auto scalable
+- By default it keeps the message from 4 to 14 days and there is no limit of messages into the queue.
+- Messages are delete after read by consumers
+- Consumers share the work to to read messages & scale horizontally.
+
 ## Simple Notification Service
 
 ## AWS Kinesis
