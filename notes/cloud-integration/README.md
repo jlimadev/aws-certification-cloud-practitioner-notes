@@ -9,6 +9,7 @@ When we start deploying multiple applications, they will inevitably need to comm
 - [Simple Notification Service](#simple-notification-service)
 - [AWS Kinesis](#aws-kinesis)
 - [Amazon MQ](#amazon-mq)
+- [Summary](#summary)
 
 ## Simple Queue Service
 
@@ -17,3 +18,20 @@ When we start deploying multiple applications, they will inevitably need to comm
 ## AWS Kinesis
 
 ## Amazon MQ
+
+## Summary
+
+- SQS:
+  - Queue service in AWS
+  - Multiple Producers, messages are kept up to 14 days
+  - Multiple Consumers share the read and delete messages when done
+  - Used to decouple applications in AWS
+- SNS:
+  - Notification service in AWS (Pub/Sub)
+  - Subscribers: Email, Lambda, SQS, HTTP, Mobile…
+  - Multiple Subscribers, send all messages to all of them
+  - No message retention
+- Kinesis: real-time data streaming, persistence and analysis
+- Amazon MQ: managed Apache MQ in the cloud (MQTT, AMQP.. protocols)
+
+All these services can scale independently from our application!
