@@ -14,3 +14,4 @@
 - [Deploy and Managing Infrastructure at Scale](notes/deployment/README.md) (CloudFormation, Beanstalk, CodePipeline+, OpsWorks, Systems Manager)
 - [Global Infrastructure](notes/aws-global-infrastructure/README.md) (Route53, Cloudfront, S3 and Global Accelerator)
 - [Cloud Integration](notes/cloud-integration/README.md) (SNS, SQS, Kinesis and Amazon MQ)
+- [Cloud Monitoring](notes/cloud-monitoring/README.md) (CloudWatch, X-Ray, CloudTrail, Services and Personal Health)
