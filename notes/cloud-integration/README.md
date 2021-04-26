@@ -74,7 +74,7 @@ Kinesis has some known features:
 
 ## Amazon MQ
 
-It is a managed Apache ActiveMQ which is a service to work with Queue and Notification Topics. The use case is when you are migrating to the cloud, instead of re-engineering the application to use SQS and SNS, we can use Amazon MQ.
+It is a managed Apache ActiveMQ and RabbitMQ which are services to work with Queue and Notification Topics. The use case is when you are migrating to the cloud, instead of re-engineering the application to use SQS and SNS, we can use Amazon MQ.
 
 - SQS, SNS are “cloud-native” services, and they’re using proprietary protocols from AWS.
 - Traditional applications running from on-premise may use open protocols such as: MQTT, AMQP, STOMP, OpenWire, WSS
