@@ -20,16 +20,57 @@ Simple Queue Service (SQS) is one of the most old AWS Services and it is used to
 - Fully Managed and Serverless services + Auto scalable
 - By default it keeps the message from 4 to 14 days and there is no limit of messages into the queue.
 - Messages are delete after read by consumers
+- A System must pool the message
+- Messages in a Queue are typically processed by a single consumer
 - Consumers share the work to to read messages & scale horizontally.
+- The consumer has to poll and pull messages from SQS
 
 In AWS we have two types of Queues:
 
 - Standard: At-least one delivery, no ordering
 - FIFO: First In First Out delivery and Exactly-Once processing
+  Keywords: Producer and Consumer
 
 ## Simple Notification Service
 
+For this service need to understand PUB/SUB: It has a topic and this topic notify multiple consumers at once (fan out) of different types (such as Lambda, SQS, Email).
+
+In Simple Notification Service (SNS) the publisher only need to send one notification to a Topic and the consumers are subscribed to this topic, you can have as many as you want.
+
+- The “event publishers” only sends message to one SNS topic
+- As many “event subscribers” as we want to listen to the SNS topic notifications
+- Each subscriber to the topic will get all the messages
+- Keywords: Publisher and Subscriber
+
+Difference between SNS and SQS:
+
+**SQS**:
+
+- SQS is distributed queuing service.
+- With SQS all the consumers share the messages
+- Messages are not pushed to receivers. Receivers have to poll SQS to receive messages. Messages can’t be received by multiple receivers at the same time. Any one receiver can receive a message, process and delete it. Other receivers do not receive the same message later.
+- Consumers poll and pull messages from SQS
+- Do your system care about an event?
+
+**SNS**:
+
+- SNS is a distributed publish-subscribe system. Messages are pushed to subscribers as and when they are sent by publishers to SNS.
+- With SNS each subscriber get ALL the messages
+- Processing the same message in multiple ways.
+- Do multiple services care about the same event?
+
 ## AWS Kinesis
+
+Amazon Kinesis it is Real Time big data streaming.
+
+- It is a Managed service to collect, process and analyze real-time streaming data at any scale.
+
+Kinesis has some known features:
+
+- Kinesis Data Streams: low latency streaming to ingest data at scale from multiple sources at the same time.
+- Kinesis Data Firehose: loads streams into another AWS services (such as S3, Elasticache, redshift, etc.)
+- Kinesis Data Analytics: perform real-time data analytics using SQL
+- Kinesis Video Streams: monitor real-time video streams for analytics or Machine Learning
 
 ## Amazon MQ
 
