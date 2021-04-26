@@ -5,8 +5,8 @@ When we start deploying multiple applications, they will inevitably need to comm
 
 **Asynchronous Communications** It is event driven and an application puts events or notifications in queues/streams and the other systems communicates with the queues if there is anything in there. The applications keeps decoupled from each other. In AWS we use the following services to Cloud Integrations with Asynchronous Communications:
 
-- [Simple Queue Service](#simple-queue-service)
-- [Simple Notification Service](#simple-notification-service)
+- [Simple Queue Service (SQS)](#simple-queue-service)
+- [Simple Notification Service (SNS)](#simple-notification-service)
 - [AWS Kinesis](#aws-kinesis)
 - [Amazon MQ](#amazon-mq)
 - [Summary](#summary)
@@ -21,6 +21,11 @@ Simple Queue Service (SQS) is one of the most old AWS Services and it is used to
 - By default it keeps the message from 4 to 14 days and there is no limit of messages into the queue.
 - Messages are delete after read by consumers
 - Consumers share the work to to read messages & scale horizontally.
+
+In AWS we have two types of Queues:
+
+- Standard: At-least one delivery, no ordering
+- FIFO: First In First Out delivery and Exactly-Once processing
 
 ## Simple Notification Service
 
