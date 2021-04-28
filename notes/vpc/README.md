@@ -1,4 +1,4 @@
-# 🔐 Virtual Particular Network - VPC
+# 🔐 Virtual Private Cloud - VPC
 
 []()
 []()
@@ -10,4 +10,4 @@
 
 ## Summary
 
-[UP](#🔐-virtual-particular-network---vpc)
+[UP](#🔐-virtual-private-Cloud---vpc)
