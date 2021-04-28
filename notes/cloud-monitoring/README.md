@@ -140,3 +140,16 @@ https://status.aws.amazon.com/
 - Shows all regions, all services health.
 - Shows historical information for each day
 - Subscribable RSS feed
+
+## Personal Health Dashboard
+
+Amazon PHD (Personal Health Dashboard) is service that provides alerts and remediation guidances to you when AWS has impacting events to a service or part of infrastructure that may impact our resources.
+
+While the Service Health Dashboard displays the general status of AWS services, **Personal Health Dashboard gives you a personalized view into the performance and availability of the AWS services underlying your AWS resources**. It provides proactive notification to help you plan for scheduled activities.
+
+- Keywords: Alert, remediation, proactive, scheduled activities
+- https://phd.aws.amazon.com/
+
+## Summary
+
+[UP](#🕐-Cloud-Monitoring)
