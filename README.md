@@ -15,3 +15,4 @@
 - [Global Infrastructure](notes/aws-global-infrastructure/README.md) (Route53, Cloudfront, S3 and Global Accelerator)
 - [Cloud Integration](notes/cloud-integration/README.md) (SNS, SQS, Kinesis and Amazon MQ)
 - [Cloud Monitoring](notes/cloud-monitoring/README.md) (CloudWatch, X-Ray, CloudTrail, Services and Personal Health)
+- [VPC](notes/vpc/README.md) (VPC, Subnets, Gateways, NATs, Security Groups, VPN, Direct Connect, Transit Gateway)
