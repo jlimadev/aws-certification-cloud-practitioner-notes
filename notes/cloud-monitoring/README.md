@@ -152,4 +152,15 @@ While the Service Health Dashboard displays the general status of AWS services, 
 
 ## Summary
 
+- CloudWatch: Cloudwatch has multiple features for monitoring our apps
+  - Metrics: Are the performance indicators of AWS services and billing metrics
+  - Alarms: We can create notifications and actions based on metrics
+  - Logs: collect log files from services and store/analyse it
+  - Events (EventBridge): create schedule jobs and react to events into our account
+- CloudTrail: Governance, Compliance and Audit tools with every events that happens into our account
+- CloudTrail Insights: Automated analysis of CloudTrail Events
+- X-Ray: trace requests and get a big picture/debugging of distributed systems/microservices.
+- Service Health Dashboard: Dashboard with all AWS services status across all regions.
+- Personal Health Dashboard: Status of AWS Services that impact OUR infrastructure and we can create a plan to deal with it.
+
 [UP](#🕐-Cloud-Monitoring)
