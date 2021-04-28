@@ -131,3 +131,12 @@ With Amazon X-Ray we can have a big picture and a visual analysis of our apps. T
 - Pinpoint services issues and review requests behaviors
 - Find errors, exceptions and understand throttles
 - Measure SLA
+
+## Service Health Dashboard
+
+It an AWS Website to show the status of all services in all regions of AWS.
+https://status.aws.amazon.com/
+
+- Shows all regions, all services health.
+- Shows historical information for each day
+- Subscribable RSS feed
