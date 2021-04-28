@@ -26,7 +26,7 @@ Sample VPC example:
 
 - We have the AWS Cloud, and AWS Has regions, inside that region we create a VPC. Inside the VPC we create the CIDR ranges to define the allowed IPs and the subnets.
 - Our VPC can reach one or more AZs, so we have the subnets, each subnet inside an AZ. Inside Each Subnet, we have Public and Private subnets.
-<center><img src="vpc-sample.jpg" alt="drawing" width="500"/></center>
+<p align="center" width="100%"><img src="vpc-sample.jpg" alt="drawing" width="500"/></p>
 
 ## Subnets
 
@@ -57,8 +57,8 @@ Following the same example of sample VPC:
 
 - Inside each subnet we can have EC2 instances, and to allow the public subnet we create the Internet Gateway and create the route to it, and it goes to the internet.
 - Inside the private subnet, by default we do not have access to the internet, so to get the access (to update a software into EC2), we need to create a NAT Gateway inside the Public Subnet and create a Route to this NAT Gateway. The NAT Gateway will communicate with Internet Gateway and the internet gateway will perform the access.
-<center><img src="gateways.jpg" alt="drawing" width="300"/></center>
+<p align="center" width="100%"><img src="gateways.jpg" alt="drawing" width="300"/></p>
 
 ## Summary
 
-[UP](#🔐-virtual-private-Cloud---vpc)
+[UP](#-virtual-private-cloud---vpc)
