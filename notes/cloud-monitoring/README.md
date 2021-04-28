@@ -5,7 +5,7 @@
 - [CloudWatch Logs](#cloudwatch-logs)
 - [CloudWatch Events - EventBridge](#cloudwatch-events---eventbridge)
 - [CloudTrail](#cloudtrail)
-- [X-Ray](#x---ray)
+- [Amazon X-Ray](#amazon-x-ray)
 - [Service Health Dashboard](#service-health-dashboard)
 - [Personal Health Dashboard](#personal-health-dashboard)
 - [Summary](#summary)
@@ -77,3 +77,47 @@ Amazon EventBridge is the next evolution of CloudWatch events. Received this new
 - Schema Models: it a model event schema
 
 > The main difference between CloudWatch Events and EventBus is that EventBus has new features and it a evolutions, so we have the default event bus (aws service) + partner and custom events and schema models.
+
+## CloudTrail
+
+CloudTrail Provides governance, compliance and audit for your AWS Account by storing every single event that happens in AWS Account. CloudTrail is enabled by default!
+
+- Get an history of events / API calls made within your AWS Account by:
+  - Console
+  - SDK
+  - CLI
+  - AWS Services
+- We Can put logs from CloudTrail into CloudWatch Logs or S3 to preserve logs to more time.
+- A trail can be applied to All Regions (default) or a single Region.
+
+If we need to check any action performed into our account, the best place to check first/investigate is CloudTrail.
+
+In CloudTrail we have three types of events:
+
+- **Management Events**: Operations performed on Resources in our AWS Account. By default, trails are configured to log management events and they can be split into two categories (Read Events, don't modify resources and Write Events, may modify resources). Examples:
+  - Configuring security (IAM AttachRolePolicy) - Write Event
+  - Configuring rules for routing data (Amazon EC2 CreateSubnet) - Write Event
+  - Setting up logging (AWS CloudTrail CreateTrail) - Write Event
+  - Delete DynamoDB Table (Write Event)
+  - Check Policies (IAM Read) - Read Event
+- **Data Events**: By default this type of event is not logged because of the high volume, since it works on object level/data level. Examples:
+  - Amazon S3 object-level activities (GetObject, DeleteObject) [Read and Write Events]
+  - AWS Lambda Function executions (Invoke API) [Read Event]
+- **Insight Events**: This type of event is to detect unusual activities in our AWS Account. It works by analyzing the normal management events and creates a base line of what is normal into our account, so it keeps analyzing the WRITE events to detect unusual patterns such as:
+  - inaccurate resource provisioning
+  - hitting service limits
+  - Bursts of AWS IAM actions
+  - Gaps in periodic maintenance activity
+
+With Insight Events we can check the anomalies in CloudTrail Console, Store events into S3 and Integrate with EventBridge to perform actions.
+
+```
+                Continuous Analysis                     Generate                      CloudTrailConsole
+Management Events ----------------> CloudTrail Insights ---------> Insights Events / EventBridge Events
+                                                                                   \  S3 Bucket
+
+```
+
+**CloudTrail Retention**: By default the events are store for 90 days. To keep the events for longer times, we can log them to S3 Bucket and use Amazon Athena to Query the events. (we can store all events types: Management Events, Data Events and Insights Events)
+
+## Amazon X-Ray
