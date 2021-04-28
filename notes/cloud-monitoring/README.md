@@ -121,3 +121,13 @@ Management Events ----------------> CloudTrail Insights ---------> Insights Even
 **CloudTrail Retention**: By default the events are store for 90 days. To keep the events for longer times, we can log them to S3 Bucket and use Amazon Athena to Query the events. (we can store all events types: Management Events, Data Events and Insights Events)
 
 ## Amazon X-Ray
+
+Usually it is more easy to debug monolith applications, because it is almost everything connected and into the same application. When we have distributed systems, microservices, etc, it is more difficult to debug and trace events as a big picture. For this, we have Amazon X-Ray.
+
+With Amazon X-Ray we can have a big picture and a visual analysis of our apps. The advantages of X-Ray are:
+
+- Troubleshooting Performance (bottlenecks)
+- Understand Dependencies in microservices architectures
+- Pinpoint services issues and review requests behaviors
+- Find errors, exceptions and understand throttles
+- Measure SLA
