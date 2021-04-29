@@ -76,4 +76,21 @@ Security Groups are Firewall specific firewall that controls traffic to and from
 - Control of inbound network (from outside to inside the instance)
 - Control of outbound network (from instance to outside) - by default, all traffic outbound (from our instance to the rest of the world) is allowed.
 
+## NACL vs Security Groups
+
+In the next image we can see NACL as the first protection layer, at the subnet level, checking every entry on the subnet and if allowed proxies to the next level.
+
+In the next image we can see Security Groups as the second layer of protection, checking if the authorized ip can access the instance, because, we can have cases when an IP is allowed into the subnet, but not into the instance.
+
+<p align="center" width="100%"><img src="nacl-sg.jpg" alt="drawing" width="300"/></p>
+## Summary
+
+The main differences are
+
+Security Group: Operates at instance level, support only allow rules, is stateful (return traffic is automatically allowed, regardless any rules)
+
+NACL: Operates at the subnet level, allow and deny rules, is stateless (return traffic must be explicitly allowed by the rules)
+
+for more details [visit amazon page](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html)
+
 [UP](#-virtual-private-cloud---vpc)
