@@ -157,17 +157,22 @@ With Transit Gateway we can connect thousands of VPC and on-premises networks to
 
 ## Summary
 
-- VPC: Virtual Private Cloud
-- Subnets: It is tied to an AZ, is a partition of VPC (can be private or public)
-- Internet Gateway: at VPC level, allow internet access
-- NAT Gateway: at the public subnet level, to allow access to the internet for the private one.
-- Network ACL (NACL): At subnet level, it is a firewall, Stateless, subnet rules for inbound and outbound
-- Security Groups: at instance level, it is a firewall, stateful. subnet rules (only allow rules) for inbound and outbound
-- VPC Flow Logs: Enable logs to all network interfaces of all internet traffic.
-- VPC Peering: Connect two VPC with non overlapping IP ranges, intransitive
-- VPC Endpoints: For private subnets, Provide private access to AWS Services within VPC
-- Site to Site VPN: connect on premises server with our vpc, through VPN using the public internet.
-- Direct Connect: connect on premises server with our vpc, though VPN, using a private connection (needs physical devices)
-- Transit Gateway: Connect thousands of VPCs and on premise servers using a central hub to manage traffic and peering.
+- VPC Structure:
+  - VPC: Virtual Private Cloud
+  - Subnets: It is tied to an AZ, is a partition of VPC (can be private or public)
+- VPC Connectivity:
+  - Internet Gateway: at VPC level, allow internet access
+  - NAT Gateway: at the public subnet level, to allow access to the internet for the private one.
+- VPC Security:
+  - Network ACL (NACL): At subnet level, it is a firewall, Stateless, subnet rules for inbound and outbound
+  - Security Groups: at instance level, it is a firewall, stateful. subnet rules (only allow rules) for inbound and outbound
+  - VPC Flow Logs: Enable logs to all network interfaces of all internet traffic.
+- Connect multiple VPCs:
+  - VPC Peering: Connect two VPC with non overlapping IP ranges, intransitive
+  - VPC Endpoints: For private subnets, Provide private access to AWS Services within VPC (Interface and Gateway [S3 and Dynamo])
+- (VPN) Connect VPC with On Premise
+  - Site to Site VPN: connect on premises server with our vpc, through VPN using the public internet.
+  - Direct Connect: connect on premises server with our vpc, though VPN, using a private connection (needs physical devices)
+  - Transit Gateway: Connect thousands of VPCs and on premise servers using a central hub to manage traffic and peering.
 
 [UP](#-virtual-private-cloud---vpc)
