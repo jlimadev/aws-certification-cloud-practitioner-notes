@@ -6,8 +6,8 @@ We need to understand the main concepts of the resources of VPC
 - [Subnets](#subnets)
 - [Internet Gateway](#internet-gateway)
 - [NAT Gateway](#nat-gateway)
-- [Security Groups]()
-- [Network ACL (NACL)]()
+- [Network ACL (NACL)](#network-acl)
+- [Security Groups](#security-groups)
 - [VPC Flow Logs]()
 - [VPC Peering]()
 - [VPC Endpoints]()
@@ -59,6 +59,12 @@ Following the same example of sample VPC:
 - Inside the private subnet, by default we do not have access to the internet, so to get the access (to update a software into EC2), we need to create a NAT Gateway inside the Public Subnet and create a Route to this NAT Gateway. The NAT Gateway will communicate with Internet Gateway and the internet gateway will perform the access.
 <p align="center" width="100%"><img src="gateways.jpg" alt="drawing" width="300"/></p>
 
-## Summary
+## Network ACL
+
+When we are inside the Subnet we have a protection called Network ACL (NACL or Network Access Level). NACL is a firewall (Subnet Level) which controls traffic from and to subnet.
+
+- NACL can have ALLOW and DENY rules
+- It is attached at the Subnet Level
+- The rules include only IP Addresses
 
 [UP](#-virtual-private-cloud---vpc)
