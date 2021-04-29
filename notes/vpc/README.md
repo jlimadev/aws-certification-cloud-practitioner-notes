@@ -67,4 +67,13 @@ When we are inside the Subnet we have a protection called Network ACL (NACL or N
 - It is attached at the Subnet Level
 - The rules include only IP Addresses
 
+## Security Groups
+
+Security Groups are Firewall specific firewall that controls traffic to and from an ENI (Elastic Network Interface) and/or EC2 Instances.
+
+- Can have only ALLOW rules
+- Rules include IP Addresses and other security groups
+- Control of inbound network (from outside to inside the instance)
+- Control of outbound network (from instance to outside) - by default, all traffic outbound (from our instance to the rest of the world) is allowed.
+
 [UP](#-virtual-private-cloud---vpc)
