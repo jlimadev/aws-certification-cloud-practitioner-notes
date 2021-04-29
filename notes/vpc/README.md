@@ -107,6 +107,15 @@ We can export our logs to S3 Bucket and/or CloudWatch Logs as well.
 
 ## VPC Peering
 
+With VPC Peering we can connect two VPCs, privately using AWS Network and make them behave as if they are in the same network.
+
+- This must not overlap CIDR (IP ranges)
+- VPC peering is not transitive, this means if we have 3 VPCs, A, B and C, Then we create a VPC peering from A to B, And we create another VPC peering from B to C
+
+  - the connection between A and C is not in the same network, because A and C does not have the peering between them, if we want to connect these two as well, we need to create the VPC peering following the bellow example.
+
+  <p align="center" width="100%"><img src="vpc-peering.jpg" alt="drawing" width="300"/></p>
+
 ## VPC Endpoints
 
 ## Summary
