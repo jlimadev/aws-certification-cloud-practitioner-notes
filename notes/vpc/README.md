@@ -83,7 +83,6 @@ In the next image we can see NACL as the first protection layer, at the subnet l
 In the next image we can see Security Groups as the second layer of protection, checking if the authorized ip can access the instance, because, we can have cases when an IP is allowed into the subnet, but not into the instance.
 
 <p align="center" width="100%"><img src="nacl-sg.jpg" alt="drawing" width="300"/></p>
-## Summary
 
 The main differences are
 
@@ -92,5 +91,24 @@ Security Group: Operates at instance level, support only allow rules, is statefu
 NACL: Operates at the subnet level, allow and deny rules, is stateless (return traffic must be explicitly allowed by the rules)
 
 for more details [visit amazon page](https://docs.aws.amazon.com/vpc/latest/userguide/VPC_Security.html)
+
+## VPC Flow Logs
+
+VPC Flow logs captures all logs from all network interfaces, so we have:
+
+- VPC Flow logs
+- Subnet Flow logs
+- Elastic Network Interface Flow logs
+- It also captures network information from AWS managed interfaces into the services: Load Balancers, ElastiCache, RDS, Aurora, etc.
+
+With this logs we can monitor and troubleshoot connectivity issues such as: Subnet to the internet, subnet to subnet, internet to subnet.
+
+We can export our logs to S3 Bucket and/or CloudWatch Logs as well.
+
+## VPC Peering
+
+## VPC Endpoints
+
+## Summary
 
 [UP](#-virtual-private-cloud---vpc)
