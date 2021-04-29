@@ -47,7 +47,7 @@ echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 **AMIs** stands to Amazon Machine Image and are a customization of an EC2 Instance:
 
 - We can add our own software configurations, operating systems, monitoring and others configurations.
-- This will leaverage to a faster boot, because the software is pre-packed.
+- This will leverage to a faster boot, because the software is pre-packed.
 - AMIs are built for a specific region (can be copied across them)
 - We can launch AMIs: 1) provided by AWS, 2) our own AMI or 3) AMIs from AWS Marketplace.
 - We can create an AMI starting from an instance. It will create the AMI and a snapshot of the storage.
@@ -55,7 +55,7 @@ echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 **EC2 Image Builder**:
 
 - Used to automate the creation of Virtual Machine or Container Images.
-- Automatically: Create, mantain, validate and test AMIs
+- Automatically: Create, maintain, validate and test AMIs
 - The builder can run scheduled (when a pack is updated, weekly, etc...)
 - It is a free service (pay for the resources)
 
@@ -114,10 +114,10 @@ There are a few [instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserG
 
 ### EC2 Security Groups
 
-- They are fundamentaal of newtwork security in AWS. Theys control how traffic is allowed into our EC2 instances. It is the Firewall of the instance.
+- They are fundamental of network security in AWS. They control how traffic is allowed into our EC2 instances. It is the Firewall of the instance.
 - They contain only **Allow** rules
 - Reference by IP or by other Security Group
-- Regulate the Access to the Ports, Authoirized IP ranges (IPV4 and 6)
+- Regulate the Access to the Ports, Authorized IP ranges (IPV4 and 6)
 - Control of inbound network (from outside to inside the instance)
 - Control of outbound network (from instance to outside) - by default, all traffic outbound (from our instance to the rest of the world) is allowed.
 - Common Ports that we need to know
