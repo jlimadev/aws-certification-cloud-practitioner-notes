@@ -8,12 +8,12 @@ We need to understand the main concepts of the resources of VPC
 - [NAT Gateway](#nat-gateway)
 - [Network ACL (NACL)](#network-acl)
 - [Security Groups](#security-groups)
-- [VPC Flow Logs]()
-- [VPC Peering]()
-- [VPC Endpoints]()
-- [Site to Site VPN]()
-- [Direct Connect]()
-- [Transit Gateway]()
+- [VPC Flow Logs](#vpc-flow-logs)
+- [VPC Peering](#vpc-peering)
+- [VPC Endpoints](#vpc-endpoints)
+- [Site to Site VPN](#site-to-site-vpn) (vpn and goes to public internet)
+- [Direct Connect](#direct-connect) (vpn and goes to private internet)
+- [Transit Gateway](#transit-gateway)
 - [Summary](#summary)
 
 ## VPC
@@ -26,7 +26,7 @@ Sample VPC example:
 
 - We have the AWS Cloud, and AWS Has regions, inside that region we create a VPC. Inside the VPC we create the CIDR ranges to define the allowed IPs and the subnets.
 - Our VPC can reach one or more AZs, so we have the subnets, each subnet inside an AZ. Inside Each Subnet, we have Public and Private subnets.
-<p align="center" width="100%"><img src="vpc-sample.jpg" alt="drawing" width="500"/></p>
+<p align="center" width="100%"><img src="assets/vpc-sample.jpg" alt="drawing" width="500"/></p>
 
 ## Subnets
 
@@ -57,7 +57,7 @@ Following the same example of sample VPC:
 
 - Inside each subnet we can have EC2 instances, and to allow the public subnet we create the Internet Gateway and create the route to it, and it goes to the internet.
 - Inside the private subnet, by default we do not have access to the internet, so to get the access (to update a software into EC2), we need to create a NAT Gateway inside the Public Subnet and create a Route to this NAT Gateway. The NAT Gateway will communicate with Internet Gateway and the internet gateway will perform the access.
-<p align="center" width="100%"><img src="gateways.jpg" alt="drawing" width="300"/></p>
+<p align="center" width="100%"><img src="assets/gateways.jpg" alt="drawing" width="300"/></p>
 
 ## Network ACL
 
@@ -82,7 +82,7 @@ In the next image we can see NACL as the first protection layer, at the subnet l
 
 In the next image we can see Security Groups as the second layer of protection, checking if the authorized ip can access the instance, because, we can have cases when an IP is allowed into the subnet, but not into the instance.
 
-<p align="center" width="100%"><img src="nacl-sg.jpg" alt="drawing" width="300"/></p>
+<p align="center" width="100%"><img src="assets/nacl-sg.jpg" alt="drawing" width="300"/></p>
 
 The main differences are
 
@@ -114,7 +114,7 @@ With VPC Peering we can connect two VPCs, privately using AWS Network and make t
 
   - the connection between A and C is not in the same network, because A and C does not have the peering between them, if we want to connect these two as well, we need to create the VPC peering following the bellow example.
 
-  <p align="center" width="100%"><img src="vpc-peering.jpg" alt="drawing" width="300"/></p>
+  <p align="center" width="100%"><img src="assets/vpc-peering.jpg" alt="drawing" width="300"/></p>
 
 ## VPC Endpoints
 
@@ -126,7 +126,35 @@ lower latency to access AWS services.
 **Gateway**: Dynamo and S3
 **Interface** All others AWS services
 
-  <p align="center" width="100%"><img src="vpc-endpoints.jpg" alt="drawing" width="300"/></p>
+  <p align="center" width="100%"><img src="assets/vpc-endpoints.jpg" alt="drawing" width="300"/></p>
+
+## Site to Site VPN
+
+Site to Site VPN connects On-Premise servers to our VPC into AWS. The connection is automatically encrypted, but this Site to Site VPN goes over the **public internet**.
+
+We have to configure our VPC with a Virtual Private Gateway (VGW) and our On-Premise server with a Customer Gateway (CGW), then the site to Site VPN will communicate through them,
+
+<p align="center" width="100%"><img src="assets/site-to-site-vpn.jpg" alt="drawing" width="700"/></p>
+
+## Direct Connect
+
+Establish a physical connection between on-premises and AWS as well, but this one is through a **private internet connection**. To do so, we need a physical connection between our server and a AWS partner that provides direct connect. (it is more expansive and takes up to a month to be ready).
+
+- Private, secure and faster
+- Expansive
+<p align="center" width="100%"><img src="assets/vpn.jpg" alt="drawing" width="300"/></p>
+
+## Transit Gateway
+
+Our Topologies can became very complicated through time, for this we have the transit gateway.
+
+With Transit Gateway we can connect thousands of VPC and on-premises networks together using a central hub to manage it all. This one use a star model (hub-and-spoke).
+
+- One single gateway can peering, multiples connections to multiple VPCs.
+- Works with Direct Connect Gateway, VPNs
+
+<p align="center" width="100%"><img src="assets/transit-gateway.jpg" alt="drawing" width="300"/></p>
+
 ## Summary
 
 [UP](#-virtual-private-cloud---vpc)
