@@ -41,7 +41,7 @@ To define access to the internet and communication between subnets, we use route
 
 Inside each subnet we can have EC2 instances, For this instances be accessible to the internet, we need to use the Internet Gateway. The internet gateway create a way to our Subnet connect to the internet.
 
-The public subnet will have a route to the internet gateway that is communicating with the internet. As soon we have the internet gateway and a route to it, that makes the subnet a **public subnet**
+The public subnet will have a route to the internet gateway that is communicating with the internet. As soon we have the internet gateway and a route to it, that makes the subnet a **public subnet**. It is defined at VPC Level.
 
 ## NAT Gateway
 
@@ -156,5 +156,18 @@ With Transit Gateway we can connect thousands of VPC and on-premises networks to
 <p align="center" width="100%"><img src="assets/transit-gateway.jpg" alt="drawing" width="300"/></p>
 
 ## Summary
+
+- VPC: Virtual Private Cloud
+- Subnets: It is tied to an AZ, is a partition of VPC (can be private or public)
+- Internet Gateway: at VPC level, allow internet access
+- NAT Gateway: at the public subnet level, to allow access to the internet for the private one.
+- Network ACL (NACL): At subnet level, it is a firewall, Stateless, subnet rules for inbound and outbound
+- Security Groups: at instance level, it is a firewall, stateful. subnet rules (only allow rules) for inbound and outbound
+- VPC Flow Logs: Enable logs to all network interfaces of all internet traffic.
+- VPC Peering: Connect two VPC with non overlapping IP ranges, intransitive
+- VPC Endpoints: For private subnets, Provide private access to AWS Services within VPC
+- Site to Site VPN: connect on premises server with our vpc, through VPN using the public internet.
+- Direct Connect: connect on premises server with our vpc, though VPN, using a private connection (needs physical devices)
+- Transit Gateway: Connect thousands of VPCs and on premise servers using a central hub to manage traffic and peering.
 
 [UP](#-virtual-private-cloud---vpc)
