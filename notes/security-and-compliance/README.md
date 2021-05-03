@@ -3,9 +3,9 @@
 - [AWS Shared Responsibility Model](#aws-shared-responsibility-model)
 - [AWS Shield](#amazon-shield) [Standard and Advanced, layer 3 and 4]
 - [AWS Web Application Firewall](#aws-web-application-firewall) [WAF, layer 7]
-- [Penetration Testing](#penetration-testing)
-- [KMS]()
-- [CloudHSM]()
+- [AWS Penetration Testing](#aws-penetration-testing)
+- [AWS Key Management Service](#aws-key-management-service) [Encryption]
+- [AWS CloudHSM](#aws-cloudhsm) [Encryption]
 - [Artifact]()
 - [GuardDuty]()
 - [Inspector]()
@@ -123,5 +123,31 @@ And we have some Prohibited Activities such as:
 - Request flooding (login request flooding, API request flooding)
 
 [Read more](https://aws.amazon.com/security/penetration-testing/)
+
+## AWS Key Management Service
+
+We have two types of encryptions:
+
+- Encryption at Rest: data stored or archived on a device somewhere (On Hard Disk, S3, RDS, Deep Archive)
+
+- Encryption in Transit (in motion): incoming data, while upload data, while the data are in the network. (Transfer from on-premises to AWS, EC2 to DynamoDB, etc)
+
+<p align="center" width="100%"><img src="assets/encryption.jpg" alt="encryption" width="500"/></p>
+
+Anytime we hear about encryption in AWS it is possible to be most likely KMS (Key Management Service). KMS manages the encryption keys for us.
+
+**Encryption Opt-in**: we can enable encryption for the bellow services. it is optional.
+
+- EBS volumes: encrypt volumes
+- S3 buckets: Server-side encryption of objects
+- Redshift database: encryption of data
+- RDS database: encryption of data
+- EFS drives: encryption of data
+
+**Encryption automatically enabled**: theses services has encryption by default, due security requirements:
+
+- CloudTrail logs
+- S3 Glacier
+- Storage Gateway
 
 [UP](#security-and-compliance)
