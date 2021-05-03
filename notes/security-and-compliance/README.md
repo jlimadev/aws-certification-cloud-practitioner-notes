@@ -6,6 +6,7 @@
 - [AWS Penetration Testing](#aws-penetration-testing)
 - [AWS Key Management Service](#aws-key-management-service) [Encryption]
 - [AWS CloudHSM](#aws-cloudhsm) [Encryption]
+- [Types of Customer Master Keys](#types-of-customer-master-keys) [CMK Encryption]
 - [Artifact]()
 - [GuardDuty]()
 - [Inspector]()
@@ -149,5 +150,13 @@ Anytime we hear about encryption in AWS it is possible to be most likely KMS (Ke
 - CloudTrail logs
 - S3 Glacier
 - Storage Gateway
+
+## AWS CloudHSM
+
+CloudHSM is a dedicated hardware provisioned by AWS. Compared to KMS which provide a software who manages our keys, CloudHSM is a hardware provisioned by AWS where we manage our own keys.
+
+HSM device is tamper resistant, FIPS 140-2 Level 3 compliance
+
+<p align="center" width="100%"><img src="assets/cloudhsm.jpg" alt="cloudhsm" width="500"/></p>
 
 [UP](#security-and-compliance)
