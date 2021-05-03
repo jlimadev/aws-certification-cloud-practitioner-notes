@@ -10,11 +10,7 @@ AWS Batch is fully managed service to batch processing at any scale. With this s
 - AWS Provision the right amount of memory and compute processing to each job.
 - Cost optimization and no worry about create the infra.
 
-```
-                                   _AWS Batch_________________
-Upload of Images -> S3 -Trigger-> | ECS -> EC2/Spot Instances | -> Insert Processed Image into a new Bucket
-
-```
+<p align="center" width="100%"><img src="assets/batch.jpg" alt="drawing" width="700"/></p>
 
 ## AWS Batch vs Lambda
 

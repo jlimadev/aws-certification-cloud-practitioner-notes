@@ -111,12 +111,7 @@ In CloudTrail we have three types of events:
 
 With Insight Events we can check the anomalies in CloudTrail Console, Store events into S3 and Integrate with EventBridge to perform actions.
 
-```
-                Continuous Analysis                     Generate                      CloudTrailConsole
-Management Events ----------------> CloudTrail Insights ---------> Insights Events / EventBridge Events
-                                                                                   \  S3 Bucket
-
-```
+<p align="center" width="100%"><img src="assets/cloudtrail.jpg" alt="drawing" width="700"/></p>
 
 **CloudTrail Retention**: By default the events are store for 90 days. To keep the events for longer times, we can log them to S3 Bucket and use Amazon Athena to Query the events. (we can store all events types: Management Events, Data Events and Insights Events)
 

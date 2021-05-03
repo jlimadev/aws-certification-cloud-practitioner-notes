@@ -31,6 +31,8 @@ In AWS we have two types of Queues:
 - FIFO: First In First Out delivery and Exactly-Once processing
   Keywords: Producer and Consumer
 
+  <p align="center" width="100%"><img src="assets/sqs.jpg" alt="drawing" width="500"/></p>
+
 ## Simple Notification Service
 
 For this service need to understand PUB/SUB: It has a topic and this topic notify multiple consumers at once (fan out) of different types (such as Lambda, SQS, Email).
@@ -41,6 +43,8 @@ In Simple Notification Service (SNS) the publisher only need to send one notific
 - As many “event subscribers” as we want to listen to the SNS topic notifications
 - Each subscriber to the topic will get all the messages
 - Keywords: Publisher and Subscriber
+
+ <p align="center" width="100%"><img src="assets/sns.jpg" alt="drawing" width="400"/></p>
 
 Difference between SNS and SQS:
 
