@@ -5,9 +5,10 @@
 - [AWS Web Application Firewall](#aws-web-application-firewall) [WAF, layer 7]
 - [AWS Penetration Testing](#aws-penetration-testing)
 - [AWS Key Management Service](#aws-key-management-service) [Encryption]
+- [AWS Secrets Manager](#aws-secrets-manager)
+- [AWS Artifact](#aws-artifact)
 - [AWS CloudHSM](#aws-cloudhsm) [Encryption]
 - [Types of Customer Master Keys](#types-of-customer-master-keys) [CMK Encryption]
-- [Artifact]()
 - [GuardDuty]()
 - [Inspector]()
 - [Config]()
@@ -182,5 +183,14 @@ HSM device is tamper resistant, FIPS 140-2 Level 3 compliance. HSM = Hardware Se
 
 - Keys generated from your own CloudHSM hardware device
 - Cryptographic operations are performed within the CloudHSM cluster
+
+## AWS Secrets Manager
+
+It is an AWS service to store secret keys of any type. The secrets are encrypted using KMS.
+
+- With AWS Secrets Manager we have the capability to rotate the secret keys every X days
+- It has full integration with RDS (relational databases) and we can store secrets there (such as user and password of the database)
+
+## AWS Artifact
 
 [UP](#security-and-compliance)
