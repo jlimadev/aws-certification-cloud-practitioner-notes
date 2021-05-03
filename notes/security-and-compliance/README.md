@@ -1,8 +1,8 @@
 # 📝Security and Compliance
 
 - [AWS Shared Responsibility Model](#aws-shared-responsibility-model)
-- [AWS Shield](#amazon-shield) [Standard and Advanced]
-- [AWS Web Application Firewall](#aws-web-application-firewall)
+- [AWS Shield](#amazon-shield) [Standard and Advanced, layer 3 and 4]
+- [AWS Web Application Firewall](#aws-web-application-firewall) [WAF, layer 7]
 - [Penetration Testing]()
 - [KMS]()
 - [CloudHSM]()
@@ -81,12 +81,22 @@ S3 examples of shared responsibility
 
 AWS Shield Standard:
 
-- It is a free service available for every AWS Customer and it provides a protection from common attacks such as SYN/UDP floods, reflection attacks and other layer 3 and 4 attacks.
+- It is a free service available for every AWS Customer and it provides a protection from common attacks such as SYN/UDP floods, reflection attacks and other layer 3 and 4 attacks (tcp/ip). It can be deployed on HTTP friendly services (ALB, API Gateway, CloudFront)
 
 AWS Shield Advanced:
 
 - It is a option DDoS mitigation ($3000 month/organization) and it protects against the most sophisticated attacks on EC2, ELB, CloudFront, Global Accelerator and Route53. It is a high level defense.
 - 24/7 access to AWS DDoS response team (DRP)
 - Protect against higher fees during spikes of DDoS
+
+## AWS Web Application Firewall
+
+WAF protects our web apps from common web exploit attacks (layer 7, http).
+
+- Define a Web Access Control List (Web ACL):
+  - Rules can include IP addresses, HTTP headers, HTTP body or strings
+  - protection from common attacks (SQL Injection and Cross-Site Scripting)
+  - Size constraints, geo-match (block a few countries)
+  - Rate-based rules (count occurrence of events) - this one is against DDoS attacks
 
 [UP](#security-and-compliance)
