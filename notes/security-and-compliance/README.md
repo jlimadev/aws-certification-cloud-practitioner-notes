@@ -1,8 +1,8 @@
 # 📝Security and Compliance
 
 - [AWS Shared Responsibility Model](#aws-shared-responsibility-model)
-- [Shield]()
-- [WAF]()
+- [Amazon Shield](#amazon-shield)
+- [AWS Web Application Firewall](#aws-web-application-firewall)
 - [Penetration Testing]()
 - [KMS]()
 - [CloudHSM]()
@@ -58,9 +58,26 @@ S3 examples of shared responsibility
   - Ensure separation of the data between different customers
   - Ensure AWS employees can’t access your data
 - Your responsibility:
+
   - Bucket configuration
   - Bucket policy / public setting
   - IAM user and roles
   - Enabling encryption
 
-[UP](#-security-and-compliance)
+  ## AWS against DDoS Attack
+
+  In a Distributed Denial of Service (DDoS) attack, an attacker uses multiple sources—such as distributed groups of malware infected computers, routers, IoT devices, and other endpoints—to orchestrate an attack against a target.
+
+  This is a example of how we can get protected into AWS using firewall and other security services.
+
+  <p align="center" width="100%"><img src="assets/ddos.jpg" alt="drawing" width="500"/></p>
+
+  - AWS Shield Standard: protects against DDOS attack for your website
+    and applications, for all customers at no additional costs
+  - AWS Shield Advanced: 24/7 premium DDoS protection
+  - AWS WAF: Filter specific requests based on rules
+  - CloudFront and Route 53:
+  - Availability protection using global edge network
+  - Combined with AWS Shield, provides attack mitigation at the edge
+
+[UP](#security-and-compliance)
