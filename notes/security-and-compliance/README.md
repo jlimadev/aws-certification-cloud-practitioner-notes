@@ -1,7 +1,7 @@
 # 📝Security and Compliance
 
 - [AWS Shared Responsibility Model](#aws-shared-responsibility-model)
-- [Amazon Shield](#amazon-shield)
+- [AWS Shield](#amazon-shield) [Standard and Advanced]
 - [AWS Web Application Firewall](#aws-web-application-firewall)
 - [Penetration Testing]()
 - [KMS]()
@@ -34,7 +34,7 @@ Shared controls:
 
 - Patch Management, Configuration Management, Awareness & Training
 
-<p align="center" width="100%"><img src="assets/shared-responsibility.jpg" alt="drawing" width="500"/></p>
+<p align="center" width="100%"><img src="assets/shared-responsibility.jpg" alt="shared-responsibility" width="500"/></p>
 
 RDS examples of shared responsibility
 
@@ -66,18 +66,27 @@ S3 examples of shared responsibility
 
   ## AWS against DDoS Attack
 
-  In a Distributed Denial of Service (DDoS) attack, an attacker uses multiple sources—such as distributed groups of malware infected computers, routers, IoT devices, and other endpoints—to orchestrate an attack against a target.
+  In a Distributed Denial of Service (DDoS) attack, an attacker uses multiple sources—such as distributed groups of malware infected computers, routers, IoT devices, and other endpoints—to orchestrate an attack against a target. This is a example of how we can get protected into AWS using firewall and other security services.
 
-  This is a example of how we can get protected into AWS using firewall and other security services.
+  <p align="center" width="100%"><img src="assets/ddos.jpg" alt="ddos" width="500"/></p>
 
-  <p align="center" width="100%"><img src="assets/ddos.jpg" alt="drawing" width="500"/></p>
-
-  - AWS Shield Standard: protects against DDOS attack for your website
-    and applications, for all customers at no additional costs
-  - AWS Shield Advanced: 24/7 premium DDoS protection
-  - AWS WAF: Filter specific requests based on rules
-  - CloudFront and Route 53:
+- AWS Shield Standard: protects against DDOS attack for your website and applications, for all customers at no additional costs
+- AWS Shield Advanced: 24/7 premium DDoS protection
+- AWS WAF: Filter specific requests based on rules
+- CloudFront and Route 53:
   - Availability protection using global edge network
   - Combined with AWS Shield, provides attack mitigation at the edge
+
+## AWS Shield
+
+AWS Shield Standard:
+
+- It is a free service available for every AWS Customer and it provides a protection from common attacks such as SYN/UDP floods, reflection attacks and other layer 3 and 4 attacks.
+
+AWS Shield Advanced:
+
+- It is a option DDoS mitigation ($3000 month/organization) and it protects against the most sophisticated attacks on EC2, ELB, CloudFront, Global Accelerator and Route53. It is a high level defense.
+- 24/7 access to AWS DDoS response team (DRP)
+- Protect against higher fees during spikes of DDoS
 
 [UP](#security-and-compliance)
