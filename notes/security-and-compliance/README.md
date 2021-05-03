@@ -189,8 +189,15 @@ HSM device is tamper resistant, FIPS 140-2 Level 3 compliance. HSM = Hardware Se
 It is an AWS service to store secret keys of any type. The secrets are encrypted using KMS.
 
 - With AWS Secrets Manager we have the capability to rotate the secret keys every X days
+- We can automate generation of secrets on rotation (uses Lambda)
 - It has full integration with RDS (relational databases) and we can store secrets there (such as user and password of the database)
 
 ## AWS Artifact
+
+It is not really a service. It is a way to download AWS compliance documentations. Is a Portal that provides customers with on-demand access to AWS compliance documentation and AWS agreements.
+
+- Artifact Reports - Allows you to download AWS security and compliance documents from third-party auditors, like AWS ISO certifications, Payment Card Industry (PCI), and System and Organization Control (SOC) reports
+- Artifact Agreements - Allows you to review, accept, and track the status of AWS agreements such as the Business Associate Addendum (BAA) or the Health Insurance Portability and Accountability Act (HIPAA) for an individual account or in your organization
+- Can be used to support internal audit or compliance
 
 [UP](#security-and-compliance)
