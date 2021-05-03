@@ -1,0 +1,20 @@
+# 📝Security and Compliance
+
+- [Shared Responsibility on AWS]()
+- [Shield]()
+- [WAF]()
+- [Penetration Testing]()
+- [KMS]()
+- [CloudHSM]()
+- [Artifact]()
+- [GuardDuty]()
+- [Inspector]()
+- [Config]()
+- [Macie]()
+- [CloudTrail]()
+- [AWS Security Hub]()
+- [Amazon Detective]()
+- [AWS Abuse]()
+- [Root user privileges]()
+
+[UP](#-security-and-compliance)

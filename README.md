@@ -16,3 +16,4 @@
 - [Cloud Integration](notes/cloud-integration/README.md) (SNS, SQS, Kinesis and Amazon MQ)
 - [Cloud Monitoring](notes/cloud-monitoring/README.md) (CloudWatch, X-Ray, CloudTrail, Services and Personal Health)
 - [VPC](notes/vpc/README.md) (VPC, Subnets, Gateways, NATs, Security Groups, VPN, Direct Connect, Transit Gateway)
+- [Security and Compliance](notes/security-and-compliance/README.md) (Shield, AWF, KMS, GuardDuty, Inspector, CloudTrail, + Security Features)
