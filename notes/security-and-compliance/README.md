@@ -16,8 +16,9 @@
 - [CloudTrail](#CloudTrail) [Audit and compliance tool regarding api calls]
 - [AWS Security Hub](#aws-security-hub)
 - [Amazon Detective](#amazon-detective) [Root cause]
-- [AWS Abuse]()
-- [Root user privileges]()
+- [AWS Abuse](#aws-abuse)
+- [Root user privileges](#root-user-privileges)
+- [Summary](#summary)
 
 ## AWS Shared Responsibility Model
 
@@ -266,5 +267,34 @@ Why do amazon have this service? With GuardDuty, Macie and Security Hub we can i
 - use machine learning algorithms and graphs
 - automatically collect data and processes events from vpc flow logs, cloudtrail, guardduty and create a unified view of it.
 - produces visualizations with details and context to get to the root cause.
+
+## AWS Abuse
+
+It is a way to report suspect acts coming from hosted services that use aws resources. We need to contact the AWS abuse team.
+
+Prohibited and Abusive behaviors:
+
+- Spam – receiving undesired emails from AWS-owned IP address, websites & forums spammed by AWS resources
+- Port scanning – sending packets to your ports to discover the unsecured ones
+- DoS or DDoS attacks – AWS-owned IP addresses attempting to overwhelm or crash your servers/softwares
+- Intrusion attempts – logging in on your resources
+- Hosting objectionable or copyrighted content – distributing illegal or copyrighted content without consent
+- Distributing malware – AWS resources distributing softwares to harm computers or machines
+
+## Root User Privileges
+
+Root user is the main account registered in AWS. It has complete access to all AWS resources, but we should not use the main account to common tasks, to do so we must create users within our account. But there a few actions allowed ONLY in the root account:
+
+- **Change Account Settings** (name, email, address, root user password, root user access keys)
+- View certain taxes invoices
+- Close AWS account
+- Restore IAM user permissions
+- **Change or Cancel the AWS support plan**
+- **Register as a seller in the reserved instance Marketplace**
+- Configure an Amazon S3 Bucket to enable MFA
+- Edit or delete Amazon S3 bucket policy that includes a invalid VPC or VPC endpoint ID
+- SignUp to GovCloud
+
+## Summary
 
 [UP](#security-and-compliance)
