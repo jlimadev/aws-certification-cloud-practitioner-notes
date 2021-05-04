@@ -12,7 +12,7 @@
 - [Amazon GuardDuty](#amazon-guardduty) [Threat Discovery into account]
 - [Amazon Inspector](#aws-inspector) [EC2 Security Assessments]
 - [AWS Config](#aws-config) [Record Configuration for resources on AWS]
-- [Macie]()
+- [Amazon Macie](#amazon-macie) [protect sensitive data in S3 Bucket]
 - [CloudTrail]()
 - [AWS Security Hub]()
 - [Amazon Detective]()
@@ -229,5 +229,15 @@ With AWS Config we can track, audit and record the resources configurations and 
 - Config per-region
 - Aggregated across regions and accounts
 - View compliance of a resource over time, View configuration of a resource over time and View CloudTrail API calls if enabled
+
+## Amazon Macie
+
+Amazon Macie is a fully managed data security and data privacy service to protect sensitive data in AWS, using machine learning.
+
+Macie helps identify and alert about sensitive data (such as PII, personal identifiable information)
+
+We can customize our own sensitive data types
+
+<p align="center" width="100%"><img src="assets/macie.jpg" alt="macie" width="500"/></p>
 
 [UP](#security-and-compliance)
