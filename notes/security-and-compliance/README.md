@@ -303,7 +303,7 @@ Root user is the main account registered in AWS. It has complete access to all A
   - AWS Web Application Firewall: Firewall to filter incoming requests based on rules. Protection against attacks on layer 7, http
   - AWS Penetration Testing: Allow penetration tests within AWS
 - Encryption:
-  - AWS Key Management Service: Encryption Keys management by AWS
+  - AWS Key Management Service: Encryption service and the keys are managed by AWS
   - AWS CloudHSM: Encryption Device. Keys is managed by the user
   - Types of Customer Master Keys: Customer Managed CMK, AWS Managed CMK, AWS Owned CMK and CloudHSM Keys
   - AWS Secrets Manager: Store secrets and encrypt them. (application secrets)
