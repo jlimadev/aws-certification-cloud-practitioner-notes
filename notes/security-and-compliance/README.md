@@ -13,9 +13,9 @@
 - [Amazon Inspector](#aws-inspector) [EC2 Security Assessments]
 - [AWS Config](#aws-config) [Record Configuration for resources on AWS]
 - [Amazon Macie](#amazon-macie) [protect sensitive data in S3 Bucket]
-- [CloudTrail]()
-- [AWS Security Hub]()
-- [Amazon Detective]()
+- [CloudTrail](#CloudTrail) [Audit and compliance tool regarding api calls]
+- [AWS Security Hub](#aws-security-hub)
+- [Amazon Detective](#amazon-detective) [Root cause]
 - [AWS Abuse]()
 - [Root user privileges]()
 
@@ -256,5 +256,15 @@ To use this service we must first enable AWS Config (Predefine and record rules 
 We can integrate with EventBridge events and Amazon Detective.
 
 <p align="center" width="100%"><img src="assets/securityhub.jpg" alt="securityhub" width="500"/></p>
+
+## Amazon Detective
+
+It is a service to identify the root cause of security issues or suspicious activities.
+
+Why do amazon have this service? With GuardDuty, Macie and Security Hub we can identify multiple security issues, but sometime we need a deeper analysis to detect what is causing that problem. So Amazon Detective analyzes, investigates and quickly identify the root cause.
+
+- use machine learning algorithms and graphs
+- automatically collect data and processes events from vpc flow logs, cloudtrail, guardduty and create a unified view of it.
+- produces visualizations with details and context to get to the root cause.
 
 [UP](#security-and-compliance)
