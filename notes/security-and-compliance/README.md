@@ -240,4 +240,21 @@ We can customize our own sensitive data types
 
 <p align="center" width="100%"><img src="assets/macie.jpg" alt="macie" width="500"/></p>
 
+## CloudTrail
+
+CloudTrail Track API calls made by users within account. It is part of [Monitoring](../cloud-monitoring/README.md/#cloudtrail) services.
+
+## AWS Security Hub
+
+It is a centralized security service that allows to do security checks across multiple accounts. Integrated dashboards showing current security and compliance status to quickly
+take actions.
+
+- Automatically aggregates alerts in predefined or personal findings from various accounts and services within AWS, such as: GuardDuty (Threat discovery), Inspector (EC2 OS security), Macie (Sensitive Data), IAM Access Analyzer, AWS Systems Manager, AWS Firewall Manager, AWS Partner Network Solutions.
+
+To use this service we must first enable AWS Config (Predefine and record rules and resources configurations)
+
+We can integrate with EventBridge events and Amazon Detective.
+
+<p align="center" width="100%"><img src="assets/securityhub.jpg" alt="securityhub" width="500"/></p>
+
 [UP](#security-and-compliance)
