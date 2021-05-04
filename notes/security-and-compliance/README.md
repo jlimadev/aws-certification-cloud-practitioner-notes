@@ -9,9 +9,9 @@
 - [Types of Customer Master Keys](#types-of-customer-master-keys) [CMK Encryption]
 - [AWS Secrets Manager](#aws-secrets-manager)
 - [AWS Artifact](#aws-artifact)
-- [Amazon GuardDuty](#amazon-guardduty)
-- [Inspector]()
-- [Config]()
+- [Amazon GuardDuty](#amazon-guardduty) [Threat Discovery into account]
+- [Amazon Inspector](#aws-inspector) [EC2 Security Assessments]
+- [AWS Config](#aws-config)
 - [Macie]()
 - [CloudTrail]()
 - [AWS Security Hub]()
@@ -202,7 +202,7 @@ It is not really a service. It is a way to download AWS compliance documentation
 
 ## Amazon GuardDuty
 
-Intelligent threat discovery to protect AWS Account. It uses machine learning algorithms to anomaly detection. We can setup cloudwatch events rules to be notified in case of any anomaly detection. These cloudwatch event rules can trigger lambdas or sns topics.
+Intelligent and continuos threat discovery service to protect AWS Account. It uses machine learning algorithms to anomaly detection. We can setup cloudwatch events rules to be notified in case of any anomaly detection. These cloudwatch event rules can trigger lambdas or sns topics.
 
 Input data includes:
 
@@ -211,5 +211,12 @@ Input data includes:
 - DNS Logs: compromised EC2 instances sending encoded data within DNS queries
 
 <p align="center" width="100%"><img src="assets/guardduty.jpg" alt="guardduty" width="500"/></p>
+
+## Amazon Inspector
+
+Amazon Inspector is an automated security assessment service for EC2 instances. It analyzes the running OS against known vulnerabilities and unintended network access.
+
+- Amazon Inspector must be installed on OS in EC2 Instances. The assessment can run in scheduled time and in target groups.
+- After the assessment it sends/provides a report of vulnerabilities.
 
 [UP](#security-and-compliance)
