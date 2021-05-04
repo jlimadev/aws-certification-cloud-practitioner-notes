@@ -297,4 +297,30 @@ Root user is the main account registered in AWS. It has complete access to all A
 
 ## Summary
 
+- AWS Shared Responsibility Model: AWS security OF the cloud, user security IN the cloud
+- DDoS + other attacks protection:
+  - AWS Shield: Automatic protection against DDoS attacks (Standard and Advanced)
+  - AWS Web Application Firewall: Firewall to filter incoming requests based on rules. Protection against attacks on layer 7, http
+  - AWS Penetration Testing: Allow penetration tests within AWS
+- Encryption:
+  - AWS Key Management Service: Encryption Keys management by AWS
+  - AWS CloudHSM: Encryption Device. Keys is managed by the user
+  - Types of Customer Master Keys: Customer Managed CMK, AWS Managed CMK, AWS Owned CMK and CloudHSM Keys
+  - AWS Secrets Manager: Store secrets and encrypt them. (application secrets)
+- Security:
+  - AWS Artifact: Get access to compliance reports such as PCI, ISO, etc
+  - Amazon GuardDuty: Threat Discovery on AWS account and Find malicious behavior with VPC, DNS & CloudTrail Logs
+  - Amazon Inspector: EC2 only, install the agent to find vulnerabilities on OS.
+  - AWS Config: Track and record configuration rules and check if resources are compliant with.
+  - Amazon Macie: Find sensitive data on S3 Buckets.
+  - CloudTrail: Track API calls on the account (Compliance, Governance and Audit)
+  - AWS Security Hub: is a central service to security on multiple accounts
+  - Amazon Detective: is a service to get the root cause of issues or suspicious activities.
+  - AWS Abuse: Report AWS resources used for abusive or illegal purposes
+- Root user privileges:
+  - Change account settings
+  - Change AWS support plan
+  - Delete account
+  - Register as seller on reserved instance marketplace
+
 [UP](#security-and-compliance)
