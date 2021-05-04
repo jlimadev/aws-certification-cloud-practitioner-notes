@@ -11,7 +11,7 @@
 - [AWS Artifact](#aws-artifact)
 - [Amazon GuardDuty](#amazon-guardduty) [Threat Discovery into account]
 - [Amazon Inspector](#aws-inspector) [EC2 Security Assessments]
-- [AWS Config](#aws-config)
+- [AWS Config](#aws-config) [Record Configuration for resources on AWS]
 - [Macie]()
 - [CloudTrail]()
 - [AWS Security Hub]()
@@ -218,5 +218,16 @@ Amazon Inspector is an automated security assessment service for EC2 instances. 
 
 - Amazon Inspector must be installed on OS in EC2 Instances. The assessment can run in scheduled time and in target groups.
 - After the assessment it sends/provides a report of vulnerabilities.
+
+## AWS Config
+
+With AWS Config we can track, audit and record the resources configurations and the compliance of them over time.
+
+- Possibility of storing the configuration data into S3 (analyzed by Athena)
+- Example of tracking in AWS Config: Check HTTP port if is public. Require to all SHH port to be restricted.
+- We can receive alerts (SNS notifications) for any changes
+- Config per-region
+- Aggregated across regions and accounts
+- View compliance of a resource over time, View configuration of a resource over time and View CloudTrail API calls if enabled
 
 [UP](#security-and-compliance)
