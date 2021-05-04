@@ -5,11 +5,11 @@
 - [AWS Web Application Firewall](#aws-web-application-firewall) [WAF, layer 7]
 - [AWS Penetration Testing](#aws-penetration-testing)
 - [AWS Key Management Service](#aws-key-management-service) [Encryption]
-- [AWS Secrets Manager](#aws-secrets-manager)
-- [AWS Artifact](#aws-artifact)
 - [AWS CloudHSM](#aws-cloudhsm) [Encryption]
 - [Types of Customer Master Keys](#types-of-customer-master-keys) [CMK Encryption]
-- [GuardDuty]()
+- [AWS Secrets Manager](#aws-secrets-manager)
+- [AWS Artifact](#aws-artifact)
+- [Amazon GuardDuty](#amazon-guardduty)
 - [Inspector]()
 - [Config]()
 - [Macie]()
@@ -199,5 +199,17 @@ It is not really a service. It is a way to download AWS compliance documentation
 - Artifact Reports - Allows you to download AWS security and compliance documents from third-party auditors, like AWS ISO certifications, Payment Card Industry (PCI), and System and Organization Control (SOC) reports
 - Artifact Agreements - Allows you to review, accept, and track the status of AWS agreements such as the Business Associate Addendum (BAA) or the Health Insurance Portability and Accountability Act (HIPAA) for an individual account or in your organization
 - Can be used to support internal audit or compliance
+
+## Amazon GuardDuty
+
+Intelligent threat discovery to protect AWS Account. It uses machine learning algorithms to anomaly detection. We can setup cloudwatch events rules to be notified in case of any anomaly detection. These cloudwatch event rules can trigger lambdas or sns topics.
+
+Input data includes:
+
+- CloudTrail Logs: unusual API calls, unauthorized deployments
+- VPC Flow Logs: unusual internal traffic, unusual IP address
+- DNS Logs: compromised EC2 instances sending encoded data within DNS queries
+
+<p align="center" width="100%"><img src="assets/guardduty.jpg" alt="guardduty" width="500"/></p>
 
 [UP](#security-and-compliance)
