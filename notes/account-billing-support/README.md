@@ -93,8 +93,9 @@ AWS ControlTower is a easy way to setup and govern a secure and compliant multi-
 
 With ControlTower we can:
 
-- automate the setup of the environment
-- automate ongoing policies
-- detect policy violations
+- automate the setup of the environment with a few clicks
+- automate ongoing policies applying guardrails
+  - detect policy violations
 - monitor compliance in a dashboard.
 - automatically sets up AWS Organizations to organize accounts and implement SCPs (Service Control Policies)
+- it creates three shared accounts: Master Account, Log Archive account and Audit account
