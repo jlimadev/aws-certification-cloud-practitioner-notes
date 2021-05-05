@@ -214,7 +214,7 @@ About the prices: A Standard Reserved Instance provides a more significant disco
 
 Difference between Dedicated Hosts and EC2 Dedicated Instances
 
-- Both allow you to use dedicated server, but in the EC2 Dedicated Hosts you pay for each Host and can have more access to the hardware it is much more flexible and is recommended when you have server bound licences, while in EC2 Dedicated Instances you pay for each instance and cannot have access to hardware.
+- Both allow you to use dedicated server, but in the EC2 Dedicated Hosts you pay for each Host and can have more access to the hardware it is much more flexible and is recommended when you have server bound licenses, while in EC2 Dedicated Instances you pay for each instance and cannot have access to hardware.
 
 ---
 

@@ -4,8 +4,17 @@
 - [Multi Account Strategies](#multi-account-strategies)
 - [Service Control Policy](#service-control-policy)
 - [AWS ControlTower](#aws-controlTower)
-- []()
-- []()
+- [AWS Pricing Models](#aws-pricing-models)
+  - [Free Services and Free Tier](#free-services-and-free-tier)
+  - [EC2 Pricing](#ec2-pricing)
+  - [Lambda Pricing](#lambda-pricing)
+  - [ECS Pricing](#ecs-pricing)
+  - [Fargate Pricing](#fargate-pricing)
+  - [S3 Pricing](#s3-pricing)
+  - [EBS Pricing](#ebs-pricing)
+  - [Database Pricing](#Database-pricing)
+  - [CloudFront Pricing](#cloudfront-pricing)
+  - [Network Pricing](#network-pricing)
 - []()
 
 ## AWS Organizations
@@ -99,3 +108,142 @@ With ControlTower we can:
 - monitor compliance in a dashboard.
 - automatically sets up AWS Organizations to organize accounts and implement SCPs (Service Control Policies)
 - it creates three shared accounts: Master Account, Log Archive account and Audit account
+
+## AWS Pricing Models
+
+AWS has four pricing models:
+
+- **Pay as you go:** You pay for what you use, remain agile, responsive, meet the scale demands
+- **Save when you reserve:** for longer term requirements, you save more when you reserve (such as using databases, ec2 instances). This one minimize risks and we have a predictably manage budgets
+- **Pay less by using more:** The more you use, more discount. Based on volume.
+- **Pay less as AWS grows:** As AWS grows, they save costs and services gets cheaper, so we are affected by it.
+
+### Free Services and Free Tier
+
+- Free Services: IAM, VPC, Consolidated Billing, DynamoDB (25gb)
+- Free Services But you per resources: Elastic Beanstalk, CloudFormation, AutoScaling Groups
+- [Free Tier](https://aws.amazon.com/pt/free/): free for a period or volume of use (EC2 t2.micro, S3, EBS)
+
+### EC2 Pricing
+
+On EC2 we are only charged on what we use:
+
+- Number of instances
+- Instance configuration:
+  - Physical capacity
+  - Region
+  - OS and software
+  - Instance type
+  - Instance size
+- ELB running time and amount of data processed
+- Detailed monitoring
+
+We have multiple types of EC2 Purchasing Options. (more detailed in [EC2 section](../ec2/README.md/#EC2-Instances-Purchasing-Options))
+
+**On-demand instances:**
+
+- Minimum of 60s of use
+- Pay per second (Linux) or per hour (Windows)
+
+**Reserved instances:**
+
+- Up to 75% discount compared to On-demand on hourly rate
+- 1- or 3-years commitment
+- All upfront, partial upfront, no upfront
+
+**Spot instances:**
+
+- Up to 90% discount compared to On-demand on hourly rate
+- Bid for unused capacity
+
+**Dedicated Host:**
+
+- On-demand
+- Reservation for 1 year or 3 years commitment
+
+**Savings plans** as an alternative to save on sustained usage
+
+### Lambda Pricing
+
+- Pay per call
+- Pay per duration
+
+### ECS Pricing
+
+- When we use ECS behind the scenes it will get an EC2 instance so, will only pay for the EC2 instance and the resources configured to run our application.
+
+### Fargate Pricing
+
+- When we use Fargate it does not runs for us an EC2 instance, so we don't have to manage nothing about server, it is serverless. We pay for Fargate Launch Type Model which means: CPU and Memory allocated to run the application into the containers.
+
+### S3 Pricing
+
+In S3 we have multiple types of [Storage classes](../s3/README.md/#s3-storage-classes): S3 Standard, S3 Infrequent Access, S3 One-Zone IA, S3, Intelligent Tiering, S3 Glacier and S3 Glacier Deep Archive
+
+In S3 we pay for:
+
+- Number and size of objects: Price can be tiered (based on volume, the more volume more discount)
+- Number and type of requests (pay for requests in and out)
+- Data transfer OUT of the S3 region
+- S3 Transfer Acceleration
+- Lifecycle transitions between storage classes
+- Similar service: EFS (pay per use, has infrequent access & lifecycle rules)
+
+### EBS Pricing
+
+In Elastic Block Storage we pay for
+
+- Volume type (based on performance)
+- Storage volume in GB per month provisioned
+- IOPS:
+  - General Purpose SSD: Included
+  - Provisioned IOPS SSD: Provisionned amount in IOPS
+  - Magnetic: Number of requests
+- Snapshots:
+  - Added data cost per GB of snapshot per month
+- Data transfer:
+  - Outbound data transfer are tiered for volume discounts
+  - Inbound is free
+
+### Database Pricing
+
+- Per hour billing
+- Database characteristics:
+  - Engine
+  - Size
+  - Memory class
+- Purchase type:
+  - On-demand
+  - Reserved instances (1 or 3 years) with required up-front
+- Backup Storage: There is no additional charge for backup storage up to 100% of your total database storage for a region.
+
+**RDS Pricing:**
+
+- Additional storage (per GB per month)
+- Number of input and output requests per month
+- Deployment type (storage and I/O are variable):
+  - Single AZ
+  - Multiple AZs
+- Data transfer:
+  - Outbound data transfer are tiered for volume discounts
+  - Inbound is free
+
+### CloudFront Pricing
+
+- Pricing is different across different geographic regions
+- Aggregated for each edge location, then applied to your bill (the more you use in a edge location, bigger the discount)
+- Data Transfer Out (volume discount)
+- Data in is always free
+- Number of HTTP/HTTPS requests
+
+### Network Pricing
+
+- All the traffic in is free
+- In same region and same AZ: if we have an EC2 instance that uses the free traffic and we have another instance that communicates with this one, the communication is free using the **private ip**.
+- In different AZs communication via **private ip** is $0.01 (cheaper) and via **public ip** is $0.02 (expensive).
+- In different regions: $0.02 because of the inter-region communication
+
+<p align="center" width="100%"><img src="assets/network-pricing.jpg" alt="network-pricing" width="500"/></p>
+
+- Use Private IP instead of Public IP for good savings and better network performance
+- Use same AZ for maximum savings (but you loose the high availability)
