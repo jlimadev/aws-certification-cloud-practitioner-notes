@@ -3,7 +3,7 @@
 - [AWS Organizations](#aws-organizations)
 - [Multi Account Strategies](#multi-account-strategies)
 - [Service Control Policy](#service-control-policy)
-- []()
+- [AWS ControlTower](#aws-controlTower)
 - []()
 - []()
 - []()
@@ -65,7 +65,7 @@ Example of Service Control Policy:
 - HR OU has no access to redshift and has no access to Lambda (due DenyAWSLambda SCP)
 - Finance OU has no access only to Deny
 
-Example of SCP allowing access to all resources but not to DynamoDB in all accounts.
+[Examples](https://docs.aws.amazon.com/organizations/latest/userguide/orgs_manage_policies_scps_examples.html) of SCP allowing access to all resources but not to DynamoDB in all accounts.
 
 ```JSON
 {
@@ -86,3 +86,15 @@ Example of SCP allowing access to all resources but not to DynamoDB in all accou
   ]
 }
 ```
+
+## AWS ControlTower
+
+AWS ControlTower is a easy way to setup and govern a secure and compliant multi-account AWS environment based on best practices.
+
+With ControlTower we can:
+
+- automate the setup of the environment
+- automate ongoing policies
+- detect policy violations
+- monitor compliance in a dashboard.
+- automatically sets up AWS Organizations to organize accounts and implement SCPs (Service Control Policies)
