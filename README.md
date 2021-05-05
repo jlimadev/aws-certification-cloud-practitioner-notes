@@ -1,4 +1,4 @@
-# 👩‍💻 AWS Cloud Practitioner Study Notes - [In Progress]
+# 💻 AWS Cloud Practitioner Study Notes - [In Progress]
 
 - [Cloud Computing](notes/cloud-computing/README.md)
 - [How AWS Works](notes/aws/README.md)
@@ -18,3 +18,4 @@
 - [VPC](notes/vpc/README.md) (VPC, Subnets, Gateways, NATs, Security Groups, VPN, Direct Connect, Transit Gateway)
 - [Security and Compliance](notes/security-and-compliance/README.md) (Shield, AWF, KMS, GuardDuty, Inspector, CloudTrail, + Security Features)
 - [Machine Learning](notes/machine-learning/README.md) (Rekognition, Transcribe, Polly, Translate, Lex, Connect, Comprehend, SageMaker)
+- [Account Management, Billing and Support](notes/account-billing-support/README.md) (AWS Organizations, SCP)
