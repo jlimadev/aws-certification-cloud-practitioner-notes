@@ -243,6 +243,7 @@ In Elastic Block Storage we pay for
 - Data transfer:
   - Outbound data transfer are tiered for volume discounts
   - Inbound is free
+- Reserved Instances are good and more cost-effective (up to 69% discount compared to On-demand pricing, depending on the upfront) for long workloads. You can reserve instances for 1 or 3 years in RDS.
 
 ### CloudFront Pricing
 
