@@ -30,7 +30,8 @@
     - [AWS Budgets](#aws-budgets)
 - [AWS Trusted Advisor](#aws-trusted-advisor)
 - [AWS Support Plans](#aws-support-plans)
-- []()
+- [Account Best Practices Summary](#account-best-practices-summary)
+- [Billing Summary](#billing-summary)
 
 ## AWS Organizations
 
@@ -463,3 +464,31 @@ For Enterprise and mission critical systems running on AWS
   - Production system impaired up to 4 business hours
   - Production system down < 1 business hour
   - Business-Critical system down < 15 minutes to response
+
+## Account Best Practices Summary
+
+- Operating with multiple accounts use AWS Organizations
+- Restricting power into the account use Service Control Policy
+- Setup multiple accounts with best-practices with AWS ControlTower
+- Use tags and Cost allocation tags for easy billing/management
+- IAM guidelines: MFA, Password policies, Least privilege principle
+- Use Config to record all the resources and configurations and do compliance over time
+- Use CloudFormation to deploy the stack across the regions
+- Use CloudTrail to track all the api calls in our account
+- Trusted Advisor is great tool to get insight to get the best cost optimization and the support plan
+- Send Services Logs and Access Logs to S3 or CloudWatch Logs (Maybe have an account just to logging)
+- If anything compromises the account: change the root password, delete and rotate all passwords and keys, and get in touch to AWS Support.
+
+## Billing Summary
+
+- TCO Calculator: Calculate the price of moving from on premises to the cloud and get reports of the the moving
+- Pricing Calculator: Calculate the price of the architecture on the cloud
+- Billing Dashboard: Simple tool to overview the billings
+- Cost Allocation Tags: Group tags together and get report by grouped tags
+- Cost and Usage Reports: Most comprehensive report in AWS
+- Cost Explorer: Visual Billing dashboard with detailed + forecast 12 usage up to 12 months
+- Billing Alarms: use CloudWatch to run the billings alarms when some metric is passed (located in us-east-1)
+- Budgets: more advanced alarm and notification regarding Budget. Integrated with SNS.
+- Savings Plan: Easy-way to save money based on long term commitment with AWS.
+
+[UP](#account-management-billing-and-support)
