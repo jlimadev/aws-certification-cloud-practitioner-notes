@@ -277,3 +277,31 @@ There are two types of savings plans
 - Up to 66% discount compared to On-Demand
 - Regardless of Family, Region, size, OS, tenancy, compute options
 - Compute Options: EC2, Fargate, Lambda
+
+## Billing and Costing Tools
+
+AWS Has multiple types of tools to Billing and Cost, and we can split in three types
+
+- Estimating costs in the cloud:
+- Tracking costs in the cloud
+- Monitoring against costs plans
+
+### Estimating costs in the cloud
+
+First we can estimate the costs in the cloud with TCO Calculator and Pricing Calculator
+
+#### TCO Calculator
+
+TCO stands to Total Cost of Ownership and it is a tool to calculate the cost of moving ownership of on-premises server to the cloud.
+
+- AWS Helps reduce CAPEX (capital expenditures) and providing a pay-as-you-go model
+- The TCO calculators allow you to estimate the cost savings when using AWS and provide a detailed set of reports that can be used in executive presentations.
+- It compares all the costs with having a on-premises server vs using AWS infrastructure (Server, Storage, Network, IT Labor)
+
+**This tools is deprecated.**
+
+#### AWS Pricing Calculator
+
+AWS Pricing Calculator is a tool to calculate the pricing of Solutions Architecture on AWS.
+
+Here we can select all the infra we want and understand the billing before start our architecture.
