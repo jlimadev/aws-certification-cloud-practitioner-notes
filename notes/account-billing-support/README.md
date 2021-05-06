@@ -373,6 +373,8 @@ AWS Budgets is a powerful tool about create and send alarms when costs exceeds t
 - Same options as AWS Cost Explorer!
 - 2 budgets are free, then $0.02/day/budget
 
+AWS Budgets gives you the ability to set custom budgets that alert you when your costs or usage exceed (or are forecasted to exceed) your budgeted amount. Difference with CloudWatch Billing Alarms: CloudWatch Billing Alarms only send alerts when your costs and usage are exceeding your budget, not when it is forecasted to exceed your budget, while AWS Budgets does both.
+
 ## AWS Trusted Advisor
 
 Trusted Advisor is a assessment on AWS account with the purpose of advise possible savings, checks and cost optimizations within AWS account.
