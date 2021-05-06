@@ -27,7 +27,8 @@
     - [Cost Explorer](#cost-explorer): Visual tool
   - [Monitoring against costs plans](#monitoring-against-costs-plans)
     - [Billing Alarms on CloudWatch](#billing-alarms-on-cloudwatch)
-    - [Budgets](#budgets)
+    - [AWS Budgets](#aws-budgets)
+- [AWS Trusted Advisor](#aws-trusted-advisor)
 - []()
 
 ## AWS Organizations
@@ -368,3 +369,43 @@ AWS Budgets is a powerful tool about create and send alarms when costs exceeds t
 - Can filter by: Service, Linked Account, Tag, Purchase Option, Instance Type, Region, Availability Zone, API Operation, etc…
 - Same options as AWS Cost Explorer!
 - 2 budgets are free, then $0.02/day/budget
+
+## AWS Trusted Advisor
+
+Trusted Advisor is a assessment on AWS account with the purpose of advise possible savings, checks and cost optimizations within AWS account.
+
+- For all customer it is free the core checks of AWS
+- We can enable weekly reports/email notifications about the recommendations
+- The full version of trusted-advisor requires a **Business and Enterprise Supports Plan**
+  - You get access to advisor to all categories
+  - Ability to use CloudWatch Alarms when reach limits
+  - **Programmatic access using AWS Support API**
+
+AWS Trusted Advisor provides multiple types of recommendations:
+
+<p align="center" width="100%"><img src="assets/trusted-advisor.jpg" alt="trusted-advisor" width="400"/></p>
+
+**Cost Optimization**:
+
+- Low utilization of EC2 Instances, idle Load Balancers, under-utilized resources (EBS Volumes)
+- Reserved instances and savings plans optimizations
+
+**Performance**:
+
+- High utilization of EC2 Instances, CloudFront CDN Optimizations
+- EC2 to EBS throughput optimizations, Alias records recommendations
+
+**Security**
+
+- MFA enabled on Root Account, IAM key rotations, exposed access keys
+- S3 Bucket permissions for public access, security groups with unrestricted access
+
+**Fault Tolerance**
+
+- Age of EBS snapshots
+- AZ balance
+- ASG multi-az, ELB Configurations
+
+**Services Limits**:
+
+- Helps to understand if we are reaching a limit of a service and advises if is needed to increase before we have problems.
