@@ -26,7 +26,7 @@
     - [Cost and Usage Reports](#cost-and-usage-reports): The most detailed report
     - [Cost Explorer](#cost-explorer): Visual tool
   - [Monitoring against costs plans](#monitoring-against-costs-plans)
-    - [Billing Alarms](#billing-alarms)
+    - [Billing Alarms on CloudWatch](#billing-alarms-on-cloudwatch)
     - [Budgets](#budgets)
 - []()
 
@@ -305,3 +305,66 @@ TCO stands to Total Cost of Ownership and it is a tool to calculate the cost of 
 AWS Pricing Calculator is a tool to calculate the pricing of Solutions Architecture on AWS.
 
 Here we can select all the infra we want and understand the billing before start our architecture.
+
+### Tracking costs in the cloud
+
+Now we have tools to track our costs in the cloud: We have: AWS Billing Dashboard, Cost Allocation Tags, Cost and Usage Reports, Cost Explorer
+
+#### AWS Billing Dashboard
+
+AWS Billing Dashboard is a high level tool, but great for an overview of costs in AWS.
+
+- It shows Month-to-Date costs
+- Summaries
+- Last month cost
+- Forecast
+- Free tier dashboard to understand the usage of the free tier services.
+
+#### Cost Allocation Tags
+
+Use Cost Allocation Tags to track costs on detailed level and categorize.
+
+The tags are used to organize resources and group them together with these tags in AWS and we can give any name we want. The most common are: name, environment, team.
+
+We can manage it with `Tag Editor`. We can also create Resources Groups in this Tag Editor tool.
+
+- We can use auto generated tags by AWS (prefix `aws`)
+- User defined tags (prefix `user`)
+
+#### Cost and Usage Reports
+
+Cost and Usage Reports is a tool to dive deeper into our AWS costs and usage of resources.
+
+- This is **the most** detailed report in AWS with the most comprehensive data report available.
+- The AWS Cost & Usage Report lists AWS usage for each service category used by an account and its IAM users in hourly or daily line items, as well as any tags that you have activated for cost allocation purposes.
+- Can be integrated with Athena, Redshift and Quicksight
+
+#### Cost Explorer
+
+Cost Explorer is a visual tool to understand and manage the cost and usage overtime in AWS.
+
+- We can create custom reports
+- Analyze your data at a high level: total costs and usage across all accounts
+- Or Monthly, hourly, resource level granularity
+- It suggest savings plans based on the usage
+- Forecast usage up to 12 months
+
+### Monitoring against costs plans
+
+On AWS we can monitor and trigger actions related to our budget.
+
+#### Billing Alarms on CloudWatch
+
+Billing Alarms on CloudWatch only available and stored in us-east-1, but we can consolidate all the costs of our account in all regions.
+
+This one is for actual costs, not projected costs. And it sends an email notification if we pass a threshold.
+
+#### AWS Budgets
+
+AWS Budgets is a powerful tool about create and send alarms when costs exceeds the budgets
+
+- We have three types of budgets: Based on Costs, Usage and Reservation
+- Up to 5 SNS notifications per budget (can trigger events based on notification)
+- Can filter by: Service, Linked Account, Tag, Purchase Option, Instance Type, Region, Availability Zone, API Operation, etc…
+- Same options as AWS Cost Explorer!
+- 2 budgets are free, then $0.02/day/budget
