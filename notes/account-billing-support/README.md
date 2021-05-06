@@ -29,6 +29,7 @@
     - [Billing Alarms on CloudWatch](#billing-alarms-on-cloudwatch)
     - [AWS Budgets](#aws-budgets)
 - [AWS Trusted Advisor](#aws-trusted-advisor)
+- [AWS Support Plans](#aws-support-plans)
 - []()
 
 ## AWS Organizations
@@ -381,7 +382,7 @@ Trusted Advisor is a assessment on AWS account with the purpose of advise possib
   - Ability to use CloudWatch Alarms when reach limits
   - **Programmatic access using AWS Support API**
 
-AWS Trusted Advisor provides multiple types of recommendations:
+AWS Trusted Advisor provides multiple types of recommendations and after that a few examples:
 
 <p align="center" width="100%"><img src="assets/trusted-advisor.jpg" alt="trusted-advisor" width="400"/></p>
 
@@ -409,3 +410,54 @@ AWS Trusted Advisor provides multiple types of recommendations:
 **Services Limits**:
 
 - Helps to understand if we are reaching a limit of a service and advises if is needed to increase before we have problems.
+
+## AWS Support Plans
+
+AWS Has multiple types of customer support plans:
+
+**Basic Support:**
+
+- Free for all customers
+- Has Customer Services & Communities - 24x7 access to customer service, documentation, whitepapers and support forums.
+- In **Trusted Advisor** we have access to the seven core checks and guidance to provision your resources following the best practices to increase performance and security.
+- In **AWS Personal Health Dashboard** we have a personalized view of the health of AWS Services and we get alerts when something is going to impact our infrastructure.
+
+**Developer Support:**
+Good when we are developing in AWS
+
+- All the basic plan +
+- Business hours email access to Cloud Support Associates
+- Unlimited cases and we have 1 primary contact in AWS
+- Depending on Severity of the problem the response time may be variable:
+  - General guidance up to 24 business hours
+  - Systems impaired up to 12 business hours
+
+**Business Support:**
+When we have production workloads and this support our main business is better to use the Business Support Plan
+
+- All the Basic + Support +
+- 24/7 phone, email and chat access to Cloud Support Engineers
+- Trusted Advisor - Full set of checks + API access
+- Unlimited Cases / Unlimited contacts
+- Depending on Severity of the problem the response time may be variable:
+
+  - General guidance up to 24 business hours
+  - Systems impaired up to 12 business hours
+  - Production system impaired up to 4 business hours
+  - Production system down < 1 business hour
+
+**Enterprise Support:**
+For Enterprise and mission critical systems running on AWS
+
+- All the business support features +
+- Access to a **Technical Account Manager (TAM)**
+- **Concierge Support Team** for billing and account best practices
+- **Infrastructure Event Management**
+- Well architected and Operations Reviews
+- Depending on Severity of the problem the response time may be variable:
+
+  - General guidance up to 24 business hours
+  - Systems impaired up to 12 business hours
+  - Production system impaired up to 4 business hours
+  - Production system down < 1 business hour
+  - Business-Critical system down < 15 minutes to response
