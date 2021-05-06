@@ -413,7 +413,9 @@ AWS Trusted Advisor provides multiple types of recommendations and after that a 
 
 ## AWS Support Plans
 
-AWS Has multiple types of customer support plans:
+AWS Has multiple types of customer support plans, the pricing of each one is variable as the use.
+
+<p align="center" width="100%"><img src="assets/support-plans-pricing.jpg"  alt="support-plans-pricing" width="400"></p>
 
 **Basic Support:**
 
