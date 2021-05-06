@@ -216,7 +216,7 @@ In Elastic Block Storage we pay for
   - Provisioned IOPS SSD: Provisionned amount in IOPS
   - Magnetic: Number of requests
 - Snapshots:
-  - Added data cost per GB of snapshot per month
+  - Added data cost per GB of snapshot per month (The added data storage by EBS Snapshots are added cost in GB per month to EBS pricing. Other EBS pricing factors are: Volume type, Provisioned storage volume, IOPS, etc.)
 - Data transfer:
   - Outbound data transfer are tiered for volume discounts
   - Inbound is free
