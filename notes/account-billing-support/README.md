@@ -200,7 +200,7 @@ In S3 we pay for:
 
 - Number and size of objects: Price can be tiered (based on volume, the more volume more discount)
 - Number and type of requests (pay for requests in and out)
-- Data transfer OUT of the S3 region
+- Data transfer OUT of the S3 region (Inbound data transfer in the S3 region is free)
 - S3 Transfer Acceleration
 - Lifecycle transitions between storage classes
 - Similar service: EFS (pay per use, has infrequent access & lifecycle rules)
