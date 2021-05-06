@@ -15,6 +15,19 @@
   - [Database Pricing](#Database-pricing)
   - [CloudFront Pricing](#cloudfront-pricing)
   - [Network Pricing](#network-pricing)
+- [AWS Savings Plan](#aws-savings-plan)
+- [Billing and Costing Tools](#billing-and-costing-tools)
+  - [Estimating costs in the cloud](#estimating-costs-in-the-cloud)
+    - [TCO Calculator](#tco-calculator): On-prem to Cloud
+    - [AWS Pricing Calculator](#aws-pricing-calculator): Cloud pricing
+  - [Tracking costs in the cloud](#tracking-costs-in-the-cloud)
+    - [AWS Billing Dashboard](#aws-billing-dashboard): Simple dashboard
+    - [Cost Allocation Tags](#cost-allocation-tags): Track by tag
+    - [Cost and Usage Reports](#cost-and-usage-reports): The most detailed report
+    - [Cost Explorer](#cost-explorer): Visual tool
+  - [Monitoring against costs plans](#monitoring-against-costs-plans)
+    - [Billing Alarms](#billing-alarms)
+    - [Budgets](#budgets)
 - []()
 
 ## AWS Organizations
@@ -247,3 +260,20 @@ In Elastic Block Storage we pay for
 
 - Use Private IP instead of Public IP for good savings and better network performance
 - Use same AZ for maximum savings (but you loose the high availability)
+
+## AWS Savings Plan
+
+AWS Savings Plans is a way to save more money by getting more discounts. And to do so, we need to commit with a amount of dollar per hour during 1 or 3 years. (With upfront, partial upfront and no upfront). This is the easiest way to setup long terms commitments in AWS.
+
+There are two types of savings plans
+
+**EC2 Savings Plan**
+
+- Up to 72% discount compared to On-Demand and we commit to usage of individual instance families in a region (e.g. C5 or M5)
+- Regardless of AZ, size (m5.xl to m5.4xl), OS (Linux/Windows) or tenancy
+
+**Compute Savings Plan:**
+
+- Up to 66% discount compared to On-Demand
+- Regardless of Family, Region, size, OS, tenancy, compute options
+- Compute Options: EC2, Fargate, Lambda
