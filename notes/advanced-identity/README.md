@@ -43,6 +43,16 @@ AD-Compatible managed Active Directory on AWS. This one is not connected with on
 
 <p align="center" width="100%"><img src="assets/simple-ad.jpg" alt="simple-ad" width="150"/></p>
 
+## Amazon Single Sign-On
+
+One single point of access to multiple applications using SSO portal on AWS.
+
+- Integrated with AWS organizations
+- Supports SAML 2.0 markup
+- Integration with on-premise Active Directory
+
+<p align="center" width="100%"><img src="assets/sso.jpg" alt="sso" width="500"/></p>
+
 ## Summary
 
 - IAM
