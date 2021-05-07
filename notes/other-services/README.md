@@ -6,6 +6,8 @@ Services worth to know about
 
 Is a managed Desktop as a Service (DaaS). It is a solution to easily provision Windows/Linux desktops.
 
+Amazon WorkSpaces is a fully managed, secure cloud desktop service. You can use Amazon WorkSpaces to provision either Windows or Linux desktops in just a few minutes and quickly scale to provide thousands of desktops to workers across the globe.
+
 - It is great to eliminate the management of on-premises VDI (Virtual Desktop Infrastructure)
 - Fast and Scalable
 - Secure data (KMS integration)
@@ -25,6 +27,8 @@ This is a Desktop Application Stream service, delivery to any computer (no need 
 
 **AppStream 2.0**
 
+Amazon AppStream 2.0 is a fully managed non-persistent application and desktop streaming service that provides users instant access to their desktop applications from anywhere.
+
 - Stream a desktop application to web browsers (no need to connect to a VDI)
 - Works with any device (that has a web browser)
 - Allow to configure an instance type per application type (CPU, RAM, GPU)
@@ -40,13 +44,13 @@ Amazon Sumerian is a set of browser-based tools for creating high-quality virtua
 
 IoT stands for “Internet of Things” – the network of internet-connected devices that are able to collect and transfer data. AWS IoT Core allows you to easily connect devices with AWS Cloud services.
 
+AWS IoT Core lets you securely connect IoT devices to the AWS Cloud and other devices without the need to provision or manage servers.
+
 - Serverless, secure and scalable to billions of devices and trillions of messages
 - Your applications can communicate with your devices even when they aren’t connected
 - Integrates with a lot of AWS services (Lambda, S3, SageMaker, etc.)
 - Build IoT applications that gather, process, analyze, and act on data
 
 <p align="center" width="100%"><img src="assets/iot-core.jpg" alt="iot-core" width="300"/></p>
-
-## AWS Elastic Transcoder
 
 ## Summary
