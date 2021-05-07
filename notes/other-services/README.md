@@ -76,8 +76,8 @@ Converts S3 files within a bucket and convert to many formats and save into a ta
 
 ## Summary
 
-- Amazon Workspaces: Desktop as a Service and provides a
-- Amazon AppStream 2.0
-- Amazon Sumerian
-- AWS IoT Core
-- AWS Elastic Transcoder
+- Amazon Workspaces: Desktop as a Service and provides a windows or linux desktop
+- Amazon AppStream 2.0: Access any application within a browser
+- Amazon Sumerian: Create 3D/VR applications (browser app)
+- AWS IoT Core: Connect billions of IoT devices with AWS
+- AWS Elastic Transcoder: Convert media to multiple formats (s3 stored media)
