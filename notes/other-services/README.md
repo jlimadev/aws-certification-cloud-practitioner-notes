@@ -2,6 +2,13 @@
 
 Services worth to know about
 
+- [Amazon Workspaces](#amazon-workspaces)
+- [Amazon AppStream 2.0](#amazon-appstream-20)
+- [Amazon Sumerian](#amazon-sumerian)
+- [AWS IoT Core](#aws-ioT-core)
+- [AWS Elastic Transcoder](#aws-elastic-transcoder)
+- [Summary](#summary)
+
 ## Amazon Workspaces
 
 Is a managed Desktop as a Service (DaaS). It is a solution to easily provision Windows/Linux desktops.
@@ -53,4 +60,27 @@ AWS IoT Core lets you securely connect IoT devices to the AWS Cloud and other de
 
 <p align="center" width="100%"><img src="assets/iot-core.jpg" alt="iot-core" width="300"/></p>
 
+## AWS Elastic Transcoder
+
+Amazon Elastic Transcoder is media transcoding in the cloud. It is used to convert media files from their source format into versions that will play back on devices like smartphones, tablets, and PCs.
+
+Converts S3 files within a bucket and convert to many formats and save into a target bucket.
+
+- Benefits:
+  - Easy to use
+  - Highly scalable – can handle large volumes of media files and large file sizes
+  - Cost effective – duration-based pricing model
+  - Fully managed & secure, pay for what you use
+
+<p align="center" width="100%"><img src="assets/elastic-transcoder.jpg" alt="elastic-transcoder" width="600"/></p>
+
 ## Summary
+
+- Amazon Workspaces
+- Amazon AppStream 2.0
+
+- Amazon Sumerian
+
+- AWS IoT Core
+
+- AWS Elastic Transcoder
