@@ -31,6 +31,22 @@ This is a Desktop Application Stream service, delivery to any computer (no need 
 
 ## Amazon Sumerian
 
+Amazon Sumerian is a set of browser-based tools for creating high-quality virtual reality (VR), augmented reality (AR), and 3D applications easily without requiring any programming or 3D graphics expertise. With Sumerian, you can construct an interactive 3D scene without any programming experience, test it in the browser, and publish it as a website that is immediately available to users.
+
+- Ready-to-use templates and assets - no programming or 3D expertise required
+- Accessible via a web-browser URLs or on popular hardware for AR/VR
+
 ## AWS IoT Core
+
+IoT stands for “Internet of Things” – the network of internet-connected devices that are able to collect and transfer data. AWS IoT Core allows you to easily connect devices with AWS Cloud services.
+
+- Serverless, secure and scalable to billions of devices and trillions of messages
+- Your applications can communicate with your devices even when they aren’t connected
+- Integrates with a lot of AWS services (Lambda, S3, SageMaker, etc.)
+- Build IoT applications that gather, process, analyze, and act on data
+
+<p align="center" width="100%"><img src="assets/iot-core.jpg" alt="iot-core" width="300"/></p>
+
+## AWS Elastic Transcoder
 
 ## Summary
