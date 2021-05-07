@@ -47,6 +47,8 @@ AD-Compatible managed Active Directory on AWS. This one is not connected with on
 
 One single point of access to multiple applications using SSO portal on AWS.
 
+> AWS SSO is an AWS service that enables you to makes it easy to centrally manage access to multiple AWS accounts and business applications and provide users with single sign-on access to all their assigned accounts and applications from one place.
+
 - Integrated with AWS organizations
 - Supports SAML 2.0 markup
 - Integration with on-premise Active Directory
