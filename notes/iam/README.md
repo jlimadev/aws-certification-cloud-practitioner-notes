@@ -31,7 +31,7 @@ Identity Access Management is a Global Service.
 - CamelCaseNamed
 - The most common roles: [EC2 Instance Roles, Lambda Function Roles, Roles for CloudFormation]
 
-<p align="center" width="100%"><img src="assets/roles.jpg" alt="roles" width="500"/></p>
+<p align="center" width="100%"><img src="assets/roles.jpg" alt="roles" width="300"/></p>
 
 ### IAM Account Security
 
