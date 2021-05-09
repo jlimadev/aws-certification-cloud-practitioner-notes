@@ -26,14 +26,16 @@ Identity Access Management is a Global Service.
 
 - Are created for another Services, so they can access or execute a process inside another service.
 - Some AWS service will need to perform actions on your behalf. To do so, we will assign permissions to AWS services with IAM Roles.
-- We need to create or attach policies to this Role to grant the permitions.
+- We need to create or attach policies to this Role to grant the permissions.
 - Then we attach the role to the service, and the service will be able to perform actions in out behalf.
 - CamelCaseNamed
 - The most common roles: [EC2 Instance Roles, Lambda Function Roles, Roles for CloudFormation]
 
+<p align="center" width="100%"><img src="assets/roles.jpg" alt="roles" width="500"/></p>
+
 ### IAM Account Security
 
-AWS Provides more security abling us to add pretection mechanisms to our account.
+AWS Provides more security allowing us to add protection mechanisms to our account.
 
 **MFA (Multi Factor Authentication)**
 
@@ -45,7 +47,7 @@ AWS Provides more security abling us to add pretection mechanisms to our account
 
 - Set a minimum password length.
 - Require specific characters in the password: Upper/Lower, numbers, non-alphanumeric.
-- Allow IAM users to change theyr passwords.
+- Allow IAM users to change their passwords.
 - Require password change each X days.
 - Prevent password reuse.
 
@@ -69,9 +71,9 @@ A user can access AWS by:
 
 - Software Development Kit, for coding, also protected by Access Key and Secrets.
 
-The access keys and secrets are genereated through the AWS Console and must be kept in secret. The users manages their own keys.
-Access Keys is simmilar to the username.
-Secret Keys is simmilar to the password.
+The access keys and secrets are generated through the AWS Console and must be kept in secret. The users manages their own keys.
+Access Keys is similar to the username.
+Secret Keys is similar to the password.
 
 ### IAM Security Tools
 
@@ -81,7 +83,7 @@ Secret Keys is simmilar to the password.
 
 **IAM Access Advisor** [iam-user level]
 
-- The access adivisor shows the services permissions granted to a user and when those services were last accessed.
+- The access advisor shows the services permissions granted to a user and when those services were last accessed.
 
 ### IAM Best Practices
 
