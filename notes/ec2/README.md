@@ -68,6 +68,8 @@ In order to create it by Image Builder we need to create an `Image Pipeline`, `R
 
 Since this pipeline is ready we can execute anytime to build our AMI. This pipeline will create an EC2 instance (where the AMI will be created based on) and terminate it. As well an instance will be created to test and after testing phase, it will be terminated. Finally it will create the distribution and the AMI will be available to use.
 
+<p align="center" width="100%"><img src="assets/image-builder.jpg" alt="image-builder" width="500"/></p>
+
 ---
 
 ### EC2 Instance Types
@@ -122,6 +124,8 @@ There are a few [instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserG
 - Control of outbound network (from instance to outside) - by default, all traffic outbound (from our instance to the rest of the world) is allowed.
 - Common Ports that we need to know
 
+<p align="center" width="100%"><img src="assets/security-group.jpg" alt="security-group" width="400"/></p>
+
 ```
 22 - SSH (Secure Shell) - log into EC2 Linux instance
 22 - SFTP - (Secure File Transport Protocol) - upload file using SSH
@@ -142,7 +146,7 @@ There are a few [instance types](https://docs.aws.amazon.com/AWSEC2/latest/UserG
 # check permissions on .pem file (must be chmod 0400)
 # and then log using ssh:
 
-ssh -i permissionsfile.pem ec2-user@ec2-public-ip
+ssh -i permissionsFile.pem ec2-user@ec2-public-ip
 ```
 
 - **EC2 Instance Connect** is an Second Option to run SSH directly from Console. It runs a browser based SSH instance connection/terminal. In this case a temporary Key is uploaded to EC2 instance by AWS. Works only out-of-the-box with Amazon Linux 2.
@@ -153,7 +157,7 @@ ssh -i permissionsfile.pem ec2-user@ec2-public-ip
 
 ### EC2 Instance Roles
 
-In order to run or access aws services, usually in our terminal we would use `aws configure`and pass our credentials. But in EC2 instance it is not a good practice, since it is a server and can be managed by more than one person. So if you want to EC2 to performe an action in other services in our behalf, we need to create a role to this EC2.
+In order to run or access aws services, usually in our terminal we would use `aws configure`and pass our credentials. But in EC2 instance it is not a good practice, since it is a server and can be managed by more than one person. So if you want to EC2 to perform an action in other services in our behalf, we need to create a role to this EC2.
 
 - For example: if we want to execute the command `aws iam list-users` we need to create a role to that contains the IAM Policy, in this case, the read user permission. To do it we need to create the policy and the role in our IAM Console and after that, in EC2 console, attach the role to the EC2 instance. Now our instance can perform this list-users action without require your secret keys directly inside the server.
 
@@ -168,19 +172,19 @@ EC2 Instances in the cloud, the default type of EC2 is on-demand instances.
 - No commitment to user to specific time.
 - Full control over the life-cycle of instance: when start, stop, etc.
 - Pay only for the seconds that the instance is on state Running.
-- Recommend to short workloads and irregular runnings that cannot be stoped until finish.
+- Recommend to short workloads and irregular runnings that cannot be stopped until finish.
 
 **Reserved Instances**:
 
 - Minimum commitment of one year, maximum of three years.
 - Up to 75% discount compared to On-Demand.
 - Purchasing options: no upfront | partial upfront | all upfront (upfront = pay all now and get more discount).
-- Can buy a instance that runs in one specifc Region [Regional] or Specifc Zone [Zonal] - it affects the price.
+- Can buy a instance that runs in one specific Region [Regional] or Specific Zone [Zonal] - it affects the price.
 - There are three kinds of reserved instances:
 
 1. **Reserved Instances**: for long workloads and always use the selected type of instance during the commitment time. (use case: host a database)
-2. **Convertible Reserverd Instances**: long workloads with flexible instances (can change the type of the instance over time)
-3. **Scheduled Reserverd Instances**: When you need to use the instance only in scheduled time. For example: when you need to use the instance every monday from 6am to 11am for one year.
+2. **Convertible Reserved Instances**: long workloads with flexible instances (can change the type of the instance over time)
+3. **Scheduled Reserved Instances**: When you need to use the instance only in scheduled time. For example: when you need to use the instance every monday from 6am to 11am for one year.
 
 About the prices: A Standard Reserved Instance provides a more significant discount than a Convertible Reserved Instance.
 
