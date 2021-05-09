@@ -9,7 +9,7 @@ This is where we can see the power of cloud computing, because of the automacall
 
 ### Scalability & High Availability
 
-**Scalability**: Scalability is linked but is different from High Availability, Scalability means that the appliation or system can handle different amounts of load by adapting. There are two different kinds of scalability:
+**Scalability**: Scalability is linked but is different from High Availability, Scalability means that the application or system can handle different amounts of load by adapting. There are two different kinds of scalability:
 
 - **Vertical Scalability**: Means increasing the size of the instance:
 
@@ -24,7 +24,7 @@ This is where we can see the power of cloud computing, because of the automacall
 - **Horizontal Scalability (elasticity)**: Means increasing the number of instances or systems to our application.
   - Have no limitations, we can always add more instances
   - Implies to distributed systems and web apps/modern apps
-  - In AWS **Scale Out** means increasing the number of instances and **Scale In** meanns decreasing the number of instances.
+  - In AWS **Scale Out** means increasing the number of instances and **Scale In** means decreasing the number of instances.
   - On AWS is easy to scale because of the [**Auto Scaling Groups**](#auto-scaling-groups-asg) and [**Load Balancer**](#elastic-load-balancer-elb)
   - A few analogies:
     1. Add more instances to our application run (Scale out)
@@ -44,7 +44,7 @@ This is where we can see the power of cloud computing, because of the automacall
 
 - **Scalability**: is the ability for a system to accommodate a larger load by making the hardware stronger (vertical scale, scale-up) or by add nodes (horizontal scale, scale-out).
 
-- **Elasticity**: Once the system is scalable, elasticity means that there will be some "auto-scaling" so that system can scale based on the load. This is "cloud-friendly": pay-per-use, match demand, optmize costs.
+- **Elasticity**: Once the system is scalable, elasticity means that there will be some "auto-scaling" so that system can scale based on the load. This is "cloud-friendly": pay-per-use, match demand, optimize costs.
 
 - **Agility**: (not related to scale - distractor), new IT resources available very quickly. (one click away, what used to happen in weeks)
 
@@ -56,7 +56,7 @@ Elastic Load Balancer are managed by AWS and they are servers that forward the i
 
 **Why use a Load Balancer?**
 
-- Spread the load accross multiple downstream instances.
+- Spread the load across multiple downstream instances.
 - Expose a single point of access (DNS) to our application.
 - Handle with failures of instances (Regular health checks to the instances), don't redirect to unhealthy instances.
 - Provide SSL termination (HTTPS) for our websites
@@ -64,7 +64,7 @@ Elastic Load Balancer are managed by AWS and they are servers that forward the i
 
 **Why use an Elastic Load Balancer?**
 
-- AWS mantains and guarantees that it will be working
+- AWS maintains and guarantees that it will be working
   - AWS takes care of upgrades, maintenance, high availability
   - AWS provides only a few configuration knobs
   - We only have to configure some behaviors of our ELB
@@ -77,6 +77,8 @@ Elastic Load Balancer are managed by AWS and they are servers that forward the i
 - Classic Load Balancer: (slowly retiring) - Layer 4 and 7
 
 When configuring the ELB we need to create a `Target Group`, this target group contains the instances that are going to handle the multiple access.
+
+<p align="center" width="100%"><img src="assets/elb.jpg" alt="elb" width="400"/></p>
 
 ---
 
@@ -94,11 +96,13 @@ The loads and access of websites can change overtime, so we need to add or remov
 
 **Tips, to Create an ASG**:
 
-- When creating an ASG Group, we need to create a template, so the new instances will be herited from it. Whenever we need to register a new instance, ASG will get this template and launch it for us.
+- When creating an ASG Group, we need to create a template, so the new instances will be inherited from it. Whenever we need to register a new instance, ASG will get this template and launch it for us.
 - We can also attach our Load Balancer to our ASG and select our `target group`, so the new instances will be created and attached to the target group.
 - Create Health Checks to Replace unhealthy instances
 - Create the group size: Minimum of Instances, Desired Number of Instances and the Maximum Number of Instances.
 - When create this groups sizes, we can create the Scaling policies to Target tracking scaling policy, this means that we can scale based on CPU usage, network in or out, count of requests per target, etc.
+
+<p align="center" width="100%"><img src="assets/asg.jpg" alt="asg" width="400"/></p>
 
 ---
 
@@ -108,3 +112,5 @@ Summary to Create an Auto Scaling Group with Load Balancing:
 - Create the Target Groups (attach instances if needed)
 - Create the ASG Group configurations (select subnets, template instance, select the target groups, select health checks, select the group sizes [min, desired, max] + scaling polices).
 - Finally, the server i'll be ready to scale and is totally elastic. 👌✔
+
+<p align="center" width="100%"><img src="assets/elb-asg.jpg" alt="elb-asg" width="400"/></p>
