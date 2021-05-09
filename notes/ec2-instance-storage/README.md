@@ -9,7 +9,7 @@
 
 ### EBS Elastic Block Store - Volumes
 
-**Main Informations about Elastic Block Store**:
+**Main Information about Elastic Block Store**:
 
 - An EBS Volume is a **network drive** that you can attach to your instance while they run. It uses the network to communicate with the instance, so it might have a little bit of latency.
 - It can be detached from an instance and attached to other quickly (benefit of network driver)
@@ -25,6 +25,8 @@
 - We can have existing EBS volumes that keeps unattached.
 - EBS Volumes are network drives with good but 'limited' performance: EC2 Instance Store have the best performance, because they are the hard disk, physical, on the data-center attached on the machine that runs the server.
 
+<p align="center" width="100%"><img src="assets/ebs.jpg" alt="ebs" width="400"/></p>
+
 ---
 
 ### EBS Snapshots
@@ -35,13 +37,15 @@ Snapshot is a backup of our EBS Volumes at a point in time. It keeps available i
 - With the Snapshot we can Copy to other regions or AZ's or Create a brand new EBS Volume.
 - This snapshot will be a "start" to the new EBS Volume. So the new volume will start with the data starting from the snapshot. The new volume will be a Restore from a snapshot.
 
+<p align="center" width="100%"><img src="assets/ebs-snapshots.jpg" alt="ebs-snapshots" width="400"/></p>
+
 ---
 
 ### EC2 Instance Store
 
 This is the **physical HARD DRIVE** attached to the server. Limited space, but higher performance. It is called by **ephemeral**
 
-- Better I/O performance. It is good to buffer/cache/scratch data/temp files. Always with short worloads.
+- Better I/O performance. It is good to buffer/cache/scratch data/temp files. Always with short workloads.
 - EC2 Instance Store lose their storage and data if they are stopped.
 - Risk of losing data (because it is a physical hardware)
 - Backups and Replications are our responsibility.
@@ -53,11 +57,12 @@ This is the **physical HARD DRIVE** attached to the server. Limited space, but h
 EFS stands to Elastic File System and it is a Network File System (NFS). This NFS can be attached to hundreds of EC2 instances at a time.
 
 - It is a shared NFS.
-- Works in Linux EC2 Instances and works acrros multiple AZs. It makes EFS High Available and Scalable. But, this also makes the EFS more expensinve (3x gp2) and you pay what you use not capacity. If you use only 20gb, that's your usage and you'll pay for this.
+- Works in Linux EC2 Instances and works across multiple AZs. It makes EFS High Available and Scalable. But, this also makes the EFS more expensive (3x gp2) and you pay what you use not capacity. If you use only 20gb, that's your usage and you'll pay for this.
 
+<p align="center" width="100%"><img src="assets/efs.jpg" alt="efs" width="300"/></p>
 ### EBS vs EFS
 
-- EBS are bound to one AZ and can be attached to one instance at a time. To move acrros regions we can use the snapashots (it is just a copy).
+- EBS are bound to one AZ and can be attached to one instance at a time. To move across regions we can use the snapshots (it is just a copy).
 - EFS works across multiple regions and can be attached to multiple instances. The same data is available to all instances. It makes the EFS a shared file system.
 
 ---
