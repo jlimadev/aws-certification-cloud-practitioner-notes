@@ -103,6 +103,8 @@ You can build you code into AWS. It means it can compiles the source code, run t
 - Scalable and Highly Available
 - You pay only for the time the package is being built
 
+<p align="center" width="100%"><img src="assets/code-build.jpg" alt="code-build" width="500"/></p>
+
 ## AWS CodePipeline
 
 With AWS Code Pipeline we can orchestrate our deployment steps
@@ -113,10 +115,7 @@ Usually in our pipelines we Get our code, test, build, provisioning servers and 
 
 Example of usage
 
-```
- ----------AWS CodePipeline---------------------------
-|AWS CodeCommit <--> AWS CodeBuild --> AWS CodeDeploy |
-```
+<p align="center" width="100%"><img src="assets/code-pipeline.jpg" alt="code-pipeline" width="500"/></p>
 
 ## AWS CodeArtifact
 
@@ -170,6 +169,8 @@ To understand it, we need to understand two tolls before: `Chef & Puppet`: Chef 
 - AWS OpsWorks is an alternative to AWS SSM, but this one, you only provision standard AWS Resources (EC2, Databases, ELB)
 - How it works: Based on a `cookbook` it will provision an architecture to your service, by provisioning ELB, ASG, EC2, Databases and your Application
 
+<p align="center" width="100%"><img src="assets/opsworks.jpg" alt="opsworks" width="500"/></p>
+
 ## Summary
 
 - CloudFormation: (AWS only)
@@ -186,5 +187,5 @@ To understand it, we need to understand two tolls before: `Chef & Puppet`: Chef 
 - CodeDeploy: Deploy code onto servers
 - CodePipeline: Orchestration of pipeline (from code to build to deploy)
 - CodeArtifact: Store software packages / dependencies on AWS
-- CodeStar: Unified view for allowing developers to do CICD and code
+- CodeStar: Unified view for allowing developers to do CI/CD and code
 - Cloud9: Cloud IDE (Integrated Development Environment) with collab
