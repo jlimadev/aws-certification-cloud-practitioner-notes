@@ -43,7 +43,10 @@ Lambdas can also run containers with **Lambda Container Image**, but they need t
 Lambdas use cases:
 
 - Thumbnails: Receive an image into S3 (this will trigger a lambda) and the lambda will create a small version of the image to store again into S3 and will store the metadata of the image into dynamoDB.
+<p align="center" width="100%"><img src="assets/lambda.jpg" alt="lambda" width="500"/></p>
+
 - CRON Jobs: Schedule to run a script (with Cloud Watch Event Bridge). This will trigger the lambda every one hour to perform a task.
+<p align="center" width="100%"><img src="assets/cron.jpg" alt="cron" width="300"/></p>
 
 **Pricing**:
 
@@ -70,11 +73,9 @@ With API gateway we can allow external request on services that are not exposed 
 API gateway example:
 A client create a item in your website, your website saves it on dynamo with this structure:
 
-```
-Client <-Rest API-> API GATEWAY <-PROXY REQUEST-> Lambda <-CRUD-> DynamoDB
+<p align="center" width="100%"><img src="assets/api-gateway.jpg" alt="api-gateway" width="500"/></p>
 
 Your site calls api gateways through your Rest API, then api gateway will proxy the request to the Lambda function and this lambda will insert the register into dynamoDB.
-```
 
 ## AWS Batch
 
