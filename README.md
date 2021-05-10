@@ -10,7 +10,7 @@ My study are based on [Stephane Maarek](https://github.com/simplesteph) content 
 - [EC2 - Elastic Cloud Compute](notes/ec2/README.md)
   - [EC2 - Instance Storage](notes/ec2-instance-storage/README.md)
   - [EC2 - Elastic Load Balancing & Auto Scaling Groups](notes/ec2-elb-asg/README.md)
-- [ECS, Fargate and ECR](notes/ecs/README.md) (Containers)
+- [ECS, Fargate and ECR](notes/ecs-fargate-ecr/README.md) (Containers)
 - [S3 - Simple Storage Service](notes/s3/README.md): Unlimited storage
 - [Database and Analytics](notes/db/README.md) (RDS, NoSQL, Data Analysis)
 - [Serverless](notes/serverless/README.md) (Lambdas, API Gateway, AWS Batch)
