@@ -91,9 +91,16 @@ An IAM Principal can access S3 objects if:
 A few examples of usage of S3 Security:
 
 - Your site exposed to web, by default nobody can access it, to allow it we need to create to attach the **S3 Bucket Policy** to allow the public access.
+<p align="center" width="100%"><img src="assets/security-public.jpg" alt="security-public" width="400"/></p>
+
 - An IAM User that already has a policy attached to the account allowing S3 access. In this case there is no need to create the S3 Bucket Policy.
+<p align="center" width="100%"><img src="assets/security-iam.jpg" alt="security-iam" width="400"/></p>
+
 - An EC2 instance wants to access our S3, so we need to create a Role to EC2 and attach the permissions (policies) to it and attach the role in our EC2. Now the instance will be able to access the bucket.
+<p align="center" width="100%"><img src="assets/security-role.jpg" alt="security-role" width="400"/></p>
+
 - Cross-Account-Access: For this case we may use the S3 Bucket Policy, which will allow the cross-account access.
+<p align="center" width="100%"><img src="assets/security-cross-account.jpg" alt="security-cross-account" width="400"/></p>
 
 ### S3 Bucket Policy
 
@@ -176,6 +183,8 @@ It is for audit purposes, enables log access to S3Bucket. Any access (allowed, d
 
 We can enable it in our bucket properties and change the `Server access logging` and select the target bucket. So, we cannot forget to create the target bucket, where the logs will be stored.
 
+<p align="center" width="100%"><img src="assets/s3-logs.jpg" alt="s3-logs" width="100" height="200"/></p>
+
 ## S3 Replication
 
 We have two types of data replication: `Cross-Region-Replication (CRR)` and `Same-Region-Replication (SRR)`.
@@ -191,6 +200,8 @@ Same-Region-Replication (SRR) use cases: log aggregation, live replication betwe
 
 - It does not replicate files before the replication setting be set, only new files. To replicate existing files we must re-upload or use s3 sync tool.
 - If we need to deletions we also need to set this option.
+
+<p align="center" width="100%"><img src="assets/s3-replication.jpg" alt="s3-replication" width="300"/></p>
 
 ## S3 Storage Classes
 
@@ -261,7 +272,7 @@ The S3 storage classes are:
 
 In AWS we can create the lifecycle rules, and can se the transition Rules: The transition rules are used to move the objects between the classes by the following rules:
 
-![AWS Global vs Regional vs AZ](https://csharpcorner.azureedge.net/article/how-to-enable-lifecycle-management-in-s3-bucket-using-aws-portal4/Images/SupportedTransitionsWaterfallModel.png)
+<p align="center" width="100%"><img src="assets/transition-rules.jpg" alt="transition-rules" width="400"/></p>
 
 ## S3 Glacier Vault Lock and Object Lock
 
@@ -278,13 +289,18 @@ Lock objects to specified amount of time.
 - We create a Lock Policy to the files, and the files will be locked to modifications.
 - Once the policy is set, no one can delete or modify the policy.
 - Really good to use when we have compliance data retention rules and policies.
+
   > S3 Glacier Vault Lock allows you to easily deploy and enforce compliance controls for individual S3 Glacier vaults with a vault lock policy. You can specify controls such as “write once read many” (WORM) in a vault lock policy and lock the policy from future edits. Once locked, the policy can no longer be changed.
+
+  <p align="center" width="100%"><img src="assets/vault-lock.jpg" alt="vault-lock" width="300"/></p>
 
 ## S3 Snow Family
 
 Highly-secure, portable devices and offline devices, to collect and process data at the edge, and migrate data into and out of AWS.
 
 The Snow Family: Offline devices to perform data migrations. If takes more than a week to transfer all the data, use the snowball devices.
+
+ <p align="center" width="100%"><img src="assets/snow-family.jpg" alt="snow-family" width="500"/></p>
 
 ### Data Migration
 
@@ -337,6 +353,8 @@ It is a truck to get all the data.
 4. Ship back the device when you’re done (goes to the right AWS facility)
 5. Data will be loaded into an S3 bucket
 6. Snowball is completely wiped
+
+ <p align="center" width="100%"><img src="assets/snow-family-flow.jpg" alt="snow-family-flow" width="500"/></p>
 
 ### Edge Computing
 
@@ -413,6 +431,8 @@ Types of Storage Gateway:
 - File Gateway
 - Volume Gateway
 - Tape Gateway
+
+ <p align="center" width="100%"><img src="assets/storage-gateway.jpg" alt="storage-gateway" width="300"/></p>
 
 ## S3 Shared Responsibility Model
 
