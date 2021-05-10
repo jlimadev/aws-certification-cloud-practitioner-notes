@@ -24,4 +24,4 @@ My study are based on [Stephane Maarek](https://github.com/simplesteph) content 
 - [Machine Learning](notes/machine-learning/README.md) (Rekognition, Transcribe, Polly, Translate, Lex, Connect, Comprehend, SageMaker)
 - [Account Management, Billing and Support](notes/account-billing-support/README.md) (AWS Organizations, SCP)
 - [Advanced Identity](notes/advanced-identity/README.md) (Cognito, Active Directory Services, SSO)
-- [Other Services](notes/other-services/README.md)
+- [Other Services](notes/other-services/README.md) (Amazon Workspaces, AppStream, Sumerian, IoT Core and Elastic Transcoder)
