@@ -1,6 +1,6 @@
 # 💻 Elastic Load Balancing and Auto Scaling Groups
 
-This is where we can see the power of cloud computing, because of the automacally scaling and distribution of loads with low configurations.
+This is where we can see the power of cloud computing, because of the automatically scaling and distribution of loads with low configurations.
 
 - [Scalability & High Availability](#scalability--high-availability)
 - [Scalability vs Elasticity (vs Agility)](#scalability-vs-elasticity-vs-agility)
