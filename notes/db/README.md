@@ -78,7 +78,9 @@ tolerance, scaling)
 
 ## RDS - Relational Database Service
 
-RDS Stands to Relational Database Service and it is a managed DB by AWS for databases that uses SQL as query language. We can create multiple relational databases types in the cloud, fully managed by AWS:
+RDS Stands to Relational Database Service and it is a managed DB by AWS for databases that uses SQL as query language. RDS databases are used for OLTP (Online Transaction Processing)
+
+We can create multiple relational databases types in the cloud, fully managed by AWS:
 
 - Postgres
 - MySQL
@@ -102,19 +104,22 @@ RDS is a managed service:
 
 **Important**: We cannot use SSH into our database instances.
 
-Example of usage: `Elastic Load Balance <-> EC2 Instances <-R/W-> RDS`
+ <p align="center" width="100%"><img src="assets/rds.jpg" alt="rds" width="500"/></p>
 
 - The ELB will receive the web requests
 - The EC2 instances doing/hosting the application logic
 - RDS doing Reads and Writes
 
-RDS Deployment Options:
+**RDS Deployment Options:**
 
 - **RDS Read Replicas**: Here we can scale the workload of our DB, we can create up to 15 replicas. The data is written only to main DB and we can read the data from the replicas.
-- **RDS Multi-AZ**: Failover in case of AZ outage (high availability), data is read/written to main database. Can have only one other AZ as failover (the data will be replicated to failover db, that will be used only if the main db has any kind of issue)
-- **RDS Multi-Region** (read replicas): Disaster recovery strategy in case of Region issue, local performance for global reads (Example: so if we have the main db in us-east-1 and replica in sa-east-1, we can read locally from region sa-east-1 with less latency, but if we need to write, it goes to main db, in us-east-1) replications costs
+<p align="center" width="100%"><img src="assets/rds-read-replicas.jpg" alt="rds" width="300"/></p>
 
-RDS databases are used for OLTP (Online Transaction Processing)
+- **RDS Multi-AZ**: Failover in case of AZ outage (high availability), data is read/written to main database. Can have only one other AZ as failover (the data will be replicated to failover db, that will be used only if the main db has any kind of issue)
+<p align="center" width="100%"><img src="assets/rds-multi-az.jpg" alt="rds" width="300"/></p>
+
+- **RDS Multi-Region** (read replicas): Disaster recovery strategy in case of Region issue, local performance for global reads (Example: so if we have the main db in us-east-1 and replica in sa-east-1, we can read locally from region sa-east-1 with less latency, but if we need to write, it goes to main db, in us-east-1) replications costs
+<p align="center" width="100%"><img src="assets/rds-multi-region.jpg" alt="rds" width="400"/></p>
 
 ## Amazon Aurora
 
@@ -129,6 +134,8 @@ It is an AWS proprietary technology (not open-source) of a Relational database. 
 
 Aurora databases are used for OLTP (Online Transaction Processing)
 
+<p align="center" width="100%"><img src="assets/aurora.jpg" alt="aurora" width="400"/></p>
+
 ## Amazon Elasticache
 
 Is used to get a Redis or Memcached managed database.
@@ -140,10 +147,7 @@ Is used to get a Redis or Memcached managed database.
 - Keywords: In-memory database
 - Architecture example:
 
-```
-Elastic Load Balance <-> EC2 Instances (possible ASG) <-R/W-> RDS
-                                                      <-R/W-> Elasticache
-```
+<p align="center" width="100%"><img src="assets/aurora.jpg" alt="aurora" width="400"/></p>
 
 ## Amazon DynamoDB
 
@@ -157,7 +161,9 @@ DynamoDB is a fully managed and High Available NoSQL Key/Value Database with rep
 - Low cost and auto scaling capabilities
 - Keywords: Serverless, low-latency and single digit millisecond.
 
-## Amazon DynamoDB Accelerator - DAX
+<p align="center" width="100%"><img src="assets/dynamodb.jpg" alt="dynamodb" width="300"/></p>
+
+### Amazon DynamoDB Accelerator - DAX
 
 Amazon DynamoDB Accelerator is a in-memory cache for DynamoDB and it is fully managed by AWS.
 It has 10x performance improvement
@@ -278,19 +284,15 @@ it supports Homogeneous Migrations and Heterogeneous Migrations.
 - The heterogenous migrations are to different types of database: SQL Server to Oracle
 - We can also migrate to Kinesis Stream Data.
 
+<p align="center" width="100%"><img src="assets/dms.jpg" alt="dms" width="200"/></p>
+
 ## Amazon Glue
 
 Amazon Glue is a serverless and fully managed service to perform ETL (Extract Transform and Load). With ETL we can connect to multiple databases to extract data, transform according our needs and load into another database to add the analysis part.
 
 - Example of usage
 
-```
-S3 Bucket       ==>
-                    \
-Amazon RDS      ==>   GLUE (ETL) => Amazon Redshift => Amazon Quicksight (B.I)
-                    /
-Amazon Aurora   ==>
-```
+<p align="center" width="100%"><img src="assets/glue.jpg" alt="glue" width="500"/></p>
 
 Glue also has a another service called `Glue Data Catalog`. This service catalogs all the datasets in AWS Infrastructure and it keeps available with all the information about the dataset, such as table names, columns names, types, etc.
 
