@@ -25,3 +25,8 @@ My study are based on [Stephane Maarek](https://github.com/simplesteph) content 
 - [Account Management, Billing and Support](notes/account-billing-support/README.md) (AWS Organizations, SCP)
 - [Advanced Identity](notes/advanced-identity/README.md) (Cognito, Active Directory Services, SSO)
 - [Other Services](notes/other-services/README.md) (Amazon Workspaces, AppStream, Sumerian, IoT Core and Elastic Transcoder)
+- [AWS Architecting & Ecosystem](notes/aws-architecting-and-ecosystem/README.md) (Design Principles and Pillars: Operational Excellence, Security, Reliability, Performance Efficiency and Cost Optimization. AWS Ecosystem)
+
+This is the first part of the journey, the **Foundational** Level.
+
+<p align="center" width="100%"><img src="assets/aws-journey.jpg" alt="aws-journey" width="600"/></p>
