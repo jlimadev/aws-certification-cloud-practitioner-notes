@@ -37,24 +37,28 @@ DNS is a collection of rules and records which helps clients understand how to r
 • example.com => AWS resource == Alias (ex: ELB, CloudFront, S3, RDS, etc…)
 ```
 
+<p align="center" width="100%"><img src="assets/route53.jpg" alt="route53" width="400"/></p>
+
 ### Route 53 Routing Policies
 
 Multiples strategies of Routing, expect by the simple route policy, all have health checks and each one different goals:
 
 - **Simple Routing Policy**: A client (web browser) request through an URL and Route 53 resolves and responds an IP. This one does not have health checks.
 
-  - Example: Web Browser -foo.com---> Route 53 (receives)
-    <-11.22.1.2- Route 53 (responds)
+    <p align="center" width="100%"><img src="assets/route53-simple-routing-policy.jpg" alt="route53-simple-routing-policy" width="300"/></p>
 
 - **Weighted Routing Policy**: It is to distribute the traffic across multiple instances: So, a client (web browser) request through an URL and Route 53 resolves and multiples IPs with a weight to each one. And since we have multiple instances, Route 53 perform health checks.
 
   - Example: 20% of the users will get response from server 1, 30% of the users will get response from server 2, 50% of the users will get response from server 3. It is like a Load Balancing
+  <p align="center" width="100%"><img src="assets/route53-weighted-routing-policy.jpg" alt="route53-weighted-routing-policy" width="300"/></p>
 
 - **Latency Routing Policy**: This Latency Routing Policy is made to reduce latency by understanding WHERE is the request coming from, and it will make sure to send a response from the closest server. This one also have health checks
 
-  - Example: We have an application global application published in South America (Brazil) and Europe (France). Our users are around the globe, so if we receive an request from Argentina it will get the response from the server in South America.
+  - Example: We have an application global application published in South America (Brazil) and Europe (France). Our users are around the globe, so if we receive an request from Argentina it will get the response from the server in South America, the closest one.
+  <p align="center" width="100%"><img src="assets/route53-latency-routing-policy.jpg" alt="route53-latency-routing-policy" width="300"/></p>
 
 - **Failover Routing Policy**: We have two instances, main instance and failover instance, if the main one fails it will redirect automatically to the failover instance. It performs health checks on the main instance.
+<p align="center" width="100%"><img src="assets/route53-failover-routing-policy.jpg" alt="route53-failover-routing-policy" width="300"/></p>
 
 ## CloudFront
 
@@ -65,6 +69,8 @@ CloudFront is a Content Delivery Network (CDN). It improves the read performance
 - The first call always goes to the Original Location, but after that, the content will cached in the edge location and next requests will be faster for all users.
   - A Static S3 Web Site deployed in Brazil (sa-east-1). A user from china tries to access. The first access on china will be slower because the response comes from the origin, but it will be cached into Edge Location, so next users will get faster responses.
 
+<p align="center" width="100%"><img src="assets/cloudfront.jpg" alt="cloudfront" width="400"/></p>
+
 CloudFront can cache from:
 
 **S3 Bucket**:
@@ -73,11 +79,15 @@ CloudFront can cache from:
 - Enhanced security with CloudFront Origin Access Identity (OAI)
 - CloudFront can be used as an ingress (to upload files to S3)
 
+<p align="center" width="100%"><img src="assets/cloudfront-s3.jpg" alt="cloudfront-s3" width="400"/></p>
+
 **Custom Origin (HTTP)**
 
 - Any kind of website
 - Load Balancer, EC2, S3 Website (Bucket must be enabled as website)
 - Any HTTP backend (even on premise)
+
+<p align="center" width="100%"><img src="assets/cloudfront-http.jpg" alt="cloudfront-http" width="400"/></p>
 
 ### CloudFront vs S3 Bucket Replication
 
@@ -95,6 +105,8 @@ Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of file
 
 - Example: We have a bucket in Australia and our user will upload a file in USA. So it will upload into the Edge Location and internally the file will to your bucket using AWS internal network (faster and private)
 
+<p align="center" width="100%"><img src="assets/s3-transfer-accelerator.jpg" alt="s3-transfer-accelerator" width="400"/></p>
+
 ## AWS Global Accelerator
 
 Improves global applications availability and performance by using AWS Global Network. Through the Edge Locations it uses the internal network of AWS and it is very faster.
@@ -102,6 +114,8 @@ Improves global applications availability and performance by using AWS Global Ne
 - Leverage the AWS internal network to optimize the route to your application (60% improvement)
 - 2 Anycast IP are created for your application and traffic is sent through Edge Locations
 - The Edge locations send the traffic to your application
+
+<p align="center" width="100%"><img src="assets/s3-global-accelerator.jpg" alt="s3-transfer-accelerator" width="300"/></p>
 
 ### AWS Global Accelerator vs CloudFront
 
@@ -129,6 +143,8 @@ Benefits:
 - Easier migration from on-premises to the cloud
 - Fully managed service
 - Some services that work on Outposts: EC2, S3, EBS, EKS, ECS, RDS, EMR
+
+<p align="center" width="100%"><img src="assets/aws-outposts.jpg" alt="aws-outposts" width="400"/></p>
 
 ## Summary
 
