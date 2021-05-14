@@ -21,8 +21,8 @@ AWS Well Architected Framework has general guiding principles to be applied:
 
 The Well Architected Framework has five Pillar:
 
-- [1st Pillar - Operational Excellence]()
-- [2nd Pillar - Security]()
+- [1st Pillar - Operational Excellence](1st-pillar---operational-excellence)
+- [2nd Pillar - Security](2nd-pillar---security)
 - [3rd Pillar - Reliability]()
 - [4th Pillar - Performance Efficiency]()
 - [5th Pillar - Cost Optimization]()
@@ -46,3 +46,19 @@ AWS Services to Operational Excellence:
 - Evolve: AWS CloudFormation and CI/CD Tools allows to evolve quickly
 
 <p align="center" width="100%"><img src="assets/1st-pillar-operational-excellence.jpg" alt="1st-pillar-operational-excellence" width="700"/></p>
+
+## 2nd Pillar - Security
+
+Security includes the ability to protect the information, applications and assets while delivering business value trough risk assessment and mitigation strategies. It will also save costs from avoidable disasters and failures.
+
+Design Principles:
+
+- Implementing a Strong Identity Foundation: Centralized Privileges and Management. Rotate credentials often.
+- Enable Traceability: integrate logs and metrics with systems to automatically respond and take actions.
+- Apply security at all layers:
+- Automate security best practices
+- Protect data in transit and at rest - Encryption, tokenization, and access control
+- Keep people away from data - eliminate or reduce the need of direct access to manual data processing
+- Prepare for security events - Run incident response simulations and use tools with automation to increase your speed for detection, investigation, and recovery
+
+<p align="center" width="100%"><img src="assets/2nd-pillar-security.jpg" alt="2nd-pillar-security" width="700"/></p>
