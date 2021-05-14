@@ -33,8 +33,16 @@ A well architected framework with Operational Excellence includes the ability to
 
 The design principles:
 
-- Perform Infrastructure as a Code (IaaS) - CloudFormation
+- Perform Infrastructure as a Code (IaaC) - CloudFormation
 - Documentation - Automate the creation of annotated docs after every build
 - Make frequent, small and reversible changes: this will avoid issues in case you need to rollback
 - Refine operations procedures frequently
 - Anticipate failures and learn from them all
+
+AWS Services to Operational Excellence:
+
+- Prepare phase: Use CloudFormation to have the IaaC, AWS Config to evaluate compliance
+- Operate: CloudFormation and AWS Config to perform the resources configuration and AWS CloudTrail and CloudWatch to monitor how it is going and if anything is gone manually
+- Evolve: AWS CloudFormation and CI/CD Tools allows to evolve quickly
+
+<p align="center" width="100%"><img src="assets/1st-pillar-operational-excellence.jpg" alt="1st-pillar-operational-excellence" width="700"/></p>
