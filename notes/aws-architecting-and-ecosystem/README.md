@@ -133,6 +133,22 @@ How does it work?
 - https://aws.amazon.com/solutions/implementations/aws-landing-zone/
 - “Replaced” by AWS Control Tower
 
+## AWS Support
+
+More in account, billing and support [section](../account-billing-support/README.md/#aws-support-plans)
+
+- Basic
+  - Free support
+  - Has Customer Services & Communities - 24x7 access to customer service, documentation, whitepapers and support forums.
+- Developer: Business Hours email access to Cloud Support Associates
+  - General Guidance: <24 business hours
+  - System impaired: <12 business hours
+- Business: 24x7 Phone, Mail and chat support from Cloud Support Engineers
+  - Production System impaired: <4 business hours
+  - Production System down: <1 business hours
+- Enterprise: Access to Technical Account Manager (TAM) and Concierge Support Team
+  - Business Critical Systems down <15 minutes
+
 ## Summary
 
 - **1st Pillar - Operational Excellence**: Ability to run and Monitor applications/systems while deliver business value + improvement through time. (Have great operations)
@@ -140,5 +156,8 @@ How does it work?
 - **3rd Pillar - Reliability**: Ability to recover from infrastructure issues and scale/get elastic to meet demand. (Ensure the application runs no matter what)
 - **4th Pillar - Performance Efficiency**: Meet system requirements and maintain efficiency while adapting to technologies (Adapting and providing the best performance and look for new technologies)
 - **5th Pillar - Cost Optimization**: Means cost reduction while delivering the best quality
+- Well Architected Tool: Free AWS Tool
+- AWS Ecosystem - Free resources
+- AWS Support - Basic, Developer, Business and Enterprise
 
 [UP](#aws-architecting--ecosystem)
