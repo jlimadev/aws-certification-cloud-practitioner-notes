@@ -27,6 +27,7 @@ The Well Architected Framework has five Pillar:
 - [4th Pillar - Performance Efficiency](#4th-pillar---performance-efficiency)
 - [5th Pillar - Cost Optimization](#5th-pillar---cost-optimization)
 - [Well Architected Tool](#well-architected-tool)
+- [AWS Ecosystem - Free resources](#aws-ecosystem---free-resources)
 - [Summary](#Summary)
 
 ## 1st Pillar - Operational Excellence
@@ -67,14 +68,11 @@ Design Principles:
 
 ## 3rd Pillar - Reliability
 
-Ability of a system to recover from infrastructure or service disruptions,
-dynamically acquire computing resources to meet demand, and mitigate
-disruptions such as misconfigurations or transient network issues.
+Ability of a system to recover from infrastructure or service disruptions, dynamically acquire computing resources to meet demand, and mitigate disruptions such as misconfigurations or transient network issues.
 
 **Design Principles**:
 
-- Test recovery procedures: Use automation to simulate different failures or to recreate
-  scenarios that led to failures before
+- Test recovery procedures: Use automation to simulate different failures or to recreate scenarios that led to failures before
 - Automatically recover from failures: Anticipate and remediate failures before they occur
 - Stop guessing capacity: Auto scaling whenever is possible (Horizontal scaling) Load Balancing (Distribute requests across multiple, smaller resources to ensure that they don't share a common point of failure)
 - Management changes through automation: Use automation to make changes to infrastructure
@@ -111,7 +109,29 @@ Design Principles
 
 ## Well Architected Tool
 
-It is a Free tool to review your architectures against the 5 pillars Well-Architected Framework and adopt architectural best practices
+It is a Free tool to review your architectures against the 5 pillars Well-Architected Framework and adopt architectural best practices.
+
+How does it work?
+
+- Select your workload and answer questions
+- Review your answers against the 5 pillars
+- Obtain advice: get videos and documentations, generate a report, see the results in a dashboard
+
+## AWS Ecosystem - Free resources
+
+- AWS Blogs: https://aws.amazon.com/blogs/aws/
+- AWS Forums (community): https://forums.aws.amazon.com/index.jspa
+- AWS Whitepapers & Guides: https://aws.amazon.com/whitepapers
+- AWS Quick Starts: https://aws.amazon.com/quickstart/
+- Automated, gold-standard deployments in the AWS Cloud
+- Build your production environment quickly with templates
+- Example: WordPress on AWS https://fwd.aws/P3yyv?did=qs_card&trk=qs_card
+- Leverages CloudFormation
+- AWS Solutions: https://aws.amazon.com/solutions/
+- Vetted Technology Solutions for the AWS Cloud
+- Example - AWS Landing Zone: secure, multi-account AWS environment
+- https://aws.amazon.com/solutions/implementations/aws-landing-zone/
+- “Replaced” by AWS Control Tower
 
 ## Summary
 
@@ -120,3 +140,5 @@ It is a Free tool to review your architectures against the 5 pillars Well-Archit
 - **3rd Pillar - Reliability**: Ability to recover from infrastructure issues and scale/get elastic to meet demand. (Ensure the application runs no matter what)
 - **4th Pillar - Performance Efficiency**: Meet system requirements and maintain efficiency while adapting to technologies (Adapting and providing the best performance and look for new technologies)
 - **5th Pillar - Cost Optimization**: Means cost reduction while delivering the best quality
+
+[UP](#aws-architecting--ecosystem)
