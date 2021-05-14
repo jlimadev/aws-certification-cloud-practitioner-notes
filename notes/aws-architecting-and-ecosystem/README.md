@@ -26,6 +26,7 @@ The Well Architected Framework has five Pillar:
 - [3rd Pillar - Reliability](#3rd-pillar---reliability)
 - [4th Pillar - Performance Efficiency](#4th-pillar---performance-efficiency)
 - [5th Pillar - Cost Optimization](#5th-pillar---cost-optimization)
+- [Well Architected Tool](#well-architected-tool)
 - [Summary](#Summary)
 
 ## 1st Pillar - Operational Excellence
@@ -94,10 +95,28 @@ Design Principles:
 
 <p align="center" width="100%"><img src="assets/4th-pillar-performance-efficiency.jpg" alt="4th-pillar-performance-efficiency" width="700"/></p>
 
+## 5th Pillar - Cost Optimization
+
+Includes the ability to run systems to deliver business value at the lowest price point.
+
+Design Principles
+
+- Adopt a consumption mode - Pay only for what you use
+- Measure overall efficiency - Use CloudWatch
+- Stop spending money on data center operations - AWS does the infrastructure part and enables customer to focus on organization projects
+- Analyze and attribute expenditure - Accurate identification of system usage and costs, helps measure return on investment (ROI) - Make sure to use tags
+- Use managed and application level services to reduce cost of ownership - As managed services operate at cloud scale, they can offer a lower cost per transaction or service
+
+<p align="center" width="100%"><img src="assets/5th-pillar-cost-optimization.jpg" alt="5th-pillar-cost-optimization" width="700"/></p>
+
+## Well Architected Tool
+
+It is a Free tool to review your architectures against the 5 pillars Well-Architected Framework and adopt architectural best practices
+
 ## Summary
 
 - **1st Pillar - Operational Excellence**: Ability to run and Monitor applications/systems while deliver business value + improvement through time. (Have great operations)
 - **2nd Pillar - Security**: Ability to protect the data, applications and assets + risk management. (Make secure environments)
 - **3rd Pillar - Reliability**: Ability to recover from infrastructure issues and scale/get elastic to meet demand. (Ensure the application runs no matter what)
 - **4th Pillar - Performance Efficiency**: Meet system requirements and maintain efficiency while adapting to technologies (Adapting and providing the best performance and look for new technologies)
-- **5th Pillar - Cost Optimization**:
+- **5th Pillar - Cost Optimization**: Means cost reduction while delivering the best quality
