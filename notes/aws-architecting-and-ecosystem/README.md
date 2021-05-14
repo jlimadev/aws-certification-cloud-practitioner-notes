@@ -21,11 +21,12 @@ AWS Well Architected Framework has general guiding principles to be applied:
 
 The Well Architected Framework has five Pillar:
 
-- [1st Pillar - Operational Excellence](1st-pillar---operational-excellence)
-- [2nd Pillar - Security](2nd-pillar---security)
-- [3rd Pillar - Reliability]()
+- [1st Pillar - Operational Excellence](#1st-pillar---operational-excellence)
+- [2nd Pillar - Security](#2nd-pillar---security)
+- [3rd Pillar - Reliability](#3rd-pillar---reliability)
 - [4th Pillar - Performance Efficiency]()
 - [5th Pillar - Cost Optimization]()
+- [Summary](#Summary)
 
 ## 1st Pillar - Operational Excellence
 
@@ -62,3 +63,25 @@ Design Principles:
 - Prepare for security events - Run incident response simulations and use tools with automation to increase your speed for detection, investigation, and recovery
 
 <p align="center" width="100%"><img src="assets/2nd-pillar-security.jpg" alt="2nd-pillar-security" width="700"/></p>
+
+## 3rd Pillar - Reliability
+
+Ability of a system to recover from infrastructure or service disruptions,
+dynamically acquire computing resources to meet demand, and mitigate
+disruptions such as misconfigurations or transient network issues.
+
+**Design Principles**:
+
+- Test recovery procedures: Use automation to simulate different failures or to recreate
+  scenarios that led to failures before
+- Automatically recover from failures: Anticipate and remediate failures before they occur
+- Stop guessing capacity: Auto scaling whenever is possible (Horizontal scaling) Load Balancing (Distribute requests across multiple, smaller resources to ensure that they don't share a common point of failure)
+- Management changes through automation: Use automation to make changes to infrastructure
+
+<p align="center" width="100%"><img src="assets/3rd-pillar-reliability.jpg" alt="3rd-pillar-reliability" width="700"/></p>
+
+## Summary
+
+- **1st Pillar - Operational Excellence**: Ability to run and Monitor applications/systems while deliver business value + improvement through time.
+- **2nd Pillar - Security**: Ability to protect the data, applications and assets + risk management.
+- **3rd Pillar - Reliability**: Ability to recover from infrastructure issues and scale/get elastic to meet demand. (ensure the application runs no matter what)
