@@ -117,7 +117,9 @@ How does it work?
 - Review your answers against the 5 pillars
 - Obtain advice: get videos and documentations, generate a report, see the results in a dashboard
 
-## AWS Ecosystem - Free resources
+## AWS Ecosystem
+
+Free Resources
 
 - AWS Blogs: https://aws.amazon.com/blogs/aws/
 - AWS Forums (community): https://forums.aws.amazon.com/index.jspa
@@ -132,6 +134,13 @@ How does it work?
 - Example - AWS Landing Zone: secure, multi-account AWS environment
 - https://aws.amazon.com/solutions/implementations/aws-landing-zone/
 - “Replaced” by AWS Control Tower
+
+Payed Resources
+
+- AWS Support
+- AWS Marketplace
+- AWS Training
+- AWS Professional Services & Partner Network (global team of experts APN [AWS Technology Partners])
 
 ## AWS Support
 
