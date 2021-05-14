@@ -24,8 +24,8 @@ The Well Architected Framework has five Pillar:
 - [1st Pillar - Operational Excellence](#1st-pillar---operational-excellence)
 - [2nd Pillar - Security](#2nd-pillar---security)
 - [3rd Pillar - Reliability](#3rd-pillar---reliability)
-- [4th Pillar - Performance Efficiency]()
-- [5th Pillar - Cost Optimization]()
+- [4th Pillar - Performance Efficiency](#4th-pillar---performance-efficiency)
+- [5th Pillar - Cost Optimization](#5th-pillar---cost-optimization)
 - [Summary](#Summary)
 
 ## 1st Pillar - Operational Excellence
@@ -80,8 +80,24 @@ disruptions such as misconfigurations or transient network issues.
 
 <p align="center" width="100%"><img src="assets/3rd-pillar-reliability.jpg" alt="3rd-pillar-reliability" width="700"/></p>
 
+## 4th Pillar - Performance Efficiency
+
+Includes the ability to use computing resources efficiently to meet system requirements, and to maintain that efficiency as demand changes and technologies evolve.
+
+Design Principles:
+
+- Democratize advanced technologies - Advance technologies become services and hence you can focus more on product development
+- Go global in minutes - Easy deployment in multiple regions
+- Use serverless architectures - Avoid burden of managing servers
+- Experiment more often - Easy to carry out comparative testing
+- Mechanical sympathy - Be aware of all AWS services
+
+<p align="center" width="100%"><img src="assets/4th-pillar-performance-efficiency.jpg" alt="4th-pillar-performance-efficiency" width="700"/></p>
+
 ## Summary
 
-- **1st Pillar - Operational Excellence**: Ability to run and Monitor applications/systems while deliver business value + improvement through time.
-- **2nd Pillar - Security**: Ability to protect the data, applications and assets + risk management.
-- **3rd Pillar - Reliability**: Ability to recover from infrastructure issues and scale/get elastic to meet demand. (ensure the application runs no matter what)
+- **1st Pillar - Operational Excellence**: Ability to run and Monitor applications/systems while deliver business value + improvement through time. (Have great operations)
+- **2nd Pillar - Security**: Ability to protect the data, applications and assets + risk management. (Make secure environments)
+- **3rd Pillar - Reliability**: Ability to recover from infrastructure issues and scale/get elastic to meet demand. (Ensure the application runs no matter what)
+- **4th Pillar - Performance Efficiency**: Meet system requirements and maintain efficiency while adapting to technologies (Adapting and providing the best performance and look for new technologies)
+- **5th Pillar - Cost Optimization**:
