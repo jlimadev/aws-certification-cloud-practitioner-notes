@@ -158,9 +158,22 @@ More in account, billing and support [section](../account-billing-support/README
 - Enterprise: Access to Technical Account Manager (TAM) and Concierge Support Team
   - Business Critical Systems down <15 minutes
 
+## AWS Professional Services & Partner Network
+
+- The AWS Professional Services organization is a global team of experts
+- They work alongside your team and a chosen member of the APN
+- APN = AWS Partner Network
+- APN Technology Partners: providing hardware, connectivity, and software
+- APN Consulting Partners: professional services firm to help build on AWS
+- APN Training Partners: find who can help you learn AWS
+- AWS Competency Program: AWS Competencies are granted to APN
+  Partners who have demonstrated technical proficiency and proven
+  customer success in specialized solution areas.
+- AWS Navigate Program: help Partners become better Partners
+
 ## Summary
 
-- **1st Pillar - Operational Excellence**: Ability to run and Monitor applications/systems while deliver business value + improvement through time. (Have great operations)
+- **1st Pillar - Operational Excellence**: Ability to run and Monitor applications/systems while deliver business value + improvement through time. (Have great operations and deployment options)
 - **2nd Pillar - Security**: Ability to protect the data, applications and assets + risk management. (Make secure environments)
 - **3rd Pillar - Reliability**: Ability to recover from infrastructure issues and scale/get elastic to meet demand. (Ensure the application runs no matter what)
 - **4th Pillar - Performance Efficiency**: Meet system requirements and maintain efficiency while adapting to technologies (Adapting and providing the best performance and look for new technologies)
