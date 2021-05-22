@@ -5,9 +5,11 @@
 - [EC2 Instance Store](#EC2-Instance-Store)
 - [EFS Elastic File System](#EFS---Elastic-File-System)
 - [EVS vs. EFS](#EBS-vs-EFS)
+- [Amazon FSx](#amazon-fsx)
 - [EC2 Storage Shared Responsibility Model](#EC2-Storage-Shared-Responsibility-Model)
+- [Summary](#Summary)
 
-### EBS Elastic Block Store - Volumes
+## EBS Elastic Block Store - Volumes
 
 **Main Information about Elastic Block Store**:
 
@@ -27,9 +29,7 @@
 
 <p align="center" width="100%"><img src="assets/ebs.jpg" alt="ebs" width="400"/></p>
 
----
-
-### EBS Snapshots
+## EBS Snapshots
 
 Snapshot is a backup of our EBS Volumes at a point in time. It keeps available in one Region. But to use it in a volume, we need to create the volume inside an AZ.
 
@@ -39,9 +39,7 @@ Snapshot is a backup of our EBS Volumes at a point in time. It keeps available i
 
 <p align="center" width="100%"><img src="assets/ebs-snapshots.jpg" alt="ebs-snapshots" width="400"/></p>
 
----
-
-### EC2 Instance Store
+## EC2 Instance Store
 
 This is the **physical HARD DRIVE** attached to the server. Limited space, but higher performance. It is called by **ephemeral**
 
@@ -50,9 +48,7 @@ This is the **physical HARD DRIVE** attached to the server. Limited space, but h
 - Risk of losing data (because it is a physical hardware)
 - Backups and Replications are our responsibility.
 
----
-
-### EFS - Elastic File System
+## EFS - Elastic File System
 
 EFS stands to Elastic File System and it is a Network File System (NFS). This NFS can be attached to hundreds of EC2 instances at a time.
 
@@ -60,12 +56,33 @@ EFS stands to Elastic File System and it is a Network File System (NFS). This NF
 - Works in Linux EC2 Instances and works across multiple AZs. It makes EFS High Available and Scalable. But, this also makes the EFS more expensive (3x gp2) and you pay what you use not capacity. If you use only 20gb, that's your usage and you'll pay for this.
 
 <p align="center" width="100%"><img src="assets/efs.jpg" alt="efs" width="300"/></p>
+
 ### EBS vs EFS
 
 - EBS are bound to one AZ and can be attached to one instance at a time. To move across regions we can use the snapshots (it is just a copy).
 - EFS works across multiple regions and can be attached to multiple instances. The same data is available to all instances. It makes the EFS a shared file system.
 
----
+## Amazon FSx
+
+We have two types of FSx in AWS:
+
+**Amazon FSx for Windows File Server**:
+
+- Fully managed, highly reliable and scalable windows native shared file systems.
+- Built on windows file server and supports SMB Protocol (Server Message Block) and Windows NTFS (New Technology File System - windows file system)
+- Integrated with Microsoft Active Directory
+- Can be accessed from AWS or On-premise
+
+<p align="center" width="100%"><img src="assets/fsx.jpg" alt="fsx" width="300"/></p>
+
+**Amazon FSx for Lustre**:
+
+- A fully managed, high-performance, scalable file storage for High Performance Computing (HPC)
+- Works for Linux and Clusters (Lusters)
+- Machine Learning, Analytics, Video Processing, Financial Modeling
+- Scales up to 100s GB/s, millions of IOPS, sub-ms latencies
+
+<p align="center" width="100%"><img src="assets/fsx-hpc.jpg" alt="fsx" width="400"/></p>
 
 ### EC2 Storage Shared Responsibility Model
 
@@ -82,3 +99,19 @@ EFS stands to Elastic File System and it is a Network File System (NFS). This NF
 - Data encryption
 - Responsibility about the data content on drivers
 - Understand the risk of using [EC2 Instance Store](#EC2-Instance-Store)
+
+## Summary
+
+- EBS volumes:
+  - Network drives attached to one EC2 instance at a time
+  - Mapped to an Availability Zones
+  - Can use EBS Snapshots for backups / transferring EBS volumes across AZ
+- AMI: create ready-to-use EC2 instances with our customizations
+  - EC2 Image Builder: automatically build, test and distribute AMIs
+- EC2 Instance Store:
+  - High performance hardware disk attached to our EC2 instance
+  - Lost if our instance is stopped / terminated
+- EFS: network file system, can be attached to 100s of instances in a region
+- EFS-IA: cost-optimized storage class for infrequent accessed files
+- FSx for Windows: Network File System for Windows servers
+- FSx for Lustre: High Performance Computing (HPC) Linux file system
