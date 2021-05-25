@@ -7,6 +7,7 @@
 - [AWS Key Management Service](#aws-key-management-service) [Encryption]
 - [AWS CloudHSM](#aws-cloudhsm) [Encryption]
 - [Types of Customer Master Keys](#types-of-customer-master-keys) [CMK Encryption]
+- [AWS Certificate Manager](#aws-certificate-manager) [Encryption and Certificate]
 - [AWS Secrets Manager](#aws-secrets-manager)
 - [AWS Artifact](#aws-artifact)
 - [Amazon GuardDuty](#amazon-guardduty) [Threat Discovery into account]
@@ -185,6 +186,24 @@ HSM device is tamper resistant, FIPS 140-2 Level 3 compliance. HSM = Hardware Se
 - Keys generated from your own CloudHSM hardware device
 - Cryptographic operations are performed within the CloudHSM cluster
 
+## AWS Certificate Manager
+
+AWS Certificate Manager (ACM) is a service to easily provision, manage, and deploy
+SSL/TLS Certificates.
+
+Used to provide in-flight encryption for websites (HTTPS)
+
+- Supports both public and private TLS
+  certificates
+- Free of charge for public TLS certificates
+- Automatic TLS certificate renewal
+- Integrations with (load TLS certificates on)
+- Elastic Load Balancers
+- CloudFront Distributions
+- APIs on API Gateway
+
+<p align="center" width="100%"><img src="assets/acm.jpg" alt="acm" width="300"/></p>
+
 ## AWS Secrets Manager
 
 It is an AWS service to store secret keys of any type. The secrets are encrypted using KMS.
@@ -307,6 +326,7 @@ Root user is the main account registered in AWS. It has complete access to all A
   - AWS CloudHSM: Encryption Device. Keys is managed by the user
   - Types of Customer Master Keys: Customer Managed CMK, AWS Managed CMK, AWS Owned CMK and CloudHSM Keys
   - AWS Secrets Manager: Store secrets and encrypt them. (application secrets)
+  - AWS Certificate Manager: provision, manage, and deploy SSL/TLS Certificates
 - Security:
   - AWS Artifact: Get access to compliance reports such as PCI, ISO, etc
   - Amazon GuardDuty: Threat Discovery on AWS account and Find malicious behavior with VPC, DNS & CloudTrail Logs
