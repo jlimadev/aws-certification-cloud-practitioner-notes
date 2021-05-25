@@ -7,6 +7,7 @@ This is where we can see the power of cloud computing, because of the automatica
 - [Elastic Load Balancer (ELB)](#elastic-load-balancer-elb)
 - [Auto Scaling Groups (ASG)](#auto-scaling-groups-asg)
 - [Scaling Strategies](#scaling-strategies)
+- [Summary](#summary)
 
 ## Scalability & High Availability
 
@@ -123,3 +124,18 @@ Summary to Create an Auto Scaling Group with Load Balancing:
 - Finally, the server i'll be ready to scale and is totally elastic. 👌✔
 
 <p align="center" width="100%"><img src="assets/elb-asg.jpg" alt="elb-asg" width="400"/></p>
+
+## Summary
+
+- High Availability (application available in multi-az) vs Scalability (vertical means add size/cpu to instance and horizontal means add more instances) vs Elasticity (capacity of scale up and down when needed) vs Agility (work faster) in the cloud.
+- Elastic Load Balancer:
+  - Distribute traffic across backend EC2 instances, can be Multi-A
+  - Supports health check
+  - 3 types: Application LB (HTTP – L7), Network LB (TCP – L4), Classic LB (old)
+- Auto Scaling Groups (ASG):
+  - Implement Elasticity for your application, across multiple AZ
+  - Scale EC2 instances based on the demand on your system, replace unhealthy
+  - Integrated with the ELB
+- Scaling Strategies:
+  - Manual
+  - Dynamic: Simple/Step (cloudwatch alarms), Target Tracking, Scheduled Scaling and Predictive Scaling.
