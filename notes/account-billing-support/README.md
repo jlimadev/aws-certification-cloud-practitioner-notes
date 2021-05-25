@@ -504,5 +504,6 @@ For Enterprise and mission critical systems running on AWS
 - Billing Alarms: use CloudWatch to run the billings alarms when some metric is passed (located in us-east-1)
 - Budgets: more advanced alarm and notification regarding Budget. Integrated with SNS.
 - Savings Plan: Easy-way to save money based on long term commitment with AWS.
+- Compute Optimizer: recommends resources’ configurations to reduce cost
 
 [UP](#account-management-billing-and-support)
