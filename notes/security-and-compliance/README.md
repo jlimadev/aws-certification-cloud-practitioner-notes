@@ -1,6 +1,7 @@
 # 📝Security and Compliance
 
 - [AWS Shared Responsibility Model](#aws-shared-responsibility-model)
+- [AWS Security Token Service](#aws-security-token-service)
 - [AWS Shield](#amazon-shield) [Standard and Advanced, layer 3 and 4]
 - [AWS Web Application Firewall](#aws-web-application-firewall) [WAF, layer 7]
 - [AWS Penetration Testing](#aws-penetration-testing)
@@ -68,9 +69,23 @@ S3 examples of shared responsibility
   - IAM user and roles
   - Enabling encryption
 
-  ## AWS against DDoS Attack
+## AWS Security Token Service
 
-  In a Distributed Denial of Service (DDoS) attack, an attacker uses multiple sources—such as distributed groups of malware infected computers, routers, IoT devices, and other endpoints—to orchestrate an attack against a target. This is a example of how we can get protected into AWS using firewall and other security services.
+AWS Security Token Service (STS) is one of the most important services of AWS. It enables you to create temporary, limited-privileges credentials to access your AWS resources.
+Short-term credentials: you configure expiration period.
+
+**Use cases**
+
+- Identity federation: manage user identities in external systems, and provide them with STS tokens to access AWS resources
+- Assume Roles
+  - IAM Roles for cross/same account access
+  - IAM Roles for Amazon EC2: provide temporary credentials for EC2 instances to access AWS resources
+
+<p align="center" width="100%"><img src="assets/sts.jpg" alt="sts" width="300"/></p>
+
+## AWS against DDoS Attack
+
+In a Distributed Denial of Service (DDoS) attack, an attacker uses multiple sources—such as distributed groups of malware infected computers, routers, IoT devices, and other endpoints—to orchestrate an attack against a target. This is a example of how we can get protected into AWS using firewall and other security services.
 
   <p align="center" width="100%"><img src="assets/ddos.jpg" alt="ddos" width="500"/></p>
 
@@ -317,6 +332,7 @@ Root user is the main account registered in AWS. It has complete access to all A
 ## Summary
 
 - AWS Shared Responsibility Model: AWS security OF the cloud, user security IN the cloud
+- Security Token Service (STS): Temporary, limited-privileges credentials to access AWS resources
 - DDoS + other attacks protection:
   - AWS Shield: Automatic protection against DDoS attacks (Standard and Advanced)
   - AWS Web Application Firewall: Firewall to filter incoming requests based on rules. Protection against attacks on layer 7, http
