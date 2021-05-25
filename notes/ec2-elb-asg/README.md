@@ -6,8 +6,9 @@ This is where we can see the power of cloud computing, because of the automatica
 - [Scalability vs Elasticity (vs Agility)](#scalability-vs-elasticity-vs-agility)
 - [Elastic Load Balancer (ELB)](#elastic-load-balancer-elb)
 - [Auto Scaling Groups (ASG)](#auto-scaling-groups-asg)
+- [Scaling Strategies](#scaling-strategies)
 
-### Scalability & High Availability
+## Scalability & High Availability
 
 **Scalability**: Scalability is linked but is different from High Availability, Scalability means that the application or system can handle different amounts of load by adapting. There are two different kinds of scalability:
 
@@ -38,9 +39,7 @@ This is where we can see the power of cloud computing, because of the automatica
   1. To do it in AWS we have ASG and ELB that are multi-az.
   2. This company has employees in three different cities in the country. So if anything stops one branch, the other two still are working and can handle the workload.
 
----
-
-### Scalability vs Elasticity (vs Agility)
+## Scalability vs Elasticity (vs Agility)
 
 - **Scalability**: is the ability for a system to accommodate a larger load by making the hardware stronger (vertical scale, scale-up) or by add nodes (horizontal scale, scale-out).
 
@@ -48,9 +47,7 @@ This is where we can see the power of cloud computing, because of the automatica
 
 - **Agility**: (not related to scale - distractor), new IT resources available very quickly. (one click away, what used to happen in weeks)
 
----
-
-### Elastic Load Balancer (ELB)
+## Elastic Load Balancer (ELB)
 
 Elastic Load Balancer are managed by AWS and they are servers that forward the internet traffic to multiple servers (EC2 Instances). `They are the backend of EC2 Instances`. The ELB is what will be exposed to the users and when receive the connection/access it will redirect traffic to instances.
 
@@ -80,9 +77,7 @@ When configuring the ELB we need to create a `Target Group`, this target group c
 
 <p align="center" width="100%"><img src="assets/elb.jpg" alt="elb" width="400"/></p>
 
----
-
-### Auto Scaling Groups (ASG)
+## Auto Scaling Groups (ASG)
 
 The loads and access of websites can change overtime, so we need to add or remove resources. We can do it automatically by using the Auto Scaling Groups. To do so, we need to have an Elastic Load Balancer configured, which means that our application can manage the loads.
 
@@ -94,7 +89,23 @@ The loads and access of websites can change overtime, so we need to add or remov
   - Replace unhealthy instances (If a instance fails, it register a new one automatically)
 - The Auto Scaling Groups leaverage to **costs savings**, since we can adjust the capacity automatically and scale in the right moments (imagine a peak of access in our website, we are going to have machines available to deal with the load and after that we don't need them anymore. In this case we pay more, but just on the peak and after that we dont have to pay the any additional machines).
 
-**Tips, to Create an ASG**:
+## Scaling Strategies
+
+**Manual Scaling**: We change manually in the console/cli the desired capacity of our ASG.
+
+**Dynamic Scaling**: Respond to changing demand. We have four types of dynamic scaling strategies.
+
+- Simple/Step Scaling:
+  - When a CloudWatch alarm is triggered (example CPU over 70%), then add 2 Instances
+  - When a CloudWatch alarm is triggered (example CPU less then 30%), then remove 1 Instance
+- Target Tracking:
+  - Based on metrics of the target. (no cloudwatch, just tracking the resource), example: I want the average ASG CPU to be around 40% of capacity. So it will add or remove instances to reach this goal.
+- Scheduled Scaling: Anticipating known events to handle better with the loads.
+  - Example: On lunch time (starting 11am) i want my min capacity to be 15 instances. After 14h i want 7 instances.
+- Predictive Scaling: Uses machine learning to predict future traffic and scale based on past identified patterns.
+  - This is useful when our load has predictable time-based patterns.
+
+### Tips, to Create an ASG:
 
 - When creating an ASG Group, we need to create a template, so the new instances will be inherited from it. Whenever we need to register a new instance, ASG will get this template and launch it for us.
 - We can also attach our Load Balancer to our ASG and select our `target group`, so the new instances will be created and attached to the target group.
@@ -103,8 +114,6 @@ The loads and access of websites can change overtime, so we need to add or remov
 - When create this groups sizes, we can create the Scaling policies to Target tracking scaling policy, this means that we can scale based on CPU usage, network in or out, count of requests per target, etc.
 
 <p align="center" width="100%"><img src="assets/asg.jpg" alt="asg" width="400"/></p>
-
----
 
 Summary to Create an Auto Scaling Group with Load Balancing:
 
