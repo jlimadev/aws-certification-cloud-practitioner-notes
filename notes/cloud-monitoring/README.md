@@ -6,6 +6,7 @@
 - [CloudWatch Events - EventBridge](#cloudwatch-events---eventbridge)
 - [CloudTrail](#cloudtrail)
 - [Amazon X-Ray](#amazon-x-ray)
+- [Amazon CodeGuru](#amazon-CodeGuru)
 - [Service Health Dashboard](#service-health-dashboard)
 - [Personal Health Dashboard](#personal-health-dashboard)
 - [Summary](#summary)
@@ -127,6 +128,34 @@ With Amazon X-Ray we can have a big picture and a visual analysis of our apps. T
 - Find errors, exceptions and understand throttles
 - Measure SLA
 
+## Amazon CodeGuru
+
+A Machine Learning service to Automated Code Reviews and for Application Performance Recommendations.
+
+**CodeGuru Reviewer**: Automated Code Reviews for static code analysis. (development).
+
+- It analysis the code in our repository (code commit, or github).
+- Identity critical issues, security vulnerabilities, and hard-to-find bugs.
+- Enforce code practices, common coding best practices, resource leaks, security detection, input validation
+- Uses machine learning and automated reasoning
+- Hard-learned lessons across multiple AWS open-sources repositories
+- Supports Java and Python (more incoming)
+- Integration with GitHub, CodeCommit and BitBucket
+
+**CodeGuru Profiler**: Visibility/recommendations of application performance during runtime (production).
+
+- It detects the expensive lines of code in pre-prod and once it is deployed it starts measuring and analyzing performance.
+- Helps to understand the runtime behavior of application
+- Identify and remove code inefficiencies
+- Improve application performance (e.g., reduce CPU utilization)
+- Decrease compute costs
+- Provides heap summary (identify which objects using up memory)
+- Anomaly Detection
+- Support applications running on AWS or on- premise
+- Minimal overhead on application
+
+<p align="center" width="100%"><img src="assets/codeguru.jpg" alt="codeguru" width="700"/></p>
+
 ## Service Health Dashboard
 
 It an AWS Website to show the status of all services in all regions of AWS.
@@ -155,6 +184,7 @@ While the Service Health Dashboard displays the general status of AWS services, 
 - CloudTrail: Governance, Compliance and Audit tools with every events that happens into our account
 - CloudTrail Insights: Automated analysis of CloudTrail Events
 - X-Ray: trace requests and get a big picture/debugging of distributed systems/microservices.
+- CodeGuru: automated code reviews and application performance recommendations
 - Service Health Dashboard: Dashboard with all AWS services status across all regions.
 - Personal Health Dashboard: Status of AWS Services that impact OUR infrastructure and we can create a plan to deal with it.
 
