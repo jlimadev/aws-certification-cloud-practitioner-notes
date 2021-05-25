@@ -21,6 +21,7 @@ Global Services to Decrease Latency and Improve Availability
 - [S3 Transfer Accelerator](#s3-transfer-accelerator)
 - [AWS Global Accelerator](#aws-global-accelerator)
 - [AWS Outposts](#aws-outposts)
+- [AWS Wavelength](#aws-wavelength)
 - [Summary](#summary)
 
 ## Route53
@@ -146,6 +147,20 @@ Benefits:
 
 <p align="center" width="100%"><img src="assets/aws-outposts.jpg" alt="aws-outposts" width="400"/></p>
 
+## AWS Wavelength
+
+- Wavelength Zones are infrastructure deployments, embedded within the telecommunications providers data centers at the edge of the 5G Networks.
+
+This brings AWS services to the edge of the 5G Networks, allowing services such as EC2, EBS, VPC...
+
+- Ultra-low latency applications through 5G networks
+- Traffic doesn’t leave the Communication Service Provider’s (CSP) network
+- High-bandwidth and secure connection to the parent AWS Region
+- No additional charges or service agreements
+- Use cases: Smart Cities, ML-assisted diagnostics, Connected Vehicles, Interactive Live Video Streams, AR/VR, Real-time Gaming, …
+
+<p align="center" width="100%"><img src="assets/aws-wavelength.jpg" alt="aws-wavelength" width="300"/></p>
+
 ## Summary
 
 - Route 53: Great to route users to the closest deployment with least latency and good for disaster recovery strategies.
@@ -153,3 +168,4 @@ Benefits:
 - S3 Transfer Acceleration: Accelerate S3 Downloads and Uploads
 - AWS Global Accelerator: Improve Global Availability and Performance of your apps by using internal AWS networking.
 - AWS Outposts: Deploy Outposts Racks in your own Data Centers to extend AWS services
+- AWS Wavelength: Ultra-low latency connection to the applications through 5g network. It brings AWS services to the edge by using the 5G.
