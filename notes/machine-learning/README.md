@@ -10,6 +10,9 @@ Amazon provide multiple services on Machine Learning
 - [Amazon Connect](#amazon-connect): Cloud contact center
 - [Amazon Comprehend](#amazon-comprehend): Natural Language Processing to understand and interpret texts
 - [Amazon SageMaker](#amazon-sageMaker): Environment to developers and data scientists build models
+- [Amazon Forecast](#amazon-forecast): Create forecast using machine learning
+- [Amazon Kendra](#amazon-kendra): document search service
+- [Amazon Personalize](#amazon-personalize): personalized recommendations
 - [Summary](#summary)
 
 ## Amazon Rekognition
@@ -61,7 +64,7 @@ It is a omnichannel cloud contact center.
 - Can integrate with other CRM systems or AWS
 - No upfront payments, 80% cheaper than traditional contact center solutions
 
-<p align="center" width="100%"><img src="assets/lex-connect.jpg" alt="shared-responsibility" width="500"/></p>
+<p align="center" width="100%"><img src="assets/lex-connect.jpg" alt="lex-connect" width="600"/></p>
 
 ## Amazon Comprehend
 
@@ -88,6 +91,32 @@ Amazon SageMaker is a fully managed service to developers and data scientists to
   - Train and Tune
   - Apply Model and do Predictions
 
+## Amazon Forecast
+
+Amazon forecast is a fully managed service that uses Machine Learning to create forecasts based on data.
+
+Use cases: Product Demand Planning, Financial Planning, Resource Planning...
+
+<p align="center" width="100%"><img src="assets/forecast.jpg" alt="forecast" width="600"/></p>
+
+## Amazon Kendra
+
+It is a Fully Managed **document search service** that uses machine learning. It is used to extract answers from documents (text, pdf, word, etc.)
+
+It indexes the documents and kendra get answers within them.
+
+<p align="center" width="100%"><img src="assets/kendra.jpg" alt="kendra" width="600"/></p>
+
+## Amazon Personalize
+
+It is a full-managed machine learning service to build real time and personalized recommendations. This is the same technology used by Amazon.com
+
+- Integrates into existing websites, applications, SMS, email marketing systems, …
+- Implement in days, not months (you don’t need to build, train, and deploy ML solutions)
+- Use cases: retail stores, media and entertainment…
+
+<p align="center" width="100%"><img src="assets/personalize.jpg" alt="personalize" width="600"/></p>
+
 ## Summary
 
 - Amazon Rekognition: Image and Video analysis with ML
@@ -98,5 +127,8 @@ Amazon SageMaker is a fully managed service to developers and data scientists to
 - Amazon Connect: Cloud contact center
 - Amazon Comprehend: natural language processing
 - Amazon SageMaker: machine learning for every developer and data scientist
+- Amazon Forecast: Create forecast using machine learning
+- Amazon Kendra: document search service
+- Amazon Personalize: A Machine Learning service to build personalized recommendations
 
 [UP](#-machine-learning)
