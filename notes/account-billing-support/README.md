@@ -16,6 +16,7 @@
   - [CloudFront Pricing](#cloudfront-pricing)
   - [Network Pricing](#network-pricing)
 - [AWS Savings Plan](#aws-savings-plan)
+- [AWS Compute Optimizer](#aws-compute-optimizer)
 - [Billing and Costing Tools](#billing-and-costing-tools)
   - [Estimating costs in the cloud](#estimating-costs-in-the-cloud)
     - [TCO Calculator](#tco-calculator): On-prem to Cloud
@@ -281,6 +282,16 @@ There are two types of savings plans
 - Up to 66% discount compared to On-Demand
 - Regardless of Family, Region, size, OS, tenancy, compute options
 - Compute Options: EC2, Fargate, Lambda
+
+## AWS Compute Optimizer
+
+AWS Compute Optimizer is a service to help save costs of compute services by analyzing the use of each one of them (using machine learning) and sending us recommendations of improvement.
+
+- Helps you choose optimal configurations and right-size your workloads (over/under provisioned)
+- Uses Machine Learning to analyze your resources’ configurations and their utilization CloudWatch metrics
+- Supported resources: EC2 instances, EC2 Auto Scaling Groups, EBS volumes and Lambda functions
+- Lower your costs by up to 25%
+- Recommendations can be exported to S3
 
 ## Billing and Costing Tools
 
