@@ -4,6 +4,7 @@ In this section we are going to understand how to deploy our workload into AWS
 
 - [Cloud Formation](#cloud-formation)
 - [Elastic Beanstalk](#elastic-beanstalk)
+- [AWS Cloud Development Kit](#aws-cloud-development-kit)
 - [AWS CodeDeploy](#aws-codedeploy)
 - [AWS CodeCommit](#aws-codecommit)
 - [AWS CodeBuild](#aws-codecommit)
@@ -74,6 +75,17 @@ Difference between CloudFormation and Beanstalk
 
 - CloudFormation is IaaC and you can deploy any AWS Services and integrations
 - Beanstalk is PaaS and it uses CloudFormation to deploy the Web Applications and you just need to worry about your code.
+
+## AWS Cloud Development Kit
+
+Define our infrastructure by using a preferred programming language. The code is compiled into a CloudFormation template (JSON/YAML).
+
+- You can therefore deploy infrastructure and application runtime code together
+  - Great for Lambdas, Docker containers (ECS/EKS)
+
+<p align="center" width="100%"><img src="assets/cdk.jpg" alt="cdk" width="600"/></p>
+
+In this example we build our CDK Application using our language defining resources, and the CDK CLI will transform to a CloudFormation template to be deployed by cloudformation.
 
 ## AWS CodeDeploy
 
@@ -179,6 +191,7 @@ To understand it, we need to understand two tolls before: `Chef & Puppet`: Chef 
 - Beanstalk: (AWS only)
   - Platform as a Service (PaaS), limited to certain programming languages or Docker
   - Deploy code consistently with a known architecture: ex, ALB + EC2 + RDS
+- Cloud Development Kit (CDK): Define your cloud infrastructure using a programming language
 - CodeDeploy (hybrid): deploy & upgrade any application onto servers
 - Systems Manager (hybrid): patch, configure and run commands at scale
 - OpsWorks (hybrid): managed Chef and Puppet in AWS
