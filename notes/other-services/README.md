@@ -90,6 +90,15 @@ Fully managed service that tests our application (web and mobile) in multiple de
 
 ## AWS Backup
 
+It is a Fully managed service to centrally manage and automate backups across AWS services.
+
+- Supports On demand and scheduled backups
+- Supports Point-In-Recovery (PITR)
+- It allows creation of Retention Policies, Lifecycle Management, Backup Policies and more...
+- Supports Cross-Region and Cross-Account backups
+
+<p align="center" width="100%"><img src="assets/aws-backup.jpg" alt="aws-backup" width="600"/></p>
+
 ## AWS CloudEndure
 
 ## Summary
@@ -100,5 +109,5 @@ Fully managed service that tests our application (web and mobile) in multiple de
 - AWS IoT Core: Connect billions of IoT devices with AWS
 - AWS Elastic Transcoder: Convert media to multiple formats (s3 stored media)
 - AWS Device Farm: Service to test our applications in multiple devices (it is a farm of devices on AWS)
-- AWS Backup:
+- AWS Backup: centrally manage and automate backups across AWS services
 - AWS CloudEndure:
