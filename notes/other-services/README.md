@@ -9,7 +9,7 @@ Services worth to know about
 - [AWS Elastic Transcoder](#aws-elastic-transcoder)
 - [AWS Device Farm](#aws-device-farm)
 - [AWS Backup](#aws-backup)
-- [AWS CloudEndure](#aws-cloudEndure)
+- [CloudEndure Disaster Recovery](#cloudEndure-disaster-recovery)
 - [Summary](#summary)
 
 ## Amazon Workspaces
@@ -99,7 +99,17 @@ It is a Fully managed service to centrally manage and automate backups across AW
 
 <p align="center" width="100%"><img src="assets/aws-backup.jpg" alt="aws-backup" width="600"/></p>
 
-## AWS CloudEndure
+## CloudEndure Disaster Recovery
+
+CloudEndure is a company acquired by AWS and AWS has its services now.
+
+CloudEndure Disaster Recovery Quickly and easily recover your physical, virtual and cloud-based servers in AWS.
+
+- Continuos block level replication for the servers.
+- Example: You have a data center with CLoudEndure agent. It will continuously replicate the data to AWS Cloud in a Staging area with low-cost EC2 instances and EBS Volumes. In case of failovers, in minutes, it starts run more powerful EC2 instances with the most recent data until the datacenter is recovered. Since it is recovered it does a failback process and release the Production EC2 instance (just keep the staging to keep replicating data).
+- Use cases: Protect most critical databases, enterprise apps and protect data from Ransomware attacks.
+
+<p align="center" width="100%"><img src="assets/aws-cloudendure.jpg" alt="aws-cloudendure" width="600"/></p>
 
 ## Summary
 
@@ -110,4 +120,4 @@ It is a Fully managed service to centrally manage and automate backups across AW
 - AWS Elastic Transcoder: Convert media to multiple formats (s3 stored media)
 - AWS Device Farm: Service to test our applications in multiple devices (it is a farm of devices on AWS)
 - AWS Backup: centrally manage and automate backups across AWS services
-- AWS CloudEndure:
+- CloudEndure Disaster Recovery:
