@@ -7,6 +7,9 @@ Services worth to know about
 - [Amazon Sumerian](#amazon-sumerian)
 - [AWS IoT Core](#aws-ioT-core)
 - [AWS Elastic Transcoder](#aws-elastic-transcoder)
+- [AWS Device Farm](#aws-device-farm)
+- [AWS Backup](#aws-backup)
+- [AWS CloudEndure](#aws-cloudEndure)
 - [Summary](#summary)
 
 ## Amazon Workspaces
@@ -74,6 +77,21 @@ Converts S3 files within a bucket and convert to many formats and save into a ta
 
 <p align="center" width="100%"><img src="assets/elastic-transcoder.jpg" alt="elastic-transcoder" width="600"/></p>
 
+## AWS Device Farm
+
+Fully managed service that tests our application (web and mobile) in multiple desktop browsers and real mobile devices and tablets.
+
+- Run tests concurrently on multiple devices
+- Can configure any settings we want (bluetooth, gps, etc.)
+- We can interact with all devices
+- We receive reports and logs of all tests
+
+<p align="center" width="100%"><img src="assets/device-farm.jpg" alt="device-farm" width="600"/></p>
+
+## AWS Backup
+
+## AWS CloudEndure
+
 ## Summary
 
 - Amazon Workspaces: Desktop as a Service and provides a windows or linux desktop
@@ -81,3 +99,6 @@ Converts S3 files within a bucket and convert to many formats and save into a ta
 - Amazon Sumerian: Create 3D/VR applications (browser app)
 - AWS IoT Core: Connect billions of IoT devices with AWS
 - AWS Elastic Transcoder: Convert media to multiple formats (s3 stored media)
+- AWS Device Farm: Service to test our applications in multiple devices (it is a farm of devices on AWS)
+- AWS Backup:
+- AWS CloudEndure:
