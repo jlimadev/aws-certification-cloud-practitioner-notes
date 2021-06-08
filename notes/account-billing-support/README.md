@@ -309,6 +309,8 @@ First we can estimate the costs in the cloud with TCO Calculator and Pricing Cal
 
 TCO stands to Total Cost of Ownership and it is a tool to calculate the cost of moving ownership of on-premises server to the cloud.
 
+> TCO calculator helps to compare the cost of your applications in an on-premises or traditional hosting environment to AWS. AWS helps reduce Total Cost of Ownership (TCO) by reducing the need to invest in large capital expenditures and providing a pay-as-you-go model that empowers to invest in the capacity you need and use it only when the business requires it. Once you describe your on-premises or hosting environment configuration, it produces a detailed cost comparison with AWS. TCO calculator can be used from https://awstcocalculator.com/.
+
 - AWS Helps reduce CAPEX (capital expenditures) and providing a pay-as-you-go model
 - The TCO calculators allow you to estimate the cost savings when using AWS and provide a detailed set of reports that can be used in executive presentations.
 - It compares all the costs with having a on-premises server vs using AWS infrastructure (Server, Storage, Network, IT Labor)
@@ -358,11 +360,19 @@ Cost and Usage Reports is a tool to dive deeper into our AWS costs and usage of 
 
 Cost Explorer is a visual tool to understand and manage the cost and usage overtime in AWS.
 
+> AWS Cost Explorer has an easy-to-use interface that lets you visualize, understand, and manage your AWS costs and usage over time. AWS Cost Explorer includes a default report that helps you visualize the costs and usage associated with your top five cost-accruing AWS services, and gives you a detailed breakdown of all services in the table view. The reports let you adjust the time range to view historical data going back up to twelve months to gain an understanding of your cost trends.
+
+> The rightsizing recommendations feature in Cost Explorer helps you identify cost-saving opportunities by downsizing or terminating EC2 instances. You can see all of your underutilized EC2 instances across member accounts in a single view to immediately identify how much you can save.
+
 - We can create custom reports
 - Analyze your data at a high level: total costs and usage across all accounts
 - Or Monthly, hourly, resource level granularity
 - It suggest savings plans based on the usage
 - Forecast usage up to 12 months
+
+### Simple Month Calculator
+
+> The Simple Monthly Calculator helps customers and prospects estimate their monthly AWS bill more efficiently. The Simple Monthly Calculator cannot be used to compare the cost of running the IT infrastructure on-premises vs AWS Cloud.
 
 ### Monitoring against costs plans
 
@@ -384,7 +394,7 @@ AWS Budgets is a powerful tool about create and send alarms when costs exceeds t
 - Same options as AWS Cost Explorer!
 - 2 budgets are free, then $0.02/day/budget
 
-AWS Budgets gives you the ability to set custom budgets that alert you when your costs or usage exceed (or are forecasted to exceed) your budgeted amount. Difference with CloudWatch Billing Alarms: CloudWatch Billing Alarms only send alerts when your costs and usage are exceeding your budget, not when it is forecasted to exceed your budget, while AWS Budgets does both.
+> AWS Budgets gives you the ability to set custom budgets that alert you when your costs or usage exceed (or are forecasted to exceed) your budgeted amount. Difference with CloudWatch Billing Alarms: CloudWatch Billing Alarms only send alerts when your costs and usage are exceeding your budget, not when it is forecasted to exceed your budget, while AWS Budgets does both.
 
 ## AWS Trusted Advisor
 

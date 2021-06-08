@@ -109,6 +109,8 @@ We can export our logs to S3 Bucket and/or CloudWatch Logs as well.
 
 With VPC Peering we can connect two VPCs, privately using AWS Network and make them behave as if they are in the same network.
 
+> A VPC peering connection is a networking connection between two VPCs that enables you to route traffic between them privately. Instances in either VPC can communicate with each other as if they are within the same network. You can create a VPC peering connection between your VPCs, with a VPC in another AWS account, or with a VPC in a different AWS Region.
+
 - This must not overlap CIDR (IP ranges)
 - VPC peering is not transitive, this means if we have 3 VPCs, A, B and C, Then we create a VPC peering from A to B, And we create another VPC peering from B to C
 
@@ -123,6 +125,8 @@ Usually when we connect our services we use the public internet, but we have pri
 VPC Endpoints allows us to connect to AWS services using a private network instead of the public. We have two types of Endpoints. This gives you enhanced security and
 lower latency to access AWS services.
 
+> VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by AWS PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
+
 **Gateway**: Dynamo and S3
 **Interface** All others AWS services
 
@@ -135,6 +139,8 @@ Site to Site VPN connects On-Premise servers to our VPC into AWS. The connection
 We have to configure our VPC with a Virtual Private Gateway (VGW) and our On-Premise server with a Customer Gateway (CGW), then the site to Site VPN will communicate through them,
 
 <p align="center" width="100%"><img src="assets/site-to-site-vpn.jpg" alt="drawing" width="700"/></p>
+
+> AWS Site-to-Site VPN creates a secure connection between your data center or branch office and your AWS cloud resources. This connection goes over the public internet. Site to Site VPN cannot be used to interconnect VPCs.
 
 ## Direct Connect
 

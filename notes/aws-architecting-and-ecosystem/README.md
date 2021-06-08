@@ -30,6 +30,8 @@ The Well Architected Framework has five Pillar:
 - [AWS Ecosystem - Free resources](#aws-ecosystem---free-resources)
 - [Summary](#Summary)
 
+<p align="center" width="100%"><img src="assets/pillars.jpg" alt="pillars" width="700"/></p>
+
 ## 1st Pillar - Operational Excellence
 
 A well architected framework with Operational Excellence includes the ability to run and monitor the applications to deliver value to the business and continually improve supporting processes and procedures.
@@ -54,6 +56,8 @@ AWS Services to Operational Excellence:
 
 Security includes the ability to protect the information, applications and assets while delivering business value trough risk assessment and mitigation strategies. It will also save costs from avoidable disasters and failures.
 
+> "Who did what" is nothing but traceability of action by any user on the system. It tells us which user performed what action on the system. Traceability is part of the Security design principle of AWS Cloud. So this is the correct option.
+
 Design Principles:
 
 - Implementing a Strong Identity Foundation: Centralized Privileges and Management. Rotate credentials often.
@@ -69,6 +73,12 @@ Design Principles:
 ## 3rd Pillar - Reliability
 
 Ability of a system to recover from infrastructure or service disruptions, dynamically acquire computing resources to meet demand, and mitigate disruptions such as misconfigurations or transient network issues.
+
+> Foundations are part of the Reliability pillar of the AWS Well-Architected Framework. AWS states that before architecting any system, foundational requirements that influence reliability should be in place. The services that are part of foundations are: Amazon VPC, AWS Trusted Advisor, AWS Service Quotas (earlier known as AWS Service Limits).
+
+> AWS Trusted Advisor is an online tool that provides you real-time guidance to help you provision your resources following AWS best practices on cost optimization, security, fault tolerance, service limits, and performance improvement. Whether establishing new workflows, developing applications, or as part of ongoing improvement, recommendations provided by Trusted Advisor regularly help keep your solutions provisioned optimally.
+
+> Service Quotas enables you to view and manage your quotas for AWS services from a central location. Quotas, also referred to as limits in AWS, are the maximum values for the resources, actions, and items in your AWS account. Each AWS service defines its quotas and establishes default values for those quotas.
 
 **Design Principles**:
 
