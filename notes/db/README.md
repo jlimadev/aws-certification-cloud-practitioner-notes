@@ -124,7 +124,8 @@ RDS is a managed service:
 <p align="center" width="100%"><img src="assets/rds-multi-az.jpg" alt="rds" width="300"/></p>
 
 - **RDS Multi-Region** (read replicas): Disaster recovery strategy in case of Region issue, local performance for global reads (Example: so if we have the main db in us-east-1 and replica in sa-east-1, we can read locally from region sa-east-1 with less latency, but if we need to write, it goes to main db, in us-east-1) replications costs.
-**The main purpose of RDS Multi-Region is Disaster Recovery**
+  **The main purpose of RDS Multi-Region is Disaster Recovery**
+
 <p align="center" width="100%"><img src="assets/rds-multi-region.jpg" alt="rds" width="400"/></p>
 
 ## Amazon Aurora
