@@ -160,6 +160,8 @@ Is used to get a Redis or Memcached managed database.
 
 DynamoDB is a fully managed and High Available NoSQL Key/Value Database with replications across 3 AZs.
 
+> Amazon DynamoDB is a key-value and document database that delivers single-digit millisecond performance at any scale. It's a fully managed, multi-Region, multi-master, durable database with built-in security, backup and restore, and in-memory caching for internet-scale applications. DynamoDB offers flexible schema and can easily handle unstructured data.
+
 - Scales to massive workloads, distributed “serverless” database (We don't need to manage any server related to this database)
 - Millions of requests per seconds, trillions of row, 100s of TB of storage
 - Fast and consistent in performance
@@ -200,6 +202,7 @@ Usually the exam ask what kind of database is used for analytics and data wareho
 - Pay as you go, based on the launched instances
 - Has SQL interface to perform queries.
 - Integrated with BI tools such as Amazon Quicksight and Tableau.
+- Redshift does not support storing unstructured data.
 
 ## Amazon Elastic MapReduce - EMR
 
