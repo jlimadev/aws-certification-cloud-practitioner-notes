@@ -46,6 +46,8 @@ Multiples strategies of Routing, expect by the simple route policy, all have hea
 
 - **Simple Routing Policy**: A client (web browser) request through an URL and Route 53 resolves and responds an IP. This one does not have health checks.
 
+> With simple routing, you typically route traffic to a single resource, for example, to a web server for your website.
+
     <p align="center" width="100%"><img src="assets/route53-simple-routing-policy.jpg" alt="route53-simple-routing-policy" width="300"/></p>
 
 - **Weighted Routing Policy**: It is to distribute the traffic across multiple instances: So, a client (web browser) request through an URL and Route 53 resolves and multiples IPs with a weight to each one. And since we have multiple instances, Route 53 perform health checks.
@@ -53,10 +55,12 @@ Multiples strategies of Routing, expect by the simple route policy, all have hea
   - Example: 20% of the users will get response from server 1, 30% of the users will get response from server 2, 50% of the users will get response from server 3. It is like a Load Balancing
   <p align="center" width="100%"><img src="assets/route53-weighted-routing-policy.jpg" alt="route53-weighted-routing-policy" width="300"/></p>
 
-- **Latency Routing Policy**: This Latency Routing Policy is made to reduce latency by understanding WHERE is the request coming from, and it will make sure to send a response from the closest server. This one also have health checks
+- **Latency Routing Policy**: This Latency Routing Policy is made to reduce latency by understanding WHERE is the request coming from, and it will make sure to send a response from the closest server to provide lower possible latency. This one also have health checks.
 
-  - Example: We have an application global application published in South America (Brazil) and Europe (France). Our users are around the globe, so if we receive an request from Argentina it will get the response from the server in South America, the closest one.
-  <p align="center" width="100%"><img src="assets/route53-latency-routing-policy.jpg" alt="route53-latency-routing-policy" width="300"/></p>
+> This routing policy is used when you have resources in multiple AWS Regions and you want to route traffic to the region that provides the best latency.
+
+- Example: We have an application global application published in South America (Brazil) and Europe (France). Our users are around the globe, so if we receive an request from Argentina it will get the response from the server in South America, the closest one.
+<p align="center" width="100%"><img src="assets/route53-latency-routing-policy.jpg" alt="route53-latency-routing-policy" width="300"/></p>
 
 - **Failover Routing Policy**: We have two instances, main instance and failover instance, if the main one fails it will redirect automatically to the failover instance. It performs health checks on the main instance.
 <p align="center" width="100%"><img src="assets/route53-failover-routing-policy.jpg" alt="route53-failover-routing-policy" width="300"/></p>
