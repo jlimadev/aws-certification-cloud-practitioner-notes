@@ -27,6 +27,8 @@
 - We can have existing EBS volumes that keeps unattached.
 - EBS Volumes are network drives with good but 'limited' performance: EC2 Instance Store have the best performance, because they are the hard disk, physical, on the data-center attached on the machine that runs the server.
 
+> Amazon Elastic Block Store (EBS) is an easy to use, high-performance block storage service designed for use with Amazon Elastic Compute Cloud (EC2) for both throughput and transaction-intensive workloads at any scale. A broad range of workloads, such as relational and non-relational databases, enterprise applications, containerized applications, big data analytics engines, file systems, and media workflows are widely deployed on Amazon EBS.
+
 <p align="center" width="100%"><img src="assets/ebs.jpg" alt="ebs" width="400"/></p>
 
 ## EBS Snapshots
@@ -47,6 +49,9 @@ This is the **physical HARD DRIVE** attached to the server. Limited space, but h
 - EC2 Instance Store lose their storage and data if they are stopped.
 - Risk of losing data (because it is a physical hardware)
 - Backups and Replications are our responsibility.
+- It is Block Level storage.
+
+> An instance store provides temporary block-level storage for your EC2 instance. This storage is located on disks that are physically attached to the host computer. Instance store is ideal for the temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content, or for data that is replicated across a fleet of instances, such as a load-balanced pool of web servers. Instance storage is temporary, data is lost if instance experiences failure or is terminated. EC2 instance store cannot be used for file sharing between instances.
 
 ## EFS - Elastic File System
 
@@ -54,6 +59,8 @@ EFS stands to Elastic File System and it is a Network File System (NFS). This NF
 
 - It is a shared NFS.
 - Works in Linux EC2 Instances and works across multiple AZs. It makes EFS High Available and Scalable. But, this also makes the EFS more expensive (3x gp2) and you pay what you use not capacity. If you use only 20gb, that's your usage and you'll pay for this.
+
+> Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully managed, elastic NFS file system. It is built to scale on-demand to petabytes without disrupting applications, growing and shrinking automatically as you add and remove files, eliminating the need to provision and manage capacity to accommodate growth. Amazon EFS is designed to provide massively parallel shared access to thousands of Amazon EC2 instances, enabling your applications to achieve high levels of aggregate throughput and IOPS with consistent low latencies.
 
 <p align="center" width="100%"><img src="assets/efs.jpg" alt="efs" width="300"/></p>
 
