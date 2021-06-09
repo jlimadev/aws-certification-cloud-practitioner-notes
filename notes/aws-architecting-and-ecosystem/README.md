@@ -133,8 +133,14 @@ Free Resources
 
 - AWS Blogs: https://aws.amazon.com/blogs/aws/
 - AWS Forums (community): https://forums.aws.amazon.com/index.jspa
+  - AWS Forums is an AWS community platform where people can help each other. It is not used to deploy technologies on AWS.
 - AWS Whitepapers & Guides: https://aws.amazon.com/whitepapers
+  - AWS Whitepapers are technical content authored by AWS and the AWS community to expand your knowledge of the cloud. They include technical whitepapers, technical guides, reference material, and reference architectures diagrams. You can find useful content for your deployment, but it is not a service that will deploy technologies.
 - AWS Quick Starts: https://aws.amazon.com/quickstart/
+
+  - Quick Starts are built by AWS solutions architects and partners to help you deploy popular technologies on AWS, based on AWS best practices for security and high availability. These accelerators reduce hundreds of manual procedures into just a few steps, so you can build your production environment quickly and start using it immediately.
+  - Each Quick Start includes AWS CloudFormation templates that automate the deployment and a guide that discusses the architecture and provides step-by-step deployment instructions.
+
 - Automated, gold-standard deployments in the AWS Cloud
 - Build your production environment quickly with templates
 - Example: WordPress on AWS https://fwd.aws/P3yyv?did=qs_card&trk=qs_card
