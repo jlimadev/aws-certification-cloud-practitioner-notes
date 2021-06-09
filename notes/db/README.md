@@ -112,7 +112,7 @@ RDS is a managed service:
 
 **RDS Deployment Options:**
 
-- **RDS Read Replicas**: Here we can scale the workload of our DB, we can create up to 15 replicas. The data is written only to main DB and we can read the data from the replicas. **Read Replica improves database scalability**.
+- **RDS Read Replicas**: Here we can scale the workload of our DB, we can create up to 15 replicas. The data is written only to main DB and we can read the data from the replicas. **Read Replica improves database scalability and are used for improved read performance**.
   > Read Replicas allow you to create read-only copies that are synchronized with your master database. Read Replicas are used for improved read performance. You can also place your read replica in a different AWS Region closer to your users for better performance. Read Replicas are an example of horizontal scaling of resources.
 
 <p align="center" width="100%"><img src="assets/rds-read-replicas.jpg" alt="rds" width="300"/></p>
