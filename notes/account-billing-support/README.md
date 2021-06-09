@@ -47,6 +47,8 @@ Cost Benefits of AWS Organizations:
 - Benefits of aggregated usage (use massive volumes of services generates discounts)
 - Shared (pooling) EC2 Reserved Instances for optimal savings.
 
+> AWS Organizations helps you to centrally manage billing; control access, compliance, and security; and share resources across your AWS accounts. Using AWS Organizations, you can automate account creation, create groups of accounts to reflect your business needs, and apply policies for these groups for governance. You can also simplify billing by setting up a single payment method for all of your AWS accounts. AWS Organizations is available to all AWS customers at no additional charge.
+
 ## Multi Account Strategies
 
 We have various modes to create accounts in AWS:

@@ -258,6 +258,8 @@ The S3 storage classes are:
   - Bulk (5 to 12 hours)
 - Use cases for: for Backups and Archiving
 
+> Amazon S3 Glacier (S3 Glacier), is a storage service optimized for infrequently used data, or "cold data. Data at rest stored in S3 Glacier is automatically server-side encrypted using 256-bit Advanced Encryption Standard (AES-256) with keys maintained by AWS.
+
 **Amazon Glacier Deep Archive**
 
 - Store data for years in AWS.
@@ -431,6 +433,8 @@ Types of Storage Gateway:
 - File Gateway
 - Volume Gateway
 - Tape Gateway
+
+> All data transferred between the gateway and AWS storage is encrypted using SSL (for all three types of gateways - File, Volume and Tape Gateways).
 
  <p align="center" width="100%"><img src="assets/storage-gateway.jpg" alt="storage-gateway" width="300"/></p>
 
