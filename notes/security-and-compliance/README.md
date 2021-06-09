@@ -254,6 +254,12 @@ Amazon Inspector is an automated security assessment service for EC2 instances. 
 - Amazon Inspector must be installed on OS in EC2 Instances. The assessment can run in scheduled time and in target groups.
 - After the assessment it sends/provides a report of vulnerabilities.
 
+> Amazon Inspector is an automated security assessment service that helps improve the security and compliance of applications deployed on AWS. Amazon Inspector automatically assesses applications for exposure, vulnerabilities, and deviations from best practices.
+
+> Amazon Inspector security assessments help you check for unintended network accessibility of your Amazon EC2 instances and for vulnerabilities on those EC2 instances.
+
+> Amazon Inspector also offers predefined software called an agent that you can optionally install in the operating system of the EC2 instances that you want to assess. The agent monitors the behavior of the EC2 instances, including network, file system, and process activity. It also collects a wide set of behavior and configuration data (telemetry).
+
 ## AWS Config
 
 With AWS Config we can track, audit and record the resources configurations and the compliance of them over time.
