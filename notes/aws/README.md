@@ -55,7 +55,7 @@ AWS Has a large services portfolio. Some of them are available Globally other ar
 
 ##### Region Scoped
 
-- Amazon EC2 (Infrastructure as a Service)
-- Elastic Beanstalk (Platform as a Service)
-- Lambdas (Function as a Service)
-- Rekognition (Software as a Service)
+- Amazon EC2 (Infrastructure as a Service - IaaS)
+- Elastic Beanstalk (Platform as a Service - PaaS)
+- Lambdas (Function as a Service - FaaS)
+- Rekognition (Software as a Service - SaaS)
