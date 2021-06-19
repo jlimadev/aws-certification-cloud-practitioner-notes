@@ -9,6 +9,7 @@
 - [Amazon CodeGuru](#amazon-CodeGuru)
 - [Service Health Dashboard](#service-health-dashboard)
 - [Personal Health Dashboard](#personal-health-dashboard)
+- [Cloudwatch vs. CloudTrail vs. Config](#cloudwatch-vs-cloudtrail-vs-config)
 - [Summary](#summary)
 
 ## CloudWatch Metrics
@@ -173,6 +174,13 @@ While the Service Health Dashboard displays the general status of AWS services, 
 
 - Keywords: Alert, remediation, proactive, scheduled activities
 - https://phd.aws.amazon.com/
+
+## Cloudwatch vs. CloudTrail vs. Config
+
+- Cloudwatch: Think resource **performance** monitoring, events, and alerts.
+- CloudTrail: Think **account-specific activity** and audit.
+- Config: Think **resource-specific** change history, audit, and compliance.
+- Trusted Advisor: real-time guidance to help you provision your resources following AWS best practices on cost optimization, security, fault tolerance, service limits and performance improvement.
 
 ## Summary
 

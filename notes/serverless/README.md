@@ -17,6 +17,8 @@ AWS have multiple serverless services such as:
 - Fargate
 - AWS Lambdas
 
+Read more [here](https://medium.com/awesome-cloud/aws-serverless-services-and-serverless-computing-in-aws-a1298ace0e3c)
+
 ## AWS Lambdas
 
 AWS Lambdas are serverless functions executions.
