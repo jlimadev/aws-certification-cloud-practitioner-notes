@@ -122,13 +122,15 @@ With VPC Peering we can connect two VPCs, privately using AWS Network and make t
 
 Usually when we connect our services we use the public internet, but we have private subnets, there is no reason to make them communicate between the public internet. For example, an EC2 instance inside a private subnet needs to communicate with S3 or Dynamo. We can use the internal AWS network. For this we need to create an VPC Endpoint.
 
-VPC Endpoints allows us to connect to AWS services using a private network instead of the public. We have two types of Endpoints. This gives you enhanced security and
-lower latency to access AWS services.
+VPC Endpoints allows us to connect to AWS services using a private network instead of the public. We have two types of Endpoints. This gives you enhanced security and lower latency to access AWS services.
 
 > VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by AWS PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
 
-**Gateway**: Dynamo and S3
-**Interface** All others AWS services
+**VPC Endpoint Gateway**: Dynamo and S3
+
+- A gateway endpoint is a gateway that you specify as a target for a route in your route table for traffic destined to a supported AWS service.
+  **VPC Endpoint Interface**: All others AWS services
+- An interface endpoint is an elastic network interface with a private IP address from the IP address range of your subnet that serves as an entry point for traffic destined to a supported service. Interface endpoints are powered by AWS PrivateLink, a technology that enables you to privately access services by using private IP addresses.
 
   <p align="center" width="100%"><img src="assets/vpc-endpoints.jpg" alt="drawing" width="300"/></p>
 
