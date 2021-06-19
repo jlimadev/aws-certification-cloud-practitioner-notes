@@ -2,7 +2,7 @@
 
 - [AWS Shared Responsibility Model](#aws-shared-responsibility-model)
 - [AWS Security Token Service](#aws-security-token-service)
-- [AWS Shield](#amazon-shield) [Standard and Advanced, layer 3 and 4]
+- [AWS Shield](#aws-shield) [Standard and Advanced, layer 3 and 4]
 - [AWS Web Application Firewall](#aws-web-application-firewall) [WAF, layer 7]
 - [AWS Penetration Testing](#aws-penetration-testing)
 - [AWS Key Management Service](#aws-key-management-service) [Encryption]
@@ -98,6 +98,8 @@ In a Distributed Denial of Service (DDoS) attack, an attacker uses multiple sour
 
 ## AWS Shield
 
+> AWS Shield Standard is activated for all AWS customers, by default. For higher levels of protection against attacks, you can subscribe to AWS Shield Advanced. With Shield Advanced, you also have exclusive access to advanced, real-time metrics and reports for extensive visibility into attacks on your AWS resources. With the assistance of the DRT (DDoS response team), AWS Shield Advanced includes intelligent DDoS attack detection and mitigation for not only for network layer (layer 3) and transport layer (layer 4) attacks but also for application layer (layer 7) attacks.
+
 AWS Shield Standard:
 
 - It is a free service available for every AWS Customer and it provides a protection from common attacks such as SYN/UDP floods, reflection attacks and other layer 3 and 4 attacks (tcp/ip). It can be deployed on HTTP friendly services (ALB, API Gateway, CloudFront)
@@ -107,6 +109,7 @@ AWS Shield Advanced:
 - It is a option DDoS mitigation ($3000 month/organization) and it protects against the most sophisticated attacks on EC2, ELB, CloudFront, Global Accelerator and Route53. It is a high level defense.
 - 24/7 access to AWS DDoS response team (DRP)
 - Protect against higher fees during spikes of DDoS
+- AWS Shield Advanced provides expanded DDoS attack protection for web applications running on the following resources: Amazon Elastic Compute Cloud, Elastic Load Balancing (ELB), Amazon CloudFront, Amazon Route 53, AWS Global Accelerator.
 
 ## AWS Web Application Firewall
 
