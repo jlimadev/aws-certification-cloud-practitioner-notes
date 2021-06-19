@@ -78,7 +78,9 @@ tolerance, scaling)
 
 ## RDS - Relational Database Service
 
-RDS Stands to Relational Database Service and it is a managed DB by AWS for databases that uses SQL as query language. RDS databases are used for OLTP (Online Transaction Processing)
+RDS Stands to Relational Database Service and it is a managed DB by AWS for databases that uses SQL as query language. RDS databases are used for OLTP (Online Transaction Processing).
+
+The performance of AWS managed RDS instance is better than a customer-managed database instance
 
 We can create multiple relational databases types in the cloud, fully managed by AWS:
 
