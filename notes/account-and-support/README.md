@@ -114,42 +114,42 @@ AWS Has multiple types of customer support plans, the pricing of each one is var
 - Has Customer Services & Communities - 24x7 access to customer service, documentation, whitepapers and support forums.
 - In **Trusted Advisor** we have access to the seven core checks and guidance to provision your resources following the best practices to increase performance and security.
 - In **AWS Personal Health Dashboard** we have a personalized view of the health of AWS Services and we get alerts when something is going to impact our infrastructure.
+- This plan **does not support any architectural guidance**.
 
 **Developer Support:**
-Good when we are developing in AWS
+AWS recommends Developer Support if you are testing or doing early development on AWS and want the ability to get email-based technical support during business hours as well as general architectural guidance as you build and test. You do not get access to Infrastructure Event Management with this plan. This plan only supports general architectural guidance.
 
 - All the basic plan +
 - Business hours email access to Cloud Support Associates
 - Unlimited cases and we have 1 primary contact in AWS
 - Depending on Severity of the problem the response time may be variable:
-  - General guidance up to 24 business hours
+  - General architectural guidance up to 24 business hours
   - Systems impaired up to 12 business hours
 
 **Business Support:**
-When we have production workloads and this support our main business is better to use the Business Support Plan
+AWS recommends Business Support if you have production workloads on AWS and want 24x7 phone, email and chat access to technical support and architectural guidance in the context of your specific use-cases. You get full access to AWS Trusted Advisor Best Practice Checks. You also get access to Infrastructure Event Management for an additional fee.
 
 - All the Basic + Support +
 - 24/7 phone, email and chat access to Cloud Support Engineers
 - Trusted Advisor - Full set of checks + API access
 - Unlimited Cases / Unlimited contacts
+- Infrastructure Event Management for an additional fee
 - Depending on Severity of the problem the response time may be variable:
-
-  - General guidance up to 24 business hours
+  - General architectural guidance up to 24 business hours
   - Systems impaired up to 12 business hours
   - Production system impaired up to 4 business hours
   - Production system down < 1 business hour
 
 **Enterprise Support:**
-For Enterprise and mission critical systems running on AWS
+AWS Enterprise Support provides customers with concierge-like service where the main focus is helping the customer achieve their outcomes and find success in the cloud. With Enterprise Support, you get 24x7 technical support from high-quality engineers, tools and technology to automatically manage the health of your environment, consultative review and guidance based on your applications, and a designated Technical Account Manager (TAM) to coordinate access to proactive/preventative programs and AWS subject matter experts. This plan supports architectural guidance contextual to your application.
 
 - All the business support features +
 - Access to a **Technical Account Manager (TAM)**
 - **Concierge Support Team** for billing and account best practices
-- **Infrastructure Event Management**
+- **Infrastructure Event Management** included
 - Well architected and Operations Reviews
 - Depending on Severity of the problem the response time may be variable:
-
-  - General guidance up to 24 business hours
+  - General architectural guidance up to 24 business hours
   - Systems impaired up to 12 business hours
   - Production system impaired up to 4 business hours
   - Production system down < 1 business hour
