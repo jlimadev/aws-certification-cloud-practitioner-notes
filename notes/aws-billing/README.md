@@ -159,7 +159,7 @@ In Elastic Block Storage we pay for
 
 ### Network Pricing
 
-- All the traffic in is free
+- All the traffic inbound traffic is free.
 - In same region and same AZ: if we have an EC2 instance that uses the free traffic and we have another instance that communicates with this one, the communication is free using the **private ip**.
 - In different AZs communication via **private ip** is $0.01 (cheaper) and via **public ip** is $0.02 (expensive).
 - In different regions: $0.02 because of the inter-region communication
@@ -168,6 +168,8 @@ In Elastic Block Storage we pay for
 
 - Use Private IP instead of Public IP for good savings and better network performance
 - Use same AZ for maximum savings (but you loose the high availability)
+
+There are three fundamental drivers of cost with AWS: compute, storage, and outbound data transfer. In most cases, there is no charge for inbound data transfer or data transfer between other AWS services within the same region. Outbound data transfer is aggregated across services and then charged at the outbound data transfer rate.
 
 ## Reserved Instances to Cost Optimization
 
