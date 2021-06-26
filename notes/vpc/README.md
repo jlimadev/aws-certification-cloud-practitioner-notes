@@ -20,6 +20,8 @@ We need to understand the main concepts of the resources of VPC
 
 VPC stands to Virtual Private Cloud and it is a private network to deploy your resources (regional resource). A VPC is linked to specific region, so we can have multiple VPC.
 
+> Amazon Virtual Private Cloud (Amazon VPC) is a logically isolated section of the AWS Cloud where you can launch AWS resources in a virtual network that you define. You have complete control over your virtual networking environment, including the selection of your IP address range, creation of subnets, and configuration of route tables and network gateways. A VPC spans all of the Availability Zones in the Region whereas A subnet spans only one Availability Zone in the Region.
+
 Inside of VPC we have Subnets and CIDR Ranges (allowed IPs)
 
 Sample VPC example:
@@ -135,6 +137,8 @@ VPC Endpoints allows us to connect to AWS services using a private network inste
   <p align="center" width="100%"><img src="assets/vpc-endpoints.jpg" alt="drawing" width="300"/></p>
 
 ## Site to Site VPN
+
+> AWS VPN - AWS Virtual Private Network (VPN) solutions establish secure connections between on-premises networks, remote offices, client devices, and the AWS global network. AWS VPN is comprised of two services: AWS Site-to-Site VPN and AWS Client VPN. Together, they deliver a highly-available, managed, and elastic cloud VPN solution to protect your network traffic.
 
 Site to Site VPN connects On-Premise servers to our VPC into AWS. The connection is automatically encrypted, but this Site to Site VPN goes over the **public internet**.
 
