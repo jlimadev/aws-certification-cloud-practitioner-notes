@@ -202,11 +202,19 @@ There are two types of savings plans
 
 AWS Compute Optimizer is a service to help save costs of compute services by analyzing the use of each one of them (using machine learning) and sending us recommendations of improvement.
 
+> AWS Compute Optimizer helps you identify the optimal AWS resource configurations, such as Amazon EC2 instance types, Amazon EBS volume configurations, and AWS Lambda function memory sizes, using machine learning to analyze historical utilization metrics. AWS Compute Optimizer delivers recommendations for selected types of EC2 instances, EC2 Auto Scaling groups, EBS volumes, and Lambda functions.
+
 - Helps you choose optimal configurations and right-size your workloads (over/under provisioned)
 - Uses Machine Learning to analyze your resources’ configurations and their utilization CloudWatch metrics
 - Supported resources: EC2 instances, EC2 Auto Scaling Groups, EBS volumes and Lambda functions
 - Lower your costs by up to 25%
 - Recommendations can be exported to S3
+
+Compute Optimizer calculates an individual performance risk score for each resource dimension of the recommended instance, including CPU, memory, EBS throughput, EBS IOPS, disk throughput, disk throughput, network throughput, and network packets per second (PPS).
+
+- AWS Compute Optimizer provides EC2 instance type and size recommendations for EC2 Auto Scaling groups with a fixed group size, meaning desired, minimum, and maximum are all set to the same value and have no scaling policy attached.
+- AWS Compute Optimizer supports IOPS and throughput recommendations for General Purpose (SSD) (gp3) volumes and IOPS recommendations for Provisioned IOPS (io1 and io2) volumes.
+- Compute Optimizer helps you optimize two categories of Lambda functions. The first category includes Lambda functions that may be over-provisioned in memory sizes. The second category includes compute-intensive Lambda functions that may benefit from additional CPU power.
 
 ## Billing and Costing Tools
 
