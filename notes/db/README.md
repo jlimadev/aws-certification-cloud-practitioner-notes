@@ -171,6 +171,7 @@ DynamoDB is a fully managed and High Available NoSQL Key/Value Database with rep
 - Integrated with IAM for security, authorization and administration
 - Low cost and auto scaling capabilities
 - Keywords: Serverless, low-latency and single digit millisecond.
+- High Available by default (EFS is high available as well)
 
 <p align="center" width="100%"><img src="assets/dynamodb.jpg" alt="dynamodb" width="300"/></p>
 
