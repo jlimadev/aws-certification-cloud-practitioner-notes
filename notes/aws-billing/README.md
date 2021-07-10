@@ -270,6 +270,8 @@ We can manage it with `Tag Editor`. We can also create Resources Groups in this 
 
 - We can use auto generated tags by AWS (prefix `aws`)
 - User defined tags (prefix `user`)
+- You must activate both AWS generated tags and user-defined tags separately before they can appear in Cost Explorer or on a cost allocation report
+- For each resource, each tag key must be unique, and each tag key can have only one value
 
 #### Cost and Usage Reports
 
@@ -367,7 +369,7 @@ AWS Trusted Advisor provides multiple types of recommendations and after that a 
 - AZ balance
 - ASG multi-az, ELB Configurations
 
-**Services Limits**:
+**Services Limits(Quotas)**:
 
 - Helps to understand if we are reaching a limit of a service and advises if is needed to increase before we have problems.
 
