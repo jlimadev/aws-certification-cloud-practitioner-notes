@@ -4,7 +4,7 @@
 - [EBS Snapshots](#EBS-Snapshots)
 - [EC2 Instance Store](#EC2-Instance-Store)
 - [EFS Elastic File System](#EFS---Elastic-File-System)
-- [EVS vs. EFS](#EBS-vs-EFS)
+- [EBS vs. EFS](#EBS-vs-EFS)
 - [Amazon FSx](#amazon-fsx)
 - [EC2 Storage Shared Responsibility Model](#EC2-Storage-Shared-Responsibility-Model)
 - [Summary](#Summary)
@@ -38,6 +38,7 @@ Snapshot is a backup of our EBS Volumes at a point in time. It keeps available i
 - To Create this snapshot you don't have to detach the volume from an instance (besides it is recommended)
 - With the Snapshot we can Copy to other regions or AZ's or Create a brand new EBS Volume.
 - This snapshot will be a "start" to the new EBS Volume. So the new volume will start with the data starting from the snapshot. The new volume will be a Restore from a snapshot.
+- Amazon EBS Snapshots are stored incrementally, which means you are billed only for the changed blocks stored
 
 <p align="center" width="100%"><img src="assets/ebs-snapshots.jpg" alt="ebs-snapshots" width="400"/></p>
 
@@ -57,8 +58,13 @@ This is the **physical HARD DRIVE** attached to the server. Limited space, but h
 
 EFS stands to Elastic File System and it is a Network File System (NFS). This NFS can be attached to hundreds of EC2 instances at a time.
 
+- Amazon EFS is a regional service storing data within and across multiple Availability Zones (AZs) for high availability and durability.
 - It is a shared NFS.
 - Works in Linux EC2 Instances and works across multiple AZs. It makes EFS High Available and Scalable. But, this also makes the EFS more expensive (3x gp2) and you pay what you use not capacity. If you use only 20gb, that's your usage and you'll pay for this.
+- High Available By Default
+- Data access: EC2 instances can access files on an EFS file system across many Availability Zones, Regions and VPCs
+  - Amazon EC2 instances can access your file system across AZs, regions, and VPCs
+  - On-premises servers can access using AWS Direct Connect or AWS VPN.
 
 > Amazon Elastic File System (Amazon EFS) provides a simple, scalable, fully managed, elastic NFS file system. It is built to scale on-demand to petabytes without disrupting applications, growing and shrinking automatically as you add and remove files, eliminating the need to provision and manage capacity to accommodate growth. Amazon EFS is designed to provide massively parallel shared access to thousands of Amazon EC2 instances, enabling your applications to achieve high levels of aggregate throughput and IOPS with consistent low latencies.
 
