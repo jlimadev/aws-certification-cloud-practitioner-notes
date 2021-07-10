@@ -46,6 +46,7 @@ echo "<h1>Hello World from $(hostname -f)</h1>" > /var/www/html/index.html
 
 **AMIs** stands to Amazon Machine Image and are a customization of an EC2 Instance:
 
+- You must use an AMI from the same region as that of the EC2 instance. (The region of the AMI has no bearing on the performance of the EC2 instance)
 - We can add our own software configurations, operating systems, monitoring and others configurations.
 - This will leverage to a faster boot, because the software is pre-packed.
 - AMIs are built for a specific region (can be copied across them)
@@ -239,12 +240,6 @@ Difference between Dedicated Hosts and EC2 Dedicated Instances
 - IAM Roles to/on EC2 and users access
 - Data security on your instance
 
----
+**Shared Responsibility**:
 
-### EC2 Instance Storage
-
-There are multiple options to EC2 Instance Storage. There is a section about this subject [here](../ec2-instance-storage/README.md).
-
-### EC2 Elastic Load Balancing and Auto Scaling Groups
-
-EC2 have a few options to Load Balancer and auto scale, There is a section about this subject [here](../ec2-elb-asg/README.md).
+> Security and Compliance is a shared responsibility between AWS and the customer. This shared model can help relieve the customer’s operational burden as AWS operates, manages and controls the components from the host operating system and virtualization layer down to the physical security of the facilities in which the service operates.
