@@ -39,6 +39,23 @@ Shared controls:
 
 - Patch Management, Configuration Management, Awareness & Training
 
+### Shared Responsibility Examples:
+
+**AWS Responsibility Examples:**
+
+- Cloud infrastructure management is the responsibility of AWS.
+- Ensuring AWS employees cannot access customer data.
+- Compliance validation of Cloud infrastructure
+
+**Customer Responsibility Examples:**
+
+- Operating system patches and updates of an EC2 instance
+- Enabling data encryption of data stored in S3 buckets
+
+**Shared Responsibility Examples:**
+
+- For abstracted services, such as Amazon S3 and Amazon DynamoDB, AWS operates the infrastructure layer, the operating system, and platforms, and customers access the endpoints to store and retrieve data.
+
 <p align="center" width="100%"><img src="assets/shared-responsibility.jpg" alt="shared-responsibility" width="500"/></p>
 
 RDS examples of shared responsibility
