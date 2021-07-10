@@ -64,6 +64,21 @@ EFS stands to Elastic File System and it is a Network File System (NFS). This NF
 
 <p align="center" width="100%"><img src="assets/efs.jpg" alt="efs" width="300"/></p>
 
+**EFS Storage Options**
+
+- Amazon EFS Standard Storage Class
+  - The EFS Standard storage class is designed for active file system workloads, and you pay only for the amount of file system storage you use per month. Data is stored regionally within and across multiple Availability Zones (AZs).
+- Amazon EFS Standard-Infrequent Access Storage Class:
+  - The EFS Standard-Infrequent Access storage class (EFS Standard-IA) is cost-optimized for files accessed less frequently. Data stored on the EFS Standard-IA storage class costs less than EFS Standard storage class, and you will pay a fee each time you read from or write to a file. Data is stored regionally within and across multiple Availability Zones (AZs).
+- Amazon EFS One Zone Storage Class:
+  - The EFS One Zone storage class is designed for active file system workloads, and you pay only for the amount of file system storage you use per month. Data is stored within a single Availability Zone. Standard data transfer fees apply for inter-AZ or inter-region access to file systems.
+- Amazon EFS One Zone-Infrequent Access Storage Class:
+  - The EFS One Zone-Infrequent Access storage class (EFS One Zone-IA) is cost-optimized for files accessed less frequently. Data stored on the EFS One Zone-IA storage class costs less than the One Zone storage class, and you will pay a fee each time you read from or write to a file. Data is stored within a single Availability Zone. Standard data transfer fees apply for inter-AZ or inter-region access to file systems.
+- Amazon EFS Bursting Throughput (Default):
+  - In the default Bursting Throughput mode, there are no charges for bandwidth or requests, and you get a baseline rate of 50 KB/s per GB of throughput included with the price of EFS Standard storage class. Read operations are metered at a 1:3 ratio toward this rate, so you can drive up to 150 KB/s per GB of read throughput or 50 KB/s per GB of write throughput with this baseline rate.
+- Amazon EFS Provisioned Throughput:
+  - You can optionally select the Provisioned Throughput mode and provision the throughput of your file system independent of the amount of data stored and pay separately for storage and throughput. Read operations are metered at a 1:3 ratio toward this rate, so you can drive up to 3 MB/s of read throughput or 1 MB/s of write throughput for every 1 MB/s of throughput provisioned. Like the default Bursting Throughput mode, the Provisioned Throughput mode also includes 50 KB/s per GB (or 1 MB/s per 20 GB) of throughput in the price of EFS Standard and EFS One Zone storage classes. You are billed only for the throughput provisioned above what you are provided based on data you have stored.
+
 ### EBS vs EFS
 
 - EBS are bound to one AZ and can be attached to one instance at a time. To move across regions we can use the snapshots (it is just a copy).
