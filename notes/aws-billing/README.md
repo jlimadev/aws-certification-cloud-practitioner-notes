@@ -325,6 +325,12 @@ AWS Budgets is a powerful tool about create and send alarms when costs exceeds t
 
 > AWS Budgets gives you the ability to set custom budgets that alert you when your costs or usage exceed (or are forecasted to exceed) your budgeted amount. Difference with CloudWatch Billing Alarms: CloudWatch Billing Alarms only send alerts when your costs and usage are exceeding your budget, not when it is forecasted to exceed your budget, while AWS Budgets does both.
 
+Supported Types of Budget:
+
+- Cost Budget - Helps you plan how much you want to spend on a service.
+- Usage Budget - Helps you plan how much you want to use one or more services.
+- Reservation Budget - This helps you track the usage of your Reserved Instances (RI). Two ways of doing it - RI utilization budgets (This lets you see if your RIs are unused or under-utilized), RI coverage budgets (This lets you see how much of your instance usage is covered by a reservation).
+
 ## AWS Trusted Advisor
 
 Trusted Advisor is a assessment on AWS account with the purpose of advise possible savings, checks and cost optimizations within AWS account.
