@@ -65,6 +65,18 @@ Multiples strategies of Routing, expect by the simple route policy, all have hea
 - **Failover Routing Policy**: We have two instances, main instance and failover instance, if the main one fails it will redirect automatically to the failover instance. It performs health checks on the main instance.
 <p align="center" width="100%"><img src="assets/route53-failover-routing-policy.jpg" alt="route53-failover-routing-policy" width="300"/></p>
 
+This failover routing policy can be:
+
+**Active-Active failover**
+
+> Use this failover configuration when you want all of your resources to be available the majority of the time. When a resource becomes unavailable, Route 53 can detect that it's unhealthy and stop including it when responding to queries.
+
+**Active-Passive failover**
+
+> Use an active-passive failover configuration when you want a primary resource or group of resources to be available the majority of the time and you want a secondary resource or group of resources to be on standby in case all the primary resources become unavailable. When responding to queries, Route 53 includes only the healthy primary resources. If all the primary resources are unhealthy, Route 53 begins to include only the healthy secondary resources in response to DNS queries.
+
+[AWS Failover types](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/dns-failover-types.html)
+
 ## CloudFront
 
 CloudFront is a Content Delivery Network (CDN). It improves the read performance and cache the content into Amazon Edge Locations all around the world. It improves the user experience (less latency).
