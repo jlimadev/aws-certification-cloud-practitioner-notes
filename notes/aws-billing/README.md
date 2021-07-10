@@ -278,6 +278,9 @@ Cost and Usage Reports is a tool to dive deeper into our AWS costs and usage of 
 - This is **the most** detailed report in AWS with the most comprehensive data report available.
 - The AWS Cost & Usage Report lists AWS usage for each service category used by an account and its IAM users in hourly or daily line items, as well as any tags that you have activated for cost allocation purposes.
 - Can be integrated with Athena, Redshift and Quicksight
+- You can use Cost and Usage Reports to publish your AWS billing reports to an Amazon Simple Storage Service (Amazon S3) bucket that you own.
+- You can receive reports that break down your costs by the hour or month, by product or product resource, or by tags that you define yourself.
+- AWS updates the report in your bucket once a day in comma-separated value (CSV) format.
 
 #### Cost Explorer
 
@@ -292,6 +295,9 @@ Cost Explorer is a visual tool to understand and manage the cost and usage overt
 - Or Monthly, hourly, resource level granularity
 - It suggest savings plans based on the usage
 - Forecast usage up to 12 months
+- Check underutilized EC2 Instances
+
+The rightsizing recommendations feature in Cost Explorer helps you identify cost-saving opportunities by downsizing or terminating EC2 instances. You can see all of your underutilized EC2 instances across member accounts in a single view to immediately identify how much you can save.
 
 ### Simple Month Calculator
 
