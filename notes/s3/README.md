@@ -1,7 +1,7 @@
 # 📝S3 - Simple Storage Service
 
 S3 stands to Simple Storage Service and it is one of the main services of AWS. This service is basically "Infinity Scaling" storage.
-Amazon S3 Console is a global console, that means that we can see all buckets in all regions, but the buckets itself, needs to be bound to a region.
+Amazon S3 Console is a global console, that means that we can see all buckets in all regions, but the buckets itself, needs to be bound to a region. S3 is a key value based object storage service. S3 stores data in a flat non-hierarchical structure.
 
 - [S3 Use cases](#s3-use-cases)
 - [S3 Buckets](#s3-buckets)
@@ -213,6 +213,11 @@ To understand better the classes we need to understand the concepts of Durabilit
 
 **Availability**:
 How readily available a service is. S3 standard has 99.99% availability. S3 may not be available per 53 minutes in a year.
+
+**Pricing**:
+- S3 Standard does not charge any data retrieval fee.
+- S3 Intelligent-Tiering does not charge any data retrieval fee.
+- All other storage classes have a retrieval fee.
 
 The S3 storage classes are:
 

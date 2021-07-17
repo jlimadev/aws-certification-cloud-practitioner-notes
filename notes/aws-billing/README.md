@@ -108,6 +108,10 @@ In S3 we pay for:
 - S3 Transfer Acceleration
 - Lifecycle transitions between storage classes
 - Similar service: EFS (pay per use, has infrequent access & lifecycle rules)
+- Retrieval Fee
+  - S3 Standard does not charge any data retrieval fee.
+  - S3 Intelligent-Tiering does not charge any data retrieval fee.
+  - All other storage classes have a retrieval fee.
 
 ### EBS Pricing
 
