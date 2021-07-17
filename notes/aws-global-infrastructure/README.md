@@ -138,10 +138,20 @@ Improves global applications availability and performance by using AWS Global Ne
 
 They both use the AWS global network and its edge locations around the world and Both services integrate with AWS Shield for DDoS protection.
 
-- **CloudFront** is a Content Delivery Network and it improves the performance of cacheable content (such as images, videos, static files) and the content is served at the edge.
+**CloudFront** is a Content Delivery Network and it improves the performance of cacheable content (such as images, videos, static files) and the content is served at the edge.
 
-- **AWS Global Accelerator** has no caching, it proxies the packets by using the edge location and the internal network to have more speed. Improves performance for a wide range of applications over TCP or UDP.
-  - Good for HTTP use cases that require static IP addresses and Good for HTTP use cases that required deterministic, fast regional failover.
+- CloudFront uses Edge Locations to cache content
+- CloudFront is designed to handle HTTP protocol
+- CloudFront uses multiple sets of dynamically changing IP addresses to route traffic to your origin.
+- CloudFront pricing is mainly based on data transfer out and HTTP requests
+
+**AWS Global Accelerator** has no caching, it proxies the packets by using the edge location and the internal network to have more speed. Improves performance for a wide range of applications over TCP or UDP.
+
+- Global Accelerator uses Edge Locations to find an optimal pathway to the nearest regional endpoint.
+- Global Accelerator will provide you a set of static IP addresses as a fixed entry point to your applications.
+- Global Accelerator Pricing: it charges a fixed hourly fee and an incremental charge over your standard Data Transfer rates, also called a Data Transfer-Premium fee (DT-Premium).
+- Global Accelerator is best used for both HTTP and non-HTTP protocols such as TCP and UDP.
+- Good for HTTP use cases that require static IP addresses and Good for HTTP use cases that required deterministic, fast regional failover.
 
 ## AWS Outposts
 
