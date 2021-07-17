@@ -337,7 +337,7 @@ Supported Types of Budget:
 
 Trusted Advisor is a assessment on AWS account with the purpose of advise possible savings, checks and cost optimizations within AWS account.
 
-- For all customer it is free the core checks of AWS
+- For all customer it is free the **core checks** of AWS
 - We can enable weekly reports/email notifications about the recommendations
 - The full version of trusted-advisor requires a **Business and Enterprise Supports Plan**
   - You get access to advisor to all categories
@@ -362,6 +362,7 @@ AWS Trusted Advisor provides multiple types of recommendations and after that a 
 
 - MFA enabled on Root Account, IAM key rotations, exposed access keys
 - S3 Bucket permissions for public access, security groups with unrestricted access
+- Send alerts when AWS CloudTrail is not activated (To get user activity logging)
 
 **Fault Tolerance**
 
