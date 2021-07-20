@@ -63,3 +63,5 @@ AWS Has a large services portfolio. Some of them are available Globally other ar
 - Rekognition (Software as a Service - SaaS)
 - S3 (has a global console, but this is a Regional Service)
 - VPC (Virtual Private Cloud)
+- DynamoDB
+- Storage Gateway
