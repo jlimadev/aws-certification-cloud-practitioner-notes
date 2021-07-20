@@ -52,10 +52,14 @@ AWS Has a large services portfolio. Some of them are available Globally other ar
 - Route 53 (DNS Service)
 - CloudFront (CDN)
 - WAF (Web Application Firewall)
+- SES (Simple Email Service)
 
 ##### Region Scoped
 
 - Amazon EC2 (Infrastructure as a Service - IaaS)
+- AMI (Amazon Machine Image)
 - Elastic Beanstalk (Platform as a Service - PaaS)
 - Lambdas (Function as a Service - FaaS)
 - Rekognition (Software as a Service - SaaS)
+- S3 (has a global console, but this is a Regional Service)
+- VPC (Virtual Private Cloud)
