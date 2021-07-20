@@ -51,8 +51,8 @@ AWS Has a large services portfolio. Some of them are available Globally other ar
 - IAM (Access Management)
 - Route 53 (DNS Service)
 - CloudFront (CDN)
-- WAF (Web Application Firewall)
 - SES (Simple Email Service)
+- WAF (Web Application Firewall)
 
 ##### Region Scoped
 
