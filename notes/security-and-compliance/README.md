@@ -130,13 +130,22 @@ AWS Shield Advanced:
 
 ## AWS Web Application Firewall
 
-WAF protects our web apps from common web exploit attacks (layer 7, http).
+AWS WAF is a web application firewall that helps protect your web applications or APIs against common web exploits that may affect availability, compromise security, or consume excessive resources. AWS WAF gives you control over how traffic reaches your applications by enabling you to create security rules that block common attack patterns, such as SQL injection or cross-site scripting, and rules that filter out specific traffic patterns you define.
 
+- WAF protects our web apps from common web exploit attacks (layer 7, http).
 - Define a Web Access Control List (Web ACL):
   - Rules can include IP addresses, HTTP headers, HTTP body or strings
   - protection from common attacks (SQL Injection and Cross-Site Scripting)
   - Size constraints, geo-match (block a few countries)
   - Rate-based rules (count occurrence of events) - this one is against DDoS attacks
+- WAF Can be deployed on services that AWS customers commonly use to deliver content for their websites and applications:
+
+  - CloudFront (Global)
+  - Application Load Balancer (ALB) (Regional)
+  - API Gateway (Regional)
+  - AWS AppSync (Regional)
+
+  When we deploy on Global Services such CDN/CloudFront, it will run the rules in all edge locations, this means the unintended traffic will be blocked before reaching the server. And when we deploy on regional services such as ALB, it will run the rules in the region where the traffic is coming from and protects the internet facing resources.
 
 ## Penetration Testing
 
@@ -324,9 +333,9 @@ It is a service to identify the root cause of security issues or suspicious acti
 
 Why do amazon have this service? With GuardDuty, Macie and Security Hub we can identify multiple security issues, but sometime we need a deeper analysis to detect what is causing that problem. So Amazon Detective analyzes, investigates and quickly identify the root cause.
 
-- use machine learning algorithms and graphs
-- automatically collect data and processes events from vpc flow logs, cloudtrail, guardduty and create a unified view of it.
-- produces visualizations with details and context to get to the root cause.
+- Use machine learning algorithms and graphs
+- Automatically collect data and processes events from VPC Flow Logs, CloudTrail, GuardDuty and create a unified view of it.
+- Produces visualizations with details and context to get to the root cause.
 
 ## AWS Abuse
 

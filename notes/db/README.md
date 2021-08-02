@@ -272,17 +272,22 @@ Use cases for Amazon Neptune:
 QLDB stands to Quantum Ledger Database, so Amazon QLDB is a database service for Ledger and Store securely financial data and transactions.
 
 - It is completely immutable system, so no entry can be removed or modified, it is all encrypted and all entries have logs and data to audit.
+- Provides a centrally verifiable history of all changes made to data residing in it
 - Used to review history of all the changes made to your application data over time.
 - QLDB is a fully managed database and is highly available with replication across 3 AZs.
 - 2-3x better performance than common ledger blockchain frameworks.
 - In QLDB there is no concept of decentralization. So QLDB has a central and unique point of control while `Amazon Managed Blockchain` use this kind of concept.
 
+Ledgers are typically used to record a history of economic and financial activity in an organization. Many organizations build applications with ledger-like functionality because they want to maintain an accurate history of their applications' data, for example, tracking the history of credits and debits in banking transactions, verifying the data lineage of an insurance claim, or tracing the movement of an item in a supply chain network. Ledger applications are often implemented using custom audit tables or audit trails created in relational databases.
+
 ## Amazon Managed Blockchain
 
-Blockchain makes it possible to execute financial transactions between multiple parties, without the need of a central authority.
-With Amazon Managed Blockchain is possible to join public blockchain networks or create your own private network.
+Blockchain makes it possible to execute financial transactions between multiple parties, without the need of a central authority. With Amazon Managed Blockchain is possible to join public blockchain networks or create your own private network.
 
-It is compatible with Ethereum and HyperLedger Fabric.
+> Amazon Managed Blockchain is a fully managed service that allows you to join public networks or set up and manage scalable private networks using popular open-source frameworks. Amazon Managed Blockchain eliminates the overhead required to create the network or join a public network and automatically scales to meet the demands of thousands of applications running millions of transactions.
+
+- It is compatible with Ethereum and HyperLedger Fabric.
+- While QLDB is a ledger database purpose-built for customers who need to maintain a complete and verifiable history of data changes in an application that they own and manage in a centralized way, QLDB is not a blockchain technology. Instead, blockchain technologies focus on enabling multiple parties to transact and share data securely in a decentralized way; without a trusted, central authority. Every member in a network has an independently verifiable copy of an immutable ledger, and members can create and endorse transactions in the network.
 
 ## Amazon DMS
 
@@ -321,7 +326,7 @@ Glue also has a another service called `Glue Data Catalog`. This service catalog
 - QuickSight: dashboards on your data (serverless)
 - DocumentDB: “Aurora for MongoDB” (JSON – NoSQL database)
 - Amazon QLDB: Financial Transactions Ledger (immutable journal, cryptographically verifiable)
-- Amazon Managed Blockchain: managed Hyperledger Fabric & Ethereum blockchain
+- Amazon Managed Blockchain: managed HyperLedger Fabric & Ethereum blockchain
 - Glue: Managed ETL (Extract Transform Load) and Data Catalog service
 - Database Migration: DMS
 - Neptune: graph database

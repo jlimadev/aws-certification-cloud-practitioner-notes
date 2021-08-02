@@ -91,7 +91,7 @@ Example of Service Control Policy:
 
 ## AWS ControlTower
 
-AWS ControlTower is a easy way to setup and govern a secure and compliant multi-account AWS environment based on best practices.
+AWS ControlTower is a easy way to setup and govern a secure and compliant multi-account AWS environment based on best practices. Control Tower is an AWS native service providing a pre-defined set of blueprints and guardrails to help customers implement a landing zone for new AWS accounts.
 
 With ControlTower we can:
 

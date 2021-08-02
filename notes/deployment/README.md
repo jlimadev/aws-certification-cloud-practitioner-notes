@@ -45,7 +45,7 @@ We can also use the CloudFormation Stack Designer: here we can see all the resou
 
 ## Elastic Beanstalk
 
-Elastic Beanstalk (EB) is a developer centric view of deploying an application on AWS. It is a Platform as a Service (PaaS).
+Elastic Beanstalk (EB) is a developer centric view of deploying an application on AWS. It is a Platform as a Service (PaaS). There is no additional charge for Elastic Beanstalk. You pay only for the underlying AWS resources that your application consumes and you can quickly deploy and manage applications in the AWS Cloud without having to learn about the infrastructure that runs those applications.
 
 > AWS Elastic Beanstalk is an easy-to-use service for deploying and scaling web applications and services developed with Java, .NET, PHP, Node.js, Python, Ruby, Go, and Docker on familiar servers such as Apache, Nginx, Passenger, and IIS. Simply upload your code and Elastic Beanstalk automatically handles the deployment, from capacity provisioning, load balancing, auto-scaling to application health monitoring. At the same time, you retain full control over the AWS resources powering your application and can access the underlying resources at any time. There is no additional charge for Elastic Beanstalk - you pay only for the AWS resources needed to store and run your applications.
 
@@ -126,6 +126,7 @@ Usually in our pipelines we Get our code, test, build, provisioning servers and 
 
 - It is fully managed
 - Compatible with CodeCommit, CodeBuild, CodeDeploy, Elastic Beanstalk, Cloud Formation, GitHub and others providers + have custom plugins.
+- CodePipeline uses Amazon CloudWatch Events to detect changes in CodeCommit repositories used as a source for a pipeline.
 
 Example of usage
 
@@ -144,6 +145,9 @@ AWS CodeArtifact is a Artifact Management service to store, publish and share so
 
 It is a unified UI to manage software development activities in one place. It is a central service to development that allows a quick start using AWS Tools.
 It gives you a dashboards with integration with CodeCommit, CodeBuild, CodePipeline, CodeBuild, etc.
+
+- Each CodeStar project includes development tools, including AWS CodePipeline, AWS CodeCommit, AWS CodeBuild, and AWS CodeDeploy, that can be used on their own and with existing AWS applications
+- You can use AWS CodeStar and AWS Cloud9 to develop, build, and deploy a serverless web application
 
 # AWS Cloud9
 
