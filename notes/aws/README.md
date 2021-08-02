@@ -19,6 +19,8 @@ AWS has a global infra that can attend customers in multiple locations. The infr
 - They’re separate from each other, so that they’re isolated from disasters
 - They’re connected with high bandwidth, ultra-low latency networking
 - All AZs together will form a **region**
+- All traffic between AZs is encrypted
+  > Each AWS Region consists of multiple, isolated and physically separated availability zones within a geographical area.
 
 ##### AWS Points of Presence/Edge Locations
 
