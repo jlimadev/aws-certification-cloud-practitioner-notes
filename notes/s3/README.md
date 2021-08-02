@@ -215,6 +215,7 @@ To understand better the classes we need to understand the concepts of Durabilit
 How readily available a service is. S3 standard has 99.99% availability. S3 may not be available per 53 minutes in a year.
 
 **Pricing**:
+
 - S3 Standard does not charge any data retrieval fee.
 - S3 Intelligent-Tiering does not charge any data retrieval fee.
 - All other storage classes have a retrieval fee.
@@ -289,12 +290,14 @@ Lock objects to specified amount of time.
 
 - This one adopts the WORM (Write Once, Read Many) class.
 - It blocks an object version from being deleted during a specified amount of time.
+- You can use S3 Object Lock to meet regulatory requirements that require WORM storage, or add an extra layer of protection against object changes and deletion.
+- Users with special permissions can make changes to the Lock policy and delete the data.
 
 **Glacier Vault Lock**:
 
 - This one adopts the WORM (Write Once, Read Many) class.
 - We create a Lock Policy to the files, and the files will be locked to modifications.
-- Once the policy is set, no one can delete or modify the policy.
+- Once the policy is set, **no one** can delete or modify the policy (even admins).
 - Really good to use when we have compliance data retention rules and policies.
 
   > S3 Glacier Vault Lock allows you to easily deploy and enforce compliance controls for individual S3 Glacier vaults with a vault lock policy. You can specify controls such as “write once read many” (WORM) in a vault lock policy and lock the policy from future edits. Once locked, the policy can no longer be changed.
