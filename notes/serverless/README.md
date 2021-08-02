@@ -73,6 +73,8 @@ With API gateway we can allow external request on services that are not exposed 
 - Fully Scalable and Serverless
 - Supports REST APIs and Websocket APIs
 - Supports security, authentication, API Keys, monitoring
+- Can be configured to send data directly to Amazon Kinesis Data Stream
+- Can call AWS Lambda functions to create a front-door for a serverless app.
 
 API gateway example:
 A client create a item in your website, your website saves it on dynamo with this structure:
