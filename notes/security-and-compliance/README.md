@@ -373,9 +373,9 @@ Root user is the main account registered in AWS. It has complete access to all A
   - AWS Artifact: Get access to compliance reports such as PCI, ISO, etc
   - Amazon GuardDuty: Threat Discovery on AWS account and Find malicious behavior with VPC, DNS & CloudTrail Logs
   - Amazon Inspector: EC2 only, install the agent to find vulnerabilities on OS.
-  - AWS Config: Track and record configuration rules and check if resources are compliant with.
+  - AWS Config: Track and record configuration rules and check if resources are compliant with. (What did my Resource look like in a point of time?)
   - Amazon Macie: Find sensitive data on S3 Buckets.
-  - CloudTrail: Track API calls on the account (Compliance, Governance and Audit)
+  - CloudTrail: Track API calls on the account (Compliance, Governance and Audit) - (Who made an API call to modify the resource?)
   - AWS Security Hub: is a central service to security on multiple accounts
   - Amazon Detective: is a service to get the root cause of issues or suspicious activities.
   - AWS Abuse: Report AWS resources used for abusive or illegal purposes
